@@ -8,14 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import savy.FileDao;
 import savy.JsonProcessor;
-import sun.org.mozilla.javascript.internal.json.JsonParser;
 import util.*;
 
 /**
