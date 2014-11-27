@@ -1,15 +1,16 @@
 package util;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeSet;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class UtilFunctions 
 {
-	public static void addToMapAndListIfNotAlreadyPresent(HashMap<String, List<JSONObject>> inputHashMap, List<String> inputList, String key, JSONObject value)
+	public static void addToMapAndListIfNotAlreadyPresent(HashMap<String, TreeSet<JSONObject>> inputHashMap, TreeSet<String> inputList, String key, JSONObject value, Comparator comparator)
 	{
 		if(inputHashMap.containsKey(key))
 		{
@@ -20,7 +21,7 @@ public class UtilFunctions
 		}
 		else
 		{
-			List<JSONObject> newList = new ArrayList<JSONObject>();
+			TreeSet<JSONObject> newList = new TreeSet<JSONObject>(comparator);
 			newList.add(value);
 			
 			inputHashMap.put(key, newList);
@@ -28,7 +29,7 @@ public class UtilFunctions
 		}
 	}
 	
-	public static void addToMapAndListIfNotAlreadyPresent(HashMap<Integer, List<JSONObject>> inputHashMap, List<Integer> inputList, Integer key, JSONObject value)
+	public static void addToMapAndListIfNotAlreadyPresent(HashMap<Integer, TreeSet<JSONObject>> inputHashMap, TreeSet<Integer> inputList, Integer key, JSONObject value)
 	{
 		if(inputHashMap.containsKey(key))
 		{
@@ -39,7 +40,7 @@ public class UtilFunctions
 		}
 		else
 		{
-			List<JSONObject> newList = new ArrayList<JSONObject>();
+			TreeSet<JSONObject> newList = new TreeSet<JSONObject>(new CustomComparator());
 			newList.add(value);
 			
 			inputHashMap.put(key, newList);
@@ -47,7 +48,7 @@ public class UtilFunctions
 		}
 	}
 	
-	public static void addToMapAndListIfNotAlreadyPresent(HashMap<Float, List<JSONObject>> inputHashMap, List<Float> inputList, Float key, JSONObject value)
+	public static void addToMapAndListIfNotAlreadyPresent(HashMap<Float, TreeSet<JSONObject>> inputHashMap, TreeSet<Float> inputList, Float key, JSONObject value)
 	{
 		if(inputHashMap.containsKey(key))
 		{
@@ -58,7 +59,7 @@ public class UtilFunctions
 		}
 		else
 		{
-			List<JSONObject> newList = new ArrayList<JSONObject>();
+			TreeSet<JSONObject> newList = new TreeSet<JSONObject>(new CustomComparator());
 			newList.add(value);
 			
 			inputHashMap.put(key, newList);
@@ -66,10 +67,10 @@ public class UtilFunctions
 		}
 	}
 	
-	public static JSONArray populateJSONObjects(HashMap<String, List<JSONObject>> mapToFilter, List<String> filterValues)
+	public static JSONArray populateJSONObjects(HashMap<String, TreeSet<JSONObject>> mapToFilter, List<String> filterValues)
 	{
 		JSONArray resultList = new JSONArray();	
-		List<JSONObject> jsonObjectList = new ArrayList<JSONObject>();
+		TreeSet<JSONObject> jsonObjectList = new TreeSet<JSONObject>(new CustomComparator());
 		
 		for(String filterValue : filterValues)
 		{			
@@ -88,10 +89,10 @@ public class UtilFunctions
 		return resultList;
 	}
 	
-	public static JSONArray populateJSONObjectsForARangeOfFloat(HashMap<Float, List<JSONObject>> mapToFilter, List<String> filterValues)
+	public static JSONArray populateJSONObjectsForARangeOfFloat(HashMap<Float, TreeSet<JSONObject>> mapToFilter, List<String> filterValues)
 	{
 		JSONArray resultList = new JSONArray();	
-		List<JSONObject> jsonObjectList = new ArrayList<JSONObject>();
+		TreeSet<JSONObject> jsonObjectList = new TreeSet<JSONObject>(new CustomComparator());
 		
 		float minValue = Float.parseFloat(filterValues.get(0));
 		float maxValue = Float.parseFloat(filterValues.get(1));
@@ -115,10 +116,10 @@ public class UtilFunctions
 		return resultList;
 	}
 	
-	public static JSONArray populateJSONObjectsForARangeOfInt(HashMap<Integer, List<JSONObject>> mapToFilter, List<String> filterValues)
+	public static JSONArray populateJSONObjectsForARangeOfInt(HashMap<Integer, TreeSet<JSONObject>> mapToFilter, List<String> filterValues)
 	{
 		JSONArray resultList = new JSONArray();	
-		List<JSONObject> jsonObjectList = new ArrayList<JSONObject>();
+		TreeSet<JSONObject> jsonObjectList = new TreeSet<JSONObject>(new CustomComparator());
 		
 		int minValue = Integer.parseInt(filterValues.get(0));
 		int maxValue = Integer.parseInt(filterValues.get(1));
@@ -163,7 +164,7 @@ public class UtilFunctions
 	
 	public static JSONArray processResultList(JSONArray inputList)
 	{
-		HashMap<String, List<JSONObject>> outputMap = new HashMap<String, List<JSONObject>>();
+		HashMap<String, TreeSet<JSONObject>> outputMap = new HashMap<String, TreeSet<JSONObject>>();
 		
 		for(int i=0; i< inputList.size(); i++)
 		{
@@ -176,7 +177,7 @@ public class UtilFunctions
 			}
 			else
 			{
-				List<JSONObject> jsonObjectList = new ArrayList<JSONObject>();
+				TreeSet<JSONObject> jsonObjectList = new TreeSet<JSONObject>(new CustomComparator());
 				jsonObjectList.add(currentObject);
 				outputMap.put(courseName, jsonObjectList);
 			}			
@@ -186,10 +187,30 @@ public class UtilFunctions
 		
 	}
 	
-	public static JSONArray convertMapToJSONArray (HashMap<String, List<JSONObject>> inputMap)
+	public static JSONArray getYearAndTermListForFilteredResults(JSONArray inputList)
+	{
+		TreeSet<JSONObject> sortedList = new TreeSet<JSONObject>(new CustomComparator2());
+		
+		for(int i=0; i< inputList.size(); i++)
+		{
+			JSONObject currentObject = (JSONObject) inputList.get(i);
+			sortedList.add(currentObject);
+		}
+		
+		JSONArray list = new JSONArray();
+		
+		for(JSONObject obj : sortedList)
+		{
+			list.add((String)obj.get(StringLiterals.YearAndTerm));
+		}
+		return list;
+		
+	}
+	
+	public static JSONArray convertMapToJSONArray (HashMap<String, TreeSet<JSONObject>> inputMap)
 	{
 		JSONArray returnObject = new JSONArray();
-		List<JSONObject> jsonObjectListToTraverse = new ArrayList<JSONObject>();
+		TreeSet<JSONObject> jsonObjectListToTraverse = new TreeSet<JSONObject>(new CustomComparator());
 		for(String key : inputMap.keySet())
 		{
 			jsonObjectListToTraverse = inputMap.get(key);
@@ -210,5 +231,7 @@ public class UtilFunctions
 		
 		return returnObject;
 	}
+	
+
 
 }

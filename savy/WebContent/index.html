@@ -163,7 +163,7 @@ li{
 
 			   	var td11 = tr1.append("td")
 			   		.style("float", "left")
-			   		.attr("width", "7%");
+			   		.attr("width", 160);
 
 		   	
 			   var svg1 = tr1
@@ -173,9 +173,9 @@ li{
 		        .attr("width", requiredWidth + 50)
 		        .attr("height", 50);
 
-			var x1 = d3.scale.linear().domain([0, 21]).range([left_pad, requiredWidth-pad]);
+			var x = d3.scale.linear().domain([0, 21]).range([left_pad, requiredWidth-pad]);
 					 
-			var x1Axis = d3.svg.axis().scale(x1).orient("top")
+			var x1Axis = d3.svg.axis().scale(x).orient("top")
 		        .ticks(22)
 		        .tickFormat(function (d, i) 
 		        {
@@ -237,7 +237,7 @@ li{
 
 			   	var td1 = tr.append("td")
 			   		.style("float", "left")
-			   		.attr("width", "7%");
+			   		.attr("width", 160);
 
 			   	td1.append("text")
 			   	.text(courseWiseProfessors[i].courseName)
@@ -260,8 +260,7 @@ li{
 
 			        var numberOfProfessors = professorNames.length;
 
-					var x = d3.scale.linear().domain([0, 21]).range([left_pad, requiredWidth-pad]),
-					    y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
+					var y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
 					 
 					var xAxis = d3.svg.axis().scale(x).orient("bottom")
 					        .ticks(22)
@@ -616,19 +615,7 @@ function populateAllFilterParameters()
 	var areaIndex=0;
 	var courseIndex=0;
 
-	var professorList=$('#professorList').find('li');
-	for(i=0;i<professorList.length;i++)
-	{
-	var childItem=$(professorList[i]).find('input');
-	if(childItem.is(":checked") && childItem.val()!="All")
-		selectedProfessors[professorIndex++]=childItem.val();
-    }
-
-    var json1 = JSON.stringify({name:"professor", value:selectedProfessors});
-
-    console.log(json1);
-
-    var areaList=$('#areaList').find('li');
+	 var areaList=$('#areaList').find('li');
     for(i=0;i<areaList.length;i++)
 	{
 	var childItem=$(areaList[i]).find('input');
@@ -636,7 +623,7 @@ function populateAllFilterParameters()
 		selectedAreas[areaIndex++]=childItem.val();
     }
 
-    var json2 = JSON.stringify({name:"area", value:selectedAreas});
+    var json1 = JSON.stringify({name:"area", value:selectedAreas});
     
 
     var courseList=$('#courseList').find('li');
@@ -647,7 +634,21 @@ function populateAllFilterParameters()
 		selectedCourses[courseIndex++]=childItem.val();
     }
 
-    var json3 = JSON.stringify({name:"course", value:selectedCourses});
+    var json2 = JSON.stringify({name:"course", value:selectedCourses});
+
+	var professorList=$('#professorList').find('li');
+	for(i=0;i<professorList.length;i++)
+	{
+	var childItem=$(professorList[i]).find('input');
+	if(childItem.is(":checked") && childItem.val()!="All")
+		selectedProfessors[professorIndex++]=childItem.val();
+    }
+
+    var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
+
+    console.log(json1);
+
+   
 
     json.push(json2);
     json.push(json1);
@@ -674,7 +675,11 @@ function filterParametersAjax()
 $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters", value:populateAllFilterParameters()}) })
 	.done(function(data) {
 		    var obj = JSON.parse(data);
-		    var numberOfObjects = Object.keys(obj).length;
+
+		    var courses = obj.CoursesData;
+		    var yearAndTermsAfterFitering = obj.YearAndTermData;
+		    //console.log(yearAndTerm);
+		    var numberOfObjects = Object.keys(courses).length;
 
 			//alert("success " + numberOfObjects);
 
@@ -694,12 +699,11 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			//$("#scatterplotTable tr").remove();
 
 			var professorNamesAfterFiltering = [];
-			var yearAndTermsAfterFitering = [];
 
 			for(i=0; i<numberOfObjects; i++)
 			{
-				var courseName = obj[i].name;
-				var courseDataPoint = obj[i].value;
+				var courseName = courses[i].name;
+				var courseDataPoint = courses[i].value;
 				
 				for(j=0; j< Object.keys(courseDataPoint).length; j++)
 				{
@@ -707,12 +711,6 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 					if($.inArray(professorName, professorNamesAfterFiltering) < 0)
 					{
 						professorNamesAfterFiltering.push(professorName);
-					}
-
-					var yearAndTerm = courseDataPoint[j].YearAndTerm;
-					if($.inArray(yearAndTerm, yearAndTermsAfterFitering) < 0)
-					{
-						yearAndTermsAfterFitering.push(yearAndTerm);
 					}
 					
 				}
@@ -728,24 +726,24 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 		   	;
 
 		   	var td11 = tr1.append("td")
-		   		.attr("width", "7%")
+		   		.attr("width", 160)
 		   		.style("float", "left");
 
 		   	var numberOfYearAndTermCombinations = yearAndTermsAfterFitering.length;
 
-		   	var requiredWidth = numberOfYearAndTermCombinations * 100;
+		   	var requiredWidth = numberOfYearAndTermCombinations * 150;
 	   	
 		   var svg1 = tr1
 		   	.append("td")
 		   	.style("float", "left")
 	        .append("svg")
-	        .attr("width", requiredWidth)
+	        .attr("width", requiredWidth + 50)
 	        .attr("height", 50);
 
 		        
-			var x1 = d3.scale.linear().domain([0, (numberOfYearAndTermCombinations)]).range([left_pad, requiredWidth-pad]);
+			var x = d3.scale.linear().domain([0, (numberOfYearAndTermCombinations)]).range([left_pad, requiredWidth-pad]);
 					 
-			var x1Axis = d3.svg.axis().scale(x1).orient("top")
+			var x1Axis = d3.svg.axis().scale(x).orient("top")
 		        .ticks(numberOfYearAndTermCombinations)
 		        .tickFormat(function (d) 
 		        {
@@ -759,8 +757,8 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 
 			for(i=0; i<numberOfObjects; i++)
 			{	
-				var courseName = obj[i].name;
-				var courseDataPoint = obj[i].value;
+				var courseName = courses[i].name;
+				var courseDataPoint = courses[i].value;
 				
 			   	var professorsForCourse = [];
 
@@ -783,7 +781,7 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			   	var td1 = tr.append("td")
 			   		.style("align","left")
 			   		.style("float", "left")
-			   		.attr("width","7%")
+			   		.attr("width",160)
 			   		;
 
 			   	td1.append("text")
@@ -799,12 +797,12 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 				   	.style("align","right")
 				   	.style("float", "left")
 			        .append("svg")
-			        .attr("width", requiredWidth)
+			        .attr("width", requiredWidth + 50)
 			        .attr("height", actualHeight);
 
 
-					var x = d3.scale.linear().domain([0, numberOfYearAndTermCombinations]).range([left_pad, requiredWidth-pad]),
-					    y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
+
+				var y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
 					 
 					var xAxis = d3.svg.axis().scale(x).orient("bottom")
 					        .ticks(numberOfYearAndTermCombinations)

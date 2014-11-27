@@ -4,8 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeSet;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -14,26 +16,27 @@ import org.json.simple.parser.ParseException;
 
 import util.*;
 
-public class JsonProcessor {
-	private static List<String> areaList = new ArrayList<String>();
-	private static List<String> professorList = new ArrayList<String>();
-	private static List<String> courseNameList = new ArrayList<String>();
-	private static List<String> courseNumberList = new ArrayList<String>();
-	private static List<String> termList = new ArrayList<String>();
-	private static List<String> yearAndTermList = new ArrayList<String>();
-	private static List<Integer> yearList = new ArrayList<Integer>();
-	private static List<Float> averageGPAList = new ArrayList<Float>();
-	private static List<Integer> classStrengthList = new ArrayList<Integer>();
+public class JsonProcessor 
+{
+	private static TreeSet<String> areaList = new TreeSet<String>();
+	private static TreeSet<String> professorList = new TreeSet<String>();
+	private static TreeSet<String> courseNameList = new TreeSet<String>();
+	private static TreeSet<String> courseNumberList = new TreeSet<String>();
+	private static TreeSet<String> termList = new TreeSet<String>();
+	private static TreeSet<String> yearAndTermList = new TreeSet<String>(new CustomComparatorForString());
+	private static TreeSet<Integer> yearList = new TreeSet<Integer>();
+	private static TreeSet<Float> averageGPAList = new TreeSet<Float>();
+	private static TreeSet<Integer> classStrengthList = new TreeSet<Integer>();
 
-	private static HashMap<String, List<JSONObject>> areaMap = new HashMap<String, List<JSONObject>>();
-	private static HashMap<String, List<JSONObject>> professorMap = new HashMap<String, List<JSONObject>>();
-	private static HashMap<String, List<JSONObject>> courseNameMap = new HashMap<String, List<JSONObject>>();
-	private static HashMap<String, List<JSONObject>> courseNumberMap = new HashMap<String, List<JSONObject>>();
-	private static HashMap<String, List<JSONObject>> termMap = new HashMap<String, List<JSONObject>>();
-	private static HashMap<String, List<JSONObject>> yearAndTermMap = new HashMap<String, List<JSONObject>>();
-	private static HashMap<Integer, List<JSONObject>> yearMap = new HashMap<Integer, List<JSONObject>>();
-	private static HashMap<Float, List<JSONObject>> averageGPAMap = new HashMap<Float, List<JSONObject>>();
-	private static HashMap<Integer, List<JSONObject>> classStrengthMap = new HashMap<Integer, List<JSONObject>>();
+	private static HashMap<String, TreeSet<JSONObject>> areaMap = new HashMap<String, TreeSet<JSONObject>>();
+	private static HashMap<String, TreeSet<JSONObject>> professorMap = new HashMap<String, TreeSet<JSONObject>>();
+	private static HashMap<String, TreeSet<JSONObject>> courseNameMap = new HashMap<String, TreeSet<JSONObject>>();
+	private static HashMap<String, TreeSet<JSONObject>> courseNumberMap = new HashMap<String, TreeSet<JSONObject>>();
+	private static HashMap<String, TreeSet<JSONObject>> termMap = new HashMap<String, TreeSet<JSONObject>>();
+	private static HashMap<String, TreeSet<JSONObject>> yearAndTermMap = new HashMap<String, TreeSet<JSONObject>>();
+	private static HashMap<Integer, TreeSet<JSONObject>> yearMap = new HashMap<Integer, TreeSet<JSONObject>>();
+	private static HashMap<Float, TreeSet<JSONObject>> averageGPAMap = new HashMap<Float, TreeSet<JSONObject>>();
+	private static HashMap<Integer, TreeSet<JSONObject>> classStrengthMap = new HashMap<Integer, TreeSet<JSONObject>>();
 
 	public JsonProcessor() 
 	{
@@ -54,33 +57,36 @@ public class JsonProcessor {
 			for (int i = 0; i < jsonArray.size(); i++) 
 			{
 				jsonObject = (JSONObject) jsonArray.get(i);
+				
+				CustomComparator myComp = new CustomComparator();
+				CustomComparator2 myOtherComp = new CustomComparator2();
 
 				String courseName = (String) jsonObject.get(StringLiterals.CourseName);				
-				UtilFunctions.addToMapAndListIfNotAlreadyPresent(courseNameMap, courseNameList, courseName, jsonObject);
+				UtilFunctions.addToMapAndListIfNotAlreadyPresent(courseNameMap, courseNameList, courseName, jsonObject, myComp);
 				
 				
 				String courseNumber = (String) jsonObject.get(StringLiterals.CourseNumber);
-				UtilFunctions.addToMapAndListIfNotAlreadyPresent(courseNumberMap, courseNumberList, courseNumber, jsonObject);
+				UtilFunctions.addToMapAndListIfNotAlreadyPresent(courseNumberMap, courseNumberList, courseNumber, jsonObject, myComp);
 
 
 				String professor = (String) jsonObject.get(StringLiterals.Professor);
-				UtilFunctions.addToMapAndListIfNotAlreadyPresent(professorMap, professorList, professor, jsonObject);
+				UtilFunctions.addToMapAndListIfNotAlreadyPresent(professorMap, professorList, professor, jsonObject, myComp);
 
 				Integer year = ((Long) (jsonObject.get(StringLiterals.Year))).intValue();
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(yearMap, yearList, year, jsonObject);
 
 				String term = (String) jsonObject.get(StringLiterals.Term);
-				UtilFunctions.addToMapAndListIfNotAlreadyPresent(termMap, termList, term, jsonObject);
+				UtilFunctions.addToMapAndListIfNotAlreadyPresent(termMap, termList, term, jsonObject, myComp);
 				
 				String yearAndTerm = (String) jsonObject.get(StringLiterals.YearAndTerm);
-				UtilFunctions.addToMapAndListIfNotAlreadyPresent(yearAndTermMap, yearAndTermList, yearAndTerm, jsonObject);
+				UtilFunctions.addToMapAndListIfNotAlreadyPresent(yearAndTermMap, yearAndTermList, yearAndTerm, jsonObject, myOtherComp);
 
 				Float averageGPA = ((Double) jsonObject.get(StringLiterals.AverageGPA)).floatValue();
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(averageGPAMap, averageGPAList, averageGPA, jsonObject);
 
 
 				String area = (String) jsonObject.get(StringLiterals.Area);
-				UtilFunctions.addToMapAndListIfNotAlreadyPresent(areaMap, areaList, area, jsonObject);
+				UtilFunctions.addToMapAndListIfNotAlreadyPresent(areaMap, areaList, area, jsonObject, myComp);
 
 				Integer classStrength = ((Long) jsonObject.get(StringLiterals.ClassStrength)).intValue();
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(classStrengthMap, classStrengthList, classStrength, jsonObject);
@@ -118,8 +124,9 @@ public class JsonProcessor {
 	}
 
 	// Filters progressively on all specified filterParameters
-	public JSONArray getFilteredResults(JSONObject inputObject) 
+	public JSONObject getFilteredResults(JSONObject inputObject) 
 	{
+		JSONObject returnObject = new JSONObject();
 		JSONArray resultList = new JSONArray();
 		JSONObject jsonArrayOfFilterParameters = null;
 		
@@ -200,7 +207,10 @@ public class JsonProcessor {
 		}
 		
 		//returns a JSONArray with course to JSONObject mapping, to make it easier to process in Javascript
-		return UtilFunctions.processResultList(resultList);
+		returnObject.put("CoursesData", UtilFunctions.processResultList(resultList));
+		returnObject.put("YearAndTermData", UtilFunctions.getYearAndTermListForFilteredResults(resultList));
+		
+		return returnObject;
 
 	}
 	
@@ -233,7 +243,7 @@ public class JsonProcessor {
 	public JSONArray getListForStringParameter(String parameter) 
 	{
 		JSONArray resultArray = new JSONArray();
-		List<String> listToProcess = new ArrayList<String>();
+		TreeSet<String> listToProcess = new TreeSet<String>();
 
 		// Create a JSONObject list and return
 		switch (parameter) {
@@ -276,7 +286,7 @@ public class JsonProcessor {
 	public JSONArray getListForIntegerParameter(String parameter) 
 	{
 		JSONArray resultArray = new JSONArray();
-		List<Integer> genericList = new ArrayList<Integer>();
+		TreeSet<Integer> genericList = new TreeSet<Integer>();
 
 		// Create a JSONObject list and return
 		switch (parameter) {
@@ -326,5 +336,4 @@ public class JsonProcessor {
 		return UtilFunctions.convertMapToJSONArray(courseNameMap);
 	}
 	
-
 }

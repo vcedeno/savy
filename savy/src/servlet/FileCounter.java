@@ -32,7 +32,8 @@ public class FileCounter extends HttpServlet
 	private JsonProcessor processor;
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 		// Set a cookie for the user, so that the counter does not increate
 		// every time the user press refresh
 		HttpSession session = request.getSession(true);
@@ -76,12 +77,12 @@ public class FileCounter extends HttpServlet
 		//System.out.println((JSONArray) jsonobject.get("value"));
 		//System.out.println((String) jsonobject.get("name"));
 		
-		JSONArray resultArray = processor.getFilteredResults(jsonobject);
+		JSONObject resultObject = processor.getFilteredResults(jsonobject);
 				
 		//JSONArray resultArray = processor.filterOnOneParameter(jsonobject);		
-		System.out.println("Sending response" + resultArray.toString());
+		System.out.println("Sending response" + resultObject.toString());
 		
-		response.getWriter().write(resultArray.toJSONString());
+		response.getWriter().write(resultObject.toJSONString());
 		
 		
 
