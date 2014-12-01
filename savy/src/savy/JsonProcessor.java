@@ -332,7 +332,7 @@ public class JsonProcessor
 	
 	public JSONArray getDataForAllCourses()
 	{
-		return UtilFunctions.convertMapToJSONArray(courseNameMap);
+		return UtilFunctions.convertMapToJSONArray(courseNameMap, true);
 	}
 	
 }

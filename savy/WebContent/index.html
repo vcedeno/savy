@@ -115,6 +115,7 @@ li{
 			professorOption=data.ListOfProfessors;
 			areaOption=data.ListOfAreas;
 			yearAndTermOption=data.ListOfYearsAndTerms;
+			console.log(yearAndTermOption);
 			coursesData = data.CoursesData;
 
 			var str='<li><input class="areaCheck" type="checkbox" value="All" checked="checked" onClick="toggleAll(this);"/>All</li>';
@@ -173,12 +174,15 @@ li{
 		        .attr("width", requiredWidth + 50)
 		        .attr("height", 50);
 
-			var x = d3.scale.linear().domain([0, 21]).range([left_pad, requiredWidth-pad]);
+
+		    console.log("Number of year and term combos: " + yearAndTermOption.length);    
+			var x = d3.scale.linear().domain([0, yearAndTermOption.length -1]).range([left_pad, requiredWidth-pad]);
 					 
 			var x1Axis = d3.svg.axis().scale(x).orient("top")
-		        .ticks(22)
+		        .ticks(yearAndTermOption.length)
 		        .tickFormat(function (d, i) 
 		        {
+		        		console.log(d);
 			            return yearAndTermOption[d].YearAndTerm;
 			        });
 			 
@@ -251,7 +255,7 @@ li{
 			   	
 				var svg = tr
 				   	.append("td")
-				   	.style("align","right")
+				   	//.style("align","right")
 				   	.style("float", "left")
 			        .append("svg")
 			        .attr("width", requiredWidth)
@@ -263,7 +267,7 @@ li{
 					var y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
 					 
 					var xAxis = d3.svg.axis().scale(x).orient("bottom")
-					        .ticks(22)
+					        .ticks(yearAndTermOption.length)
 					        .tickFormat(function (d, i) 
 					        {
 					            return yearAndTermOption[d].YearAndTerm;
@@ -378,6 +382,7 @@ li{
 
 				                */
 
+				                /*
 				                $('svg circle').tooltipsy(
 				                {
 				                	offset: [7,0],
@@ -390,6 +395,7 @@ li{
 				                		$e1.fadeOut(100);
 				                	}
 				                });	
+*/
 
 								gnodes
 								.on("mouseover", function(d)
@@ -399,8 +405,8 @@ li{
 
 									var subSVG = d3.select(this)
 									.append("svg")
-									.attr("width", 20)
-									.attr("height", 60)
+									.attr("width", 40)
+									.attr("height", 30)
 									.attr("x", xPosition)
 									.attr("y", yPosition)
 									;
@@ -419,13 +425,28 @@ li{
 
 									
 
-									var text = subSVG.append("block")
+									var text1 = subSVG
 									.append("text")
-									.text("Hi.. How are you???")
+									.attr("dx", 8)
+									.attr("dy", 10)
+									.text("#A's: " + d.NumberOfAs)
 								   	.style("font-family", "sans-serif")
 								   	.style("font-size", "8px")
 								   	.style("stroke", "black")
+								   	.style("float", "left")
 									;
+
+									var text2 = subSVG
+									.append("text")
+									.attr("dx", 8)
+									.attr("dy", 18)
+									.text("#B's: " + d.NumberOfBs)
+								   	.style("font-family", "sans-serif")
+								   	.style("font-size", "8px")
+								   	.style("stroke", "black")
+								   	.style("float", "left")
+									;
+
 
 									
 								})
@@ -794,7 +815,7 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			   
 				var svg = tr
 				   	.append("td")
-				   	.style("align","right")
+				   	//.style("align","right")
 				   	.style("float", "left")
 			        .append("svg")
 			        .attr("width", requiredWidth + 50)
@@ -871,6 +892,8 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 									return "Number Of A's: " + d.NumberOfAs + ", \nNumber Of B's: " + d.NumberOfBs;
 								});
 
+								/*
+
 								$('svg circle').tooltipsy(
 				                {
 				                	offset: [7,0],
@@ -883,6 +906,8 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 				                		$e1.fadeOut(100);
 				                	}
 				                });		
+								
+								*/
 
 								gnodes
 								.on("mouseover", function(d)
@@ -892,8 +917,8 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 
 									var subSVG = d3.select(this)
 									.append("svg")
-									.attr("width", 20)
-									.attr("height", 60)
+									.attr("width", 40)
+									.attr("height", 30)
 									.attr("x", xPosition)
 									.attr("y", yPosition)
 									;
@@ -910,16 +935,27 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 									.attr("height", d.NumberOfAs ^ 3)
 									.attr("fill", "blue");
 
-									/*
-
-									var text = subSVG.append("text")
-									.text("Hi.. How are you???")
+									var text1 = subSVG
+									.append("text")
+									.attr("dx", 8)
+									.attr("dy", 10)
+									.text("#A's: " + d.NumberOfAs)
 								   	.style("font-family", "sans-serif")
 								   	.style("font-size", "8px")
 								   	.style("stroke", "black")
+								   	.style("float", "left")
 									;
 
-									*/
+									var text2 = subSVG
+									.append("text")
+									.attr("dx", 8)
+									.attr("dy", 18)
+									.text("#B's: " + d.NumberOfBs)
+								   	.style("font-family", "sans-serif")
+								   	.style("font-size", "8px")
+								   	.style("stroke", "black")
+								   	.style("float", "left")
+									;
 								})
 								.on("mouseout", function(d)
 								{
