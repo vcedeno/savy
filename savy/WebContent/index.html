@@ -92,12 +92,14 @@ li{
 <script type="text/javascript" src="tooltipsy-master/tooltipsy.source.js"></script>
 <script type="text/javascript" src="tooltipsy-master/tooltipsy.min.js"></script>
 <script>
-
-	        var w = 4500,
+			
+			//Various parameters which are used for the SVGs
+			    var w = 4500,
 			    h = 300,
 			    pad = 20,
 			    left_pad = 300;
 
+    //This function is called on load
 	$(document).ready(function(){
 	//$('.filters').accordion();
 	var x=document.getElementsByClassName("radio");
@@ -118,6 +120,8 @@ li{
 			console.log(yearAndTermOption);
 			coursesData = data.CoursesData;
 
+
+			//This section constructs the filters one by one
 			var str='<li><input class="areaCheck" type="checkbox" value="All" checked="checked" onClick="toggleAll(this);"/>All</li>';
 			for(i=0;i<areaOption.length;i++)
 			{
@@ -158,6 +162,9 @@ li{
 
 	        var requiredWidth = yearAndTermOption.length * 100;
 
+	        //We create a scatterplot table for the courses view
+	        //Essentially we are creating a spark line
+
 			var tr1 = d3.select("#scatterplotTable")
 			   					.append("tr")
 			   	;
@@ -166,7 +173,7 @@ li{
 			   		.style("float", "left")
 			   		.attr("width", 160);
 
-		   	
+		   		//This is an empty filler element.
 			   var svg1 = tr1
 			   	.append("td")
 			   	.style("float", "left")
@@ -175,14 +182,14 @@ li{
 		        .attr("height", 50);
 
 
-		    console.log("Number of year and term combos: " + yearAndTermOption.length);    
+		    //The first item in the scatterplot table in the first row is the term-year combination x-axis
 			var x = d3.scale.linear().domain([0, yearAndTermOption.length -1]).range([left_pad, requiredWidth-pad]);
 					 
 			var x1Axis = d3.svg.axis().scale(x).orient("top")
 		        .ticks(yearAndTermOption.length)
 		        .tickFormat(function (d, i) 
 		        {
-		        		console.log(d);
+		        		//console.log(d);
 			            return yearAndTermOption[d].YearAndTerm;
 			        });
 			 
@@ -191,6 +198,8 @@ li{
 			    .attr("transform", "translate(0, "+(50-pad)+")")
 			    .call(x1Axis);
 
+			//These two variables are used to interpret the variance and to allow us to make the color gradient granular
+			//Gradient is used to represent avgGPA
 			var minGPAForCourses = [];
 			var maxGPAForCourses = [];		
 
@@ -223,17 +232,15 @@ li{
 			//console.log(courseWiseProfessors);
 
 			
-
+			//For each entry in the professors list, create one row in the scatterplot
+			//The row will have two TDs, one has the courseName and the other has the plot
 			for(i=0; i< courseWiseProfessors.length; i++)
 			{
-				//console.log(i);
-				//console.log(courseWiseProfessors[i].courseName);
-				//console.log(courseWiseProfessors[i].professorNames);
+
 				var professorNames = courseWiseProfessors[i].professorNames; 
 				var numberOfProfessors = professorNames.length;
 
 			   	var actualHeight = (numberOfProfessors*60) + 20;
-			   	//console.log("For courseName :" + courseWiseProfessors[i].courseName + ", actualHeight: " + actualHeight);
 
 				var tr = d3.select("#scatterplotTable")
 			   					.append("tr")
@@ -265,7 +272,8 @@ li{
 			        var numberOfProfessors = professorNames.length;
 
 					var y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
-					 
+
+					//We need to create an x-axis for the sake of plotting, but using CSS we make sure it is not visible 
 					var xAxis = d3.svg.axis().scale(x).orient("bottom")
 					        .ticks(yearAndTermOption.length)
 					        .tickFormat(function (d, i) 
@@ -289,8 +297,8 @@ li{
 					    .attr("transform", "translate("+(left_pad- pad)+", 0)")
 					    .call(yAxis);
 
-					    //console.log(svg);
-
+					
+					//Club all data points for the same course which the professor has taught multiple times
 					var relevantCoursesData = [];
 
 					for(k=0; k< coursesData.length; k++)
@@ -308,6 +316,7 @@ li{
 
 					//console.log(relevantCoursesData);
 
+					//Create a gnode for each data point
 					var gnodes = svg.selectAll('g.gnode')
 					  .data(relevantCoursesData)
 					  .enter()
@@ -347,10 +356,7 @@ li{
 								{
 									return getHue(d.AverageGPA);
 								})
-								.attr("title", function(d)
-								{
-									return "Number Of A's: " + d.NumberOfAs + ", \nNumber Of B's: " + d.NumberOfBs;
-								})/*
+								/*
 								.on("mouseover", function(d)
 								{
 									var xPosition = parseFloat(d3.select(this).attr("cx")) + 2;
@@ -400,38 +406,92 @@ li{
 								gnodes
 								.on("mouseover", function(d)
 								{
+									//on mouse over we basically append a new SVG to the circle consisting of a bar graph and tex.
+									//could also consider creating this initially with opacity = 0 and then toggling opacity on mouse-over
+									//but not entirely sure how to do it. maybe if time permits
 									var xPosition = parseFloat(d3.select(this).select("circle").attr("cx")) + 8;
 									var yPosition = parseFloat(d3.select(this).select("circle").attr("cy")) - 5;
 
 									var subSVG = d3.select(this)
 									.append("svg")
-									.attr("width", 40)
-									.attr("height", 30)
+									.attr("width", 80)
+									.attr("height", 200)
 									.attr("x", xPosition)
 									.attr("y", yPosition)
 									;
 
-									var rect1 = subSVG
-									.append("rect")									
-									.attr("width", 10)
-									.attr("height", d.NumberOfBs * 3)
-									.attr("fill", "orange");
+									if(d.NumberOfFs>0)
+									{
+										subSVG
+										.append("rect")									
+										.attr("width", 10)
+										.attr("height", d.NumberOfFs * 3)
+										.attr("fill", "pink");
+									}
 
-									var rect2 = subSVG
-									.append("rect")									
-									.attr("width", 10)
-									.attr("height", d.NumberOfAs ^ 3)
-									.attr("fill", "blue");
+									if(d.NumberOfEs>0)
+									{
+										subSVG
+										.append("rect")									
+										.attr("width", 10)
+										.attr("height", d.NumberOfEs * 3)
+										.attr("fill", "green");
+									}
 
-									
+									if(d.NumberOfDs>0)
+									{
+										subSVG
+										.append("rect")									
+										.attr("width", 10)
+										.attr("height", d.NumberOfDs * 3)
+										.attr("fill", "red");
+									}
+
+									if(d.NumberOfCs>0)
+									{
+										subSVG
+										.append("rect")									
+										.attr("width", 10)
+										.attr("height", d.NumberOfCs * 3)
+										.attr("fill", "purple");
+									}
+
+									if(d.NumberOfBs>0)
+									{
+										subSVG
+										.append("rect")									
+										.attr("width", 10)
+										.attr("height", d.NumberOfBs * 3)
+										.attr("fill", "orange");
+									}
+
+									if(d.NumberOfAs>0)
+									{
+										subSVG
+										.append("rect")									
+										.attr("width", 10)
+										.attr("height", d.NumberOfAs * 3)
+										.attr("fill", "blue");
+									}
+
+									var text0 = subSVG
+									.append("text")
+									.attr("dx", 8)
+									.attr("dy", 10)
+									.text("Class size: " + d.ClassStrength)
+								   	.style("font-family", "sans-serif")
+								   	.style("font-size", "7px")
+								   	.style("stroke", "black")
+								   	.style("float", "left")
+									;
 
 									var text1 = subSVG
 									.append("text")
 									.attr("dx", 8)
-									.attr("dy", 10)
+									.attr("dy", 18)
 									.text("#A's: " + d.NumberOfAs)
 								   	.style("font-family", "sans-serif")
-								   	.style("font-size", "8px")
+								   	.style("font-size", "7px")
 								   	.style("stroke", "black")
 								   	.style("float", "left")
 									;
@@ -439,13 +499,78 @@ li{
 									var text2 = subSVG
 									.append("text")
 									.attr("dx", 8)
-									.attr("dy", 18)
+									.attr("dy", 26)
 									.text("#B's: " + d.NumberOfBs)
 								   	.style("font-family", "sans-serif")
-								   	.style("font-size", "8px")
+								   	.style("font-size", "7px")
 								   	.style("stroke", "black")
 								   	.style("float", "left")
 									;
+
+									var dy_val = 34;
+
+									if(d.NumberOfCs >0)
+									{
+										var text3 = subSVG
+										.append("text")
+										.attr("dx", 8)
+										.attr("dy", dy_val)
+										.text("#C's: " + d.NumberOfCs)
+									   	.style("font-family", "sans-serif")
+									   	.style("font-size", "7px")
+									   	.style("stroke", "black")
+									   	.style("float", "left")
+										;
+
+										dy_val +=8;
+									}
+
+									if(d.NumberOfDs >0)
+									{
+										var text4 = subSVG
+										.append("text")
+										.attr("dx", 8)
+										.attr("dy", dy_val)
+										.text("#D's: " + d.NumberOfDs)
+									   	.style("font-family", "sans-serif")
+									   	.style("font-size", "7px")
+									   	.style("stroke", "black")
+									   	.style("float", "left")
+										;
+
+										dy_val +=8;
+									}
+
+									if(d.NumberOfEs >0)
+									{
+										var text5 = subSVG
+										.append("text")
+										.attr("dx", 8)
+										.attr("dy", dy_val)
+										.text("#E's: " + d.NumberOfEs)
+									   	.style("font-family", "sans-serif")
+									   	.style("font-size", "7px")
+									   	.style("stroke", "black")
+									   	.style("float", "left")
+										;
+										dy_val +=8;
+									}
+
+									if(d.NumberOfFs >0)
+									{
+
+										var text6 = subSVG
+										.append("text")
+										.attr("dx", 8)
+										.attr("dy", dy_val)
+										.text("#F's: " + d.NumberOfFs)
+									   	.style("font-family", "sans-serif")
+									   	.style("font-size", "7px")
+									   	.style("stroke", "black")
+									   	.style("float", "left")
+									;
+
+									}
 
 
 									
@@ -499,6 +624,7 @@ function getRadius(classStrength)
 	}
 }
 
+//Needs to be made more granular (Shiwani)
 function getHue(averageGPA)
 {
 	var a = averageGPA/4,
@@ -624,6 +750,8 @@ function populateSelectedList(all)
 
 //TO DO: add parameters for next filters
 //For year, averageGPA and classStrength, only add minValue and maxValue. MinValue has to be first attribute
+
+//TO DO 2: optimize when 'All' is selected for any parameter? Would need backend tweaking as well though
 function populateAllFilterParameters()
 {
 	var json = [];
@@ -690,6 +818,10 @@ function okButtonClicked(ipButton){
 		 
 		}
 }
+
+//Called when backend returns after 'Submit'
+//Removes the complete sctaterplot table and creates a new one based on incoming data
+//Logic and code same as in the on-load function.
 
 function filterParametersAjax()
 {
