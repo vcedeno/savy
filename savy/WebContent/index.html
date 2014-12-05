@@ -130,7 +130,10 @@ dl
 			    additional_width = 50,
 			    additional_height = 20;
 				
-	var minGPA_calc,maxGPA_calc,minSize,maxSize;
+	var minGPA_calc=0;
+	var maxGPA_calc=0;
+	var minSize=0;
+	var maxSize=0;
     //This function is called on load
 	$(document).ready(function(){
 	$('.accordion').accordion({ heightStyle: "content" });
@@ -153,8 +156,7 @@ dl
 			sizeList= data.ListOfClassStrengths;
 			GPAList=data.ListOfAverageGPAs;
 			//maxSize= Math.max(data.ListOfClassStrengths);
-			//console.log(minSize);
-			//console.log(maxSize);
+			
 			coursesData = data.CoursesData;
 			var SizePopulated=[];
 			var GPAPopulated=[];
@@ -186,6 +188,9 @@ dl
 			
 			minGPA_calc=Math.min.apply(null,GPAPopulated);
 			maxGPA_calc=Math.max.apply(null,GPAPopulated);
+			
+			console.log(minSize);
+			console.log(maxSize);
 			
 			
 			//This section constructs the filters one by one
@@ -485,8 +490,7 @@ dl
 	   });		
 	   //************************************* ajax complete **************//
 	
-			
-	$( "#slider-range_year" ).slider({
+		$( "#slider-range_year" ).slider({
 	  range: true,
       min:2004,
       max:2013,
@@ -500,10 +504,10 @@ dl
 	
 	$( "#slider-range_GPA" ).slider({
 	  range: true,
-      min:  minGPA_calc,
-      max:maxGPA_calc,
+      min:2.5,
+      max:4.1,
 	  step:0.1,
-      values:[minGPA_calc,maxGPA_calc],
+      values:[2.5,4.1],
       slide: function( event, ui ) {
         $( "#chosenGPA" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
@@ -512,17 +516,19 @@ dl
 	
 	$( "#slider-range_size" ).slider({
 	  range: true,
-      min:minSize,
-      max:maxSize,
+      min:10,
+      max:75,
 	  step:2,
-      values:[minSize,maxSize],
+      values:[10,75],
       slide: function( event, ui ) {
         $( "#chosenClassSize" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
     });
-    $( "#chosenClassSize" ).val(  $( "#slider-range_size" ).slider( "values", 0 )  +" to "+  $( "#slider-range_size" ).slider( "values", 1 ) );
-
+    $( "#chosenClassSize" ).val(  $( "#slider-range_size" ).slider( "values", 0 )  +" to "+  $( "#slider-range_size" ).slider( "values", 1 ) );	
+	
 });
+
+
 
 function hover(d, obj_ref)
 {
@@ -993,7 +999,7 @@ function populateAllFilterParameters()
 	if(childItem.is(":checked") && childItem.val()!="All")
 		selectedProfessors[professorIndex++]=childItem.val();
     }
-<<<<<<< HEAD
+
 	//console.log("selected radio button is "+ $('input[name=Term]:checked').val());
 	//console.log("prof sample"+selectedProfessors);
 	
@@ -1023,12 +1029,11 @@ function populateAllFilterParameters()
 	
 	
 	console.log(json1);
-=======
+
 
     var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
 
     //console.log(json1);
->>>>>>> e8ba90956e4eb08a19f59a7d959ac1b29b4d98ff
 
    
 
@@ -1277,31 +1282,18 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 	); 
 }
 
-/*
-function filterParametersAjax(object)
-{
-$.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:populateSelectedList(object)}) })
-	.done(function(data) {
-		    //
-			alert("success" + data);
-
-         }
-	); 
-}
-*/
 
  </script>
 
 		<div style="width: 100%;">
-<<<<<<< HEAD
-			<table><tr><td>
-=======
 
->>>>>>> e8ba90956e4eb08a19f59a7d959ac1b29b4d98ff
+			<table><tr><td>
+
+
 			<div style="width: 250px; float: left;" class="filtersLists">
 						<div class="accordion">
 							<h3>
-								<label for="TermFilter">Select Term</label>
+								<label for="TermFilter">Select by Term</label>
 							</h3>
 							
 							<div name="Terms_select" class="Radio">
@@ -1313,14 +1305,14 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
 				
 				
 							<h3>
-								<label for="areaList">Select Area(s)</label>
+								<label for="areaList">Select by Area(s)</label>
 							</h3>
 							<div name="areas_select" class="select">
 								<p><ul id="areaList"></ul></p>
 							</div>
 				
 							<h3>
-								<label for="courseList">Select Course(s)</label>
+								<label for="courseList">Select by Course(s)</label>
 							</h3>
 							
 							<div name="course_select" class="select" >
@@ -1328,34 +1320,34 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
 							</div>
 			
 							<h3>
-								<label for="professorList">Select Professor(s) </label>
+								<label for="professorList">Select by Professor(s) </label>
 							</h3>
 							<div name="professor_select" class="select" >
 								<p><ul id="professorList"></ul></p>
 							</div>
 							
 							<h3>
-								<label for="yearList">Select year(s) </label>
+								<label for="yearList">Select by year(s) </label>
 							</h3>
 							<div name="year_select" class="select" >
 								<input type="text" id="chosenYear" readonly style="width:150px;">
 								<div id="slider-range_year"></div>
 							</div>
 							<h3>
-								<label for="yearList">Select Average GPA Range </label>
+								<label for="yearList">Select by Average GPA </label>
 							</h3>
 							<div name="GPA_select" class="select" >
 								<input type="text" id="chosenGPA" readonly style="width:150px;">
 								<div id="slider-range_GPA"></div>
 							</div>
 							<h3>
-								<label for="yearList">Select Class size</label>
+								<label for="yearList">Select by Class size</label>
 							</h3>
 							<div name="classSize_select" class="select" >
 								<input type="text" id="chosenClassSize" readonly style="width:150px;">
 								<div id="slider-range_size"></div>
 							</div>
-<<<<<<< HEAD
+
 						</div> 
 			<input type="button" id="filterNowButton" value="Filter Now" onClick="filterParametersAjax();" />
 			
@@ -1363,11 +1355,10 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
 			
 			
 			</td><td>
-=======
-						</div>
-					</tr>
-				</table>
-			</div>
+
+						
+				
+			
 			<div style="margin-left: 280px;" id="legendHolder">
 				<fieldset>
 				<legend>Legend</legend>
@@ -1377,13 +1368,12 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
     			</fieldset>
 
     		</div>
-			
->>>>>>> e8ba90956e4eb08a19f59a7d959ac1b29b4d98ff
+
     		<div style="margin-left: 280px;" id="tableHolder">
     			<table style="width:5000" id="scatterplotTable"> 
     			</table>   			
     		</div>
-			</tr></table>
+			</td></tr></table>
 		</div>	
 
 		
