@@ -185,7 +185,7 @@ public class JsonProcessor
 				case "classStrength":
 					for (int j = 0; j < filterValues.size(); j++)
 					{
-						filterIntParameterValues.add((Integer) filterValues.get(String.valueOf(j)));
+						filterIntParameterValues.add(((Long) filterValues.get(String.valueOf(j))).intValue());
 					}
 					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(classStrengthMap, filterIntParameterValues);
 					break;
@@ -193,7 +193,7 @@ public class JsonProcessor
 				case "averageGPA":
 					for (int j = 0; j < filterValues.size(); j++)
 					{
-						filterFloatParameterValues.add(((Double) filterValues.get(String.valueOf(j))).floatValue());
+						filterFloatParameterValues.add(Float.parseFloat((String) filterValues.get(String.valueOf(j))));
 					}
 					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfFloat(averageGPAMap, filterFloatParameterValues);
 					break;

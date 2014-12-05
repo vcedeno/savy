@@ -134,7 +134,11 @@ dl
 	
     //This function is called on load
 	$(document).ready(function(){
+	
+	
+
 	$('.accordion').accordion({ heightStyle: "content", collapsible: true, active: false   });
+	$('input:radio[name="Term"][value="Fall&Spring"]').prop('checked', true);
 	var x=document.getElementsByClassName("radio");
 	for(i=0;i<x.length;i++)
 	  x[i].checked=false;
@@ -488,7 +492,9 @@ dl
 	   });		
 	   //************************************* ajax complete **************//
 	
-		$( "#slider-range_year" ).slider({
+	//$('input[name=Term]').val()
+	
+	$( "#slider-range_year" ).slider({
 	  range: true,
       min:2003,
       max:2014,
@@ -502,15 +508,15 @@ dl
 	
 	$( "#slider-range_GPA" ).slider({
 	  range: true,
-      min:2.5,
-      max:4.1,
-	  step:0.1,
-      values:[2.5,4.1],
+      min:2.50,
+      max:4.01,
+	  step:0.05,
+      values:[2.50,4.01],
       slide: function( event, ui ) {
         $( "#chosenGPA" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
     });
-    $( "#chosenGPA" ).val(  $( "#slider-range_GPA" ).slider( "values", 0 )  +" to "+  $( "#slider-range_GPA" ).slider( "values", 1 ) );
+    $( "#chosenGPA" ).val(  $( "#slider-range_GPA" ).slider( "values", 0 ).toFixed(2)  +" to "+  $( "#slider-range_GPA" ).slider( "values", 1 ).toFixed(2)  );
 	
 	$( "#slider-range_size" ).slider({
 	  range: true,
@@ -963,13 +969,13 @@ function populateAllFilterParameters()
 	if(childItem.is(":checked") && childItem.val()!="All")
 		selectedProfessors[professorIndex++]=childItem.val();
     }
-<<<<<<< HEAD
+
 
 	window.alert("selected radio button is "+ $('input[name=Term]:checked').val());
-=======
+
 
 	//console.log("selected radio button is "+ $('input[name=Term]:checked').val());
->>>>>>> origin/master
+
 	//console.log("prof sample"+selectedProfessors);
 	
 	if( $('input[name=Term]:checked').val() == 'Fall&Spring' )
@@ -984,9 +990,9 @@ function populateAllFilterParameters()
 	year[0]= $("#slider-range_year").slider("values",0);
 	year[1]= $("#slider-range_year").slider("values",1);
 	
-	averageGPA[0]= $("#slider-range_GPA").slider("values",0);
-	averageGPA[1]= $("#slider-range_GPA").slider("values",1);
-	
+	averageGPA[0]= $("#slider-range_GPA").slider("values",0).toFixed(2) ;
+	averageGPA[1]= $("#slider-range_GPA").slider("values",1).toFixed(2);
+	console.log(averageGPA[0]+" "+ averageGPA[1]);
 	classStrength[0]= $("#slider-range_size").slider("values",0);
 	classStrength[1]= $("#slider-range_size").slider("values",1);
 	
@@ -1013,11 +1019,7 @@ function populateAllFilterParameters()
 	json.push(json5);
 	json.push(json6);
 	json.push(json7);
-<<<<<<< HEAD
-	
-	
-=======
->>>>>>> origin/master
+
 
     //console.log(json);
 
@@ -1104,7 +1106,7 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 		   var svg1 = tr1
 		   	.append("td")
 		   	.style("float", "left")
-			.style("margin-left",160)
+			.style("margin","0px 0px 0px 160px")
 	        .append("svg")
 	        .attr("width", requiredWidth + 250)
 	        .attr("height", 50);
@@ -1274,9 +1276,9 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 							</h3>
 							
 							<div name="Terms_select" class="Radio">
-								<input type="radio" name="Term" value="Fall">Fall<br>
-								<input type="radio" name="Term" value="Spring">Spring<br>
-								<input type="radio" name="Term" value="Fall&Spring" checked="true">Both<br>
+								<input type="radio" id="Fall" name="Term" value="Fall">Fall<br>
+								<input type="radio" id="Spring" name="Term" value="Spring">Spring<br>
+								<input type="radio" id="Both" name="Term" value="Fall&Spring">Both<br>
 							</div>
 							
 				
