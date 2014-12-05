@@ -46,6 +46,12 @@ li{
     font-size: 11px;
 }
 
+dl
+      dt, dd
+      {
+         display: inline;
+      }      
+
 .x-axis path,
 .x-axis line {
     fill: none;
@@ -71,6 +77,14 @@ li{
 }
 
 .subsvg text {
+
+	font-family: sans-serif;
+    font-size: 10px;
+    stroke: black;
+    float: left;
+}
+
+.legendSVG text {
 
 	font-family: sans-serif;
     font-size: 10px;
@@ -174,6 +188,36 @@ li{
 			
 			$('#professorList').html(str);
 			str="";
+
+
+			//Legend
+			var legendTr = d3.select("#legendTable")
+			   					.append("tr")
+			   	;
+
+			for(i=0; i< areaOption.length; i++)
+			{
+				var area = areaOption[i].Area;
+				var requiredWidth = area.length *9;
+
+				//console.log(area + " " + area.length);
+
+				var legendtd = legendTr.append("td").style("float", "left").attr("width", requiredWidth + 15);
+				var legendSVG = legendtd.append("svg").attr("width", requiredWidth).attr("height", 20);
+
+				legendSVG.append("rect")
+				.attr("class", "legendSVG")
+				.attr("width", 10)
+				.attr("height", 10)
+				.attr("fill", getColourBasedOnArea(area));
+
+				legendSVG.append("text")
+				.attr("dx", 12)
+				.attr("dy", 12)
+				.text(area);
+
+			}
+
       
 	        var courseWiseProfessors = [];
 
@@ -812,7 +856,7 @@ function populateAllFilterParameters()
 
     var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
 
-    console.log(json1);
+    //console.log(json1);
 
    
 
@@ -1076,6 +1120,7 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
  </script>
 
 		<div style="width: 100%;">
+
 			<div style="width: 250px; float: left;" class="filtersLists">
 				<table style="height:100%;">
 					<tr>
@@ -1117,6 +1162,16 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
 					</tr>
 				</table>
 			</div>
+			<div style="margin-left: 280px;" id="legendHolder">
+				<fieldset>
+				<legend>Legend</legend>
+    			<table style="width:5000" id="legendTable">
+
+    			</table>
+    			</fieldset>
+
+    		</div>
+			
     		<div style="margin-left: 280px;" id="tableHolder">
     			<table style="width:5000" id="scatterplotTable"> 
     			</table>   			
