@@ -532,19 +532,62 @@ function hover(d, obj_ref)
 	var subSVG = obj_ref
 	.append("svg")
 	.attr("width", 200)
-	.attr("height", (d.ClassStrength*3) + 20)
+	.attr("height", (d.ClassStrength*3) + 40)
 	.attr("x", xPosition)
 	.attr("y", yPosition)
 	.attr("class", "subsvg")
 	;
+
+	var xpositionForRect = xPosition + 3;
+	var ypositionForRect = yPosition + 3;
+
+	var totalOfAll = 0;
+	console.log(typeof(totalOfAll));
+
+	if(d.NumberOfFs>0)
+	{
+		totalOfAll += d.NumberOfFs;
+	}
+
+	if(d.NumberOfEs>0)
+	{
+		totalOfAll += d.NumberOfEs;
+	}
+
+	if(d.NumberOfDs>0)
+	{
+		totalOfAll += d.NumberOfDs;
+	}
+
+	if(d.NumberOfCs>0)
+	{
+		totalOfAll += d.NumberOfCs;
+	}
+
+	if(d.NumberOfBs>0)
+	{
+		totalOfAll += d.NumberOfBs;
+	}
+
+	if(d.NumberOfAs>0)
+	{
+		totalOfAll += d.NumberOfAs;
+	}
+
+	console.log(totalOfAll);
+	console.log(typeof(totalOfAll));
 
 	if(d.NumberOfFs>0)
 	{
 		subSVG
 		.append("rect")									
 		.attr("width", 10)
-		.attr("height", d.NumberOfFs * 3)
+		.attr("height", (totalOfAll * 3))
 		.attr("fill", "pink");
+
+		ypositionForRect+= (d.NumberOfFs *3) ;
+
+		totalOfAll -=d.NumberOfFs;
 	}
 
 	if(d.NumberOfEs>0)
@@ -552,8 +595,11 @@ function hover(d, obj_ref)
 		subSVG
 		.append("rect")									
 		.attr("width", 10)
-		.attr("height", d.NumberOfEs * 3)
+		.attr("height", totalOfAll * 3)
 		.attr("fill", "green");
+
+		ypositionForRect+= (d.NumberOfEs *3) ;
+		totalOfAll -=d.NumberOfEs;
 	}
 
 	if(d.NumberOfDs>0)
@@ -561,8 +607,11 @@ function hover(d, obj_ref)
 		subSVG
 		.append("rect")									
 		.attr("width", 10)
-		.attr("height", d.NumberOfDs * 3)
+		.attr("height", totalOfAll * 3)
 		.attr("fill", "red");
+
+		ypositionForRect+= (d.NumberOfDs *3) ;
+		totalOfAll -=d.NumberOfDs;
 	}
 
 	if(d.NumberOfCs>0)
@@ -570,8 +619,11 @@ function hover(d, obj_ref)
 		subSVG
 		.append("rect")									
 		.attr("width", 10)
-		.attr("height", d.NumberOfCs * 3)
+		.attr("height", totalOfAll * 3)
 		.attr("fill", "purple");
+
+		ypositionForRect+= (d.NumberOfCs *3) ;
+		totalOfAll -=d.NumberOfCs;
 	}
 
 	if(d.NumberOfBs>0)
@@ -579,8 +631,12 @@ function hover(d, obj_ref)
 		subSVG
 		.append("rect")									
 		.attr("width", 10)
-		.attr("height", d.NumberOfBs * 3)
+		.attr("height", totalOfAll * 3)
 		.attr("fill", "orange");
+
+
+		ypositionForRect+= (d.NumberOfBs *3) ;
+		totalOfAll -=d.NumberOfBs;
 	}
 
 	if(d.NumberOfAs>0)
@@ -588,8 +644,9 @@ function hover(d, obj_ref)
 		subSVG
 		.append("rect")									
 		.attr("width", 10)
-		.attr("height", d.NumberOfAs * 3)
+		.attr("height", totalOfAll * 3)
 		.attr("fill", "blue");
+
 	}
 
 	var dy_val = 8;
@@ -602,13 +659,14 @@ function hover(d, obj_ref)
 	;
 
 	dy_val+=13;
+	dx_val = 10;
 
 	if(d.NumberOfAs >0)
 	{
 
 		var text1 = subSVG
 		.append("text")
-		.attr("dx", 8)
+		.attr("dx", dx_val)
 		.attr("dy", dy_val)
 		.text("#A's: " + d.NumberOfAs)
 		;
@@ -621,7 +679,7 @@ function hover(d, obj_ref)
 	{
 		var text2 = subSVG
 		.append("text")
-		.attr("dx", 8)
+		.attr("dx", dx_val)
 		.attr("dy", dy_val)
 		.text("#B's: " + d.NumberOfBs)
 		;
@@ -633,7 +691,7 @@ function hover(d, obj_ref)
 	{
 		var text3 = subSVG
 		.append("text")
-		.attr("dx", 8)
+		.attr("dx", dx_val)
 		.attr("dy", dy_val)
 		.text("#C's: " + d.NumberOfCs)
 		;
@@ -645,7 +703,7 @@ function hover(d, obj_ref)
 	{
 		var text4 = subSVG
 		.append("text")
-		.attr("dx", 8)
+		.attr("dx", dx_val)
 		.attr("dy", dy_val)
 		.text("#D's: " + d.NumberOfDs)
 		;
@@ -657,7 +715,7 @@ function hover(d, obj_ref)
 	{
 		var text5 = subSVG
 		.append("text")
-		.attr("dx", 8)
+		.attr("dx", dx_val)
 		.attr("dy", dy_val)
 		.text("#E's: " + d.NumberOfEs)
 		;
@@ -669,7 +727,7 @@ function hover(d, obj_ref)
 
 		var text6 = subSVG
 		.append("text")
-		.attr("dx", 8)
+		.attr("dx", dx_val)
 		.attr("dy", dy_val)
 		.text("#F's: " + d.NumberOfFs)
 	;

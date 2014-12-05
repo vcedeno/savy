@@ -9,11 +9,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.46,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -25,11 +25,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.78,
     "ClassStrength":16,
-    "NumberOfA's":13,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -41,11 +41,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.89,
     "ClassStrength":54,
-    "NumberOfA's":54,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":54,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -57,11 +57,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.67,
     "ClassStrength":15,
-    "NumberOfA's":11,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -73,11 +73,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.56,
     "ClassStrength":30,
-    "NumberOfA's":17,
-    "NumberOfB's":12,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":12,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5724",
@@ -89,11 +89,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.10,
     "ClassStrength":26,
-    "NumberOfA's":7,
-    "NumberOfB's":15,
-    "NumberOfC's":4,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":15,
+    "NumberOfCs":4,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -105,11 +105,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.47,
     "ClassStrength":17,
-    "NumberOfA's":9,
-    "NumberOfB's":7,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":7,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -121,11 +121,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.87,
     "ClassStrength":12,
-    "NumberOfA's":11,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -137,11 +137,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.98,
     "ClassStrength":15,
-    "NumberOfA's":15,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -153,11 +153,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.29,
     "ClassStrength":15,
-    "NumberOfA's":5,
-    "NumberOfB's":10,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":10,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5804",
@@ -169,11 +169,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.37,
     "ClassStrength":18,
-    "NumberOfA's":7,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -185,11 +185,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.11,
     "ClassStrength":18,
-    "NumberOfA's":3,
-    "NumberOfB's":14,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":3,
+    "NumberOfBs":14,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5104",
@@ -201,11 +201,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.10,
     "ClassStrength":10,
-    "NumberOfA's":4,
-    "NumberOfB's":3,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":3,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5124",
@@ -217,11 +217,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.52,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -233,11 +233,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.06,
     "ClassStrength":10,
-    "NumberOfA's":2,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":2,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5804",
@@ -249,11 +249,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.00,
     "ClassStrength":11,
-    "NumberOfA's":4,
-    "NumberOfB's":5,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":4,
+    "NumberOfBs":5,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5804",
@@ -265,11 +265,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.79,
     "ClassStrength":17,
-    "NumberOfA's":14,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -281,11 +281,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.85,
     "ClassStrength":22,
-    "NumberOfA's":20,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6104",
@@ -297,11 +297,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.65,
     "ClassStrength":14,
-    "NumberOfA's":10,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -313,11 +313,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.41,
     "ClassStrength":17,
-    "NumberOfA's":7,
-    "NumberOfB's":10,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":10,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -329,11 +329,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.36,
     "ClassStrength":20,
-    "NumberOfA's":9,
-    "NumberOfB's":10,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":10,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -345,11 +345,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.54,
     "ClassStrength":63,
-    "NumberOfA's":32,
-    "NumberOfB's":31,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":32,
+    "NumberOfBs":31,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5734",
@@ -361,11 +361,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.73,
     "ClassStrength":14,
-    "NumberOfA's":12,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6104",
@@ -377,11 +377,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.51,
     "ClassStrength":23,
-    "NumberOfA's":12,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -393,11 +393,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.77,
     "ClassStrength":17,
-    "NumberOfA's":14,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -409,11 +409,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.80,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -425,11 +425,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.53,
     "ClassStrength":43,
-    "NumberOfA's":27,
-    "NumberOfB's":15,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":27,
+    "NumberOfBs":15,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -441,11 +441,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.58,
     "ClassStrength":23,
-    "NumberOfA's":14,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -457,11 +457,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.59,
     "ClassStrength":24,
-    "NumberOfA's":15,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -473,11 +473,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.64,
     "ClassStrength":12,
-    "NumberOfA's":8,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -489,11 +489,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.65,
     "ClassStrength":22,
-    "NumberOfA's":17,
-    "NumberOfB's":4,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":4,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -505,11 +505,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.35,
     "ClassStrength":11,
-    "NumberOfA's":5,
-    "NumberOfB's":4,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":4,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -521,11 +521,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.39,
     "ClassStrength":24,
-    "NumberOfA's":11,
-    "NumberOfB's":12,
-    "NumberOfC's":0,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":12,
+    "NumberOfCs":0,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -537,11 +537,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.67,
     "ClassStrength":14,
-    "NumberOfA's":10,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -553,11 +553,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.76,
     "ClassStrength":11,
-    "NumberOfA's":9,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -569,11 +569,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.53,
     "ClassStrength":11,
-    "NumberOfA's":7,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -585,11 +585,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.36,
     "ClassStrength":16,
-    "NumberOfA's":7,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -601,11 +601,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.62,
     "ClassStrength":59,
-    "NumberOfA's":37,
-    "NumberOfB's":22,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":37,
+    "NumberOfBs":22,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -617,11 +617,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.80,
     "ClassStrength":35,
-    "NumberOfA's":29,
-    "NumberOfB's":5,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":29,
+    "NumberOfBs":5,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -633,11 +633,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.85,
     "ClassStrength":20,
-    "NumberOfA's":19,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -649,11 +649,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.70,
     "ClassStrength":14,
-    "NumberOfA's":11,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -665,11 +665,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.70,
     "ClassStrength":14,
-    "NumberOfA's":11,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5104",
@@ -681,11 +681,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.52,
     "ClassStrength":13,
-    "NumberOfA's":7,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5485",
@@ -697,11 +697,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.57,
     "ClassStrength":12,
-    "NumberOfA's":8,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -713,11 +713,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.65,
     "ClassStrength":24,
-    "NumberOfA's":17,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -729,11 +729,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":2.91,
     "ClassStrength":45,
-    "NumberOfA's":18,
-    "NumberOfB's":16,
-    "NumberOfC's":5,
-    "NumberOfD's":2,
-    "NumberOfF's":4
+    "NumberOfAs":18,
+    "NumberOfBs":16,
+    "NumberOfCs":5,
+    "NumberOfDs":2,
+    "NumberOfFs":4
   },
   {
     "Course":"CS5704",
@@ -745,11 +745,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.69,
     "ClassStrength":24,
-    "NumberOfA's":17,
-    "NumberOfB's":6,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":6,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -761,11 +761,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.30,
     "ClassStrength":19,
-    "NumberOfA's":10,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -777,11 +777,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.55,
     "ClassStrength":14,
-    "NumberOfA's":9,
-    "NumberOfB's":4,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":4,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -793,11 +793,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.78,
     "ClassStrength":10,
-    "NumberOfA's":9,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5466",
@@ -809,11 +809,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.81,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6104",
@@ -825,11 +825,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.37,
     "ClassStrength":17,
-    "NumberOfA's":6,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -841,11 +841,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.26,
     "ClassStrength":44,
-    "NumberOfA's":22,
-    "NumberOfB's":17,
-    "NumberOfC's":3,
-    "NumberOfD's":1,
-    "NumberOfF's":1
+    "NumberOfAs":22,
+    "NumberOfBs":17,
+    "NumberOfCs":3,
+    "NumberOfDs":1,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5734",
@@ -857,11 +857,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.89,
     "ClassStrength":25,
-    "NumberOfA's":25,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":25,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -873,11 +873,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.51,
     "ClassStrength":23,
-    "NumberOfA's":13,
-    "NumberOfB's":10,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":10,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -889,11 +889,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":2.92,
     "ClassStrength":48,
-    "NumberOfA's":15,
-    "NumberOfB's":18,
-    "NumberOfC's":14,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":18,
+    "NumberOfCs":14,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -905,11 +905,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.69,
     "ClassStrength":20,
-    "NumberOfA's":14,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -921,11 +921,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.39,
     "ClassStrength":17,
-    "NumberOfA's":7,
-    "NumberOfB's":9,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":9,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -937,11 +937,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.78,
     "ClassStrength":24,
-    "NumberOfA's":20,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -953,11 +953,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.49,
     "ClassStrength":23,
-    "NumberOfA's":15,
-    "NumberOfB's":7,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":7,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -969,11 +969,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":4.00,
     "ClassStrength":14,
-    "NumberOfA's":14,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -985,11 +985,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.52,
     "ClassStrength":26,
-    "NumberOfA's":14,
-    "NumberOfB's":11,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":11,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1001,11 +1001,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.30,
     "ClassStrength":45,
-    "NumberOfA's":22,
-    "NumberOfB's":18,
-    "NumberOfC's":5,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":22,
+    "NumberOfBs":18,
+    "NumberOfCs":5,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -1017,11 +1017,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.98,
     "ClassStrength":13,
-    "NumberOfA's":13,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -1033,11 +1033,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.36,
     "ClassStrength":23,
-    "NumberOfA's":10,
-    "NumberOfB's":13,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":13,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -1049,11 +1049,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.73,
     "ClassStrength":10,
-    "NumberOfA's":7,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -1065,11 +1065,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.31,
     "ClassStrength":14,
-    "NumberOfA's":8,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":8,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5314",
@@ -1081,11 +1081,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.15,
     "ClassStrength":13,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":2,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":2,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -1097,11 +1097,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.80,
     "ClassStrength":35,
-    "NumberOfA's":29,
-    "NumberOfB's":5,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":29,
+    "NumberOfBs":5,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -1113,11 +1113,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.85,
     "ClassStrength":20,
-    "NumberOfA's":19,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1129,11 +1129,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.49,
     "ClassStrength":23,
-    "NumberOfA's":11,
-    "NumberOfB's":12,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":12,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -1145,11 +1145,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.49,
     "ClassStrength":22,
-    "NumberOfA's":11,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1161,11 +1161,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.15,
     "ClassStrength":45,
-    "NumberOfA's":19,
-    "NumberOfB's":20,
-    "NumberOfC's":4,
-    "NumberOfD's":0,
-    "NumberOfF's":2
+    "NumberOfAs":19,
+    "NumberOfBs":20,
+    "NumberOfCs":4,
+    "NumberOfDs":0,
+    "NumberOfFs":2
   },
   {
     "Course":"CS5485",
@@ -1177,11 +1177,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.57,
     "ClassStrength":12,
-    "NumberOfA's":8,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -1193,11 +1193,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.65,
     "ClassStrength":24,
-    "NumberOfA's":17,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -1209,11 +1209,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.72,
     "ClassStrength":44,
-    "NumberOfA's":34,
-    "NumberOfB's":9,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":34,
+    "NumberOfBs":9,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1225,11 +1225,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.69,
     "ClassStrength":24,
-    "NumberOfA's":17,
-    "NumberOfB's":6,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":6,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -1241,11 +1241,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.80,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1257,11 +1257,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.57,
     "ClassStrength":13,
-    "NumberOfA's":8,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -1273,11 +1273,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.78,
     "ClassStrength":10,
-    "NumberOfA's":9,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6804",
@@ -1289,11 +1289,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.77,
     "ClassStrength":21,
-    "NumberOfA's":17,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6104",
@@ -1305,11 +1305,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.37,
     "ClassStrength":17,
-    "NumberOfA's":6,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -1321,11 +1321,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.14,
     "ClassStrength":13,
-    "NumberOfA's":6,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":6,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS6604",
@@ -1337,11 +1337,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.82,
     "ClassStrength":11,
-    "NumberOfA's":9,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5734",
@@ -1353,11 +1353,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.64,
     "ClassStrength":18,
-    "NumberOfA's":14,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1369,11 +1369,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.11,
     "ClassStrength":47,
-    "NumberOfA's":17,
-    "NumberOfB's":22,
-    "NumberOfC's":6,
-    "NumberOfD's":0,
-    "NumberOfF's":2
+    "NumberOfAs":17,
+    "NumberOfBs":22,
+    "NumberOfCs":6,
+    "NumberOfDs":0,
+    "NumberOfFs":2
   },
   {
     "Course":"CS5704",
@@ -1385,11 +1385,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.70,
     "ClassStrength":46,
-    "NumberOfA's":34,
-    "NumberOfB's":12,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":34,
+    "NumberOfBs":12,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1401,11 +1401,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.62,
     "ClassStrength":22,
-    "NumberOfA's":14,
-    "NumberOfB's":8,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":8,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5214",
@@ -1417,11 +1417,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.37,
     "ClassStrength":15,
-    "NumberOfA's":8,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":8,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5565",
@@ -1433,11 +1433,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.34,
     "ClassStrength":11,
-    "NumberOfA's":7,
-    "NumberOfB's":2,
-    "NumberOfC's":1,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":2,
+    "NumberOfCs":1,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -1449,11 +1449,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.42,
     "ClassStrength":16,
-    "NumberOfA's":7,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -1465,11 +1465,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.58,
     "ClassStrength":15,
-    "NumberOfA's":9,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5560",
@@ -1481,11 +1481,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.14,
     "ClassStrength":17,
-    "NumberOfA's":5,
-    "NumberOfB's":9,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":9,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1497,11 +1497,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.25,
     "ClassStrength":20,
-    "NumberOfA's":9,
-    "NumberOfB's":8,
-    "NumberOfC's":2,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":8,
+    "NumberOfCs":2,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS4704",
@@ -1513,11 +1513,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.00,
     "ClassStrength":22,
-    "NumberOfA's":10,
-    "NumberOfB's":6,
-    "NumberOfC's":3,
-    "NumberOfD's":3,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":6,
+    "NumberOfCs":3,
+    "NumberOfDs":3,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1529,11 +1529,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.11,
     "ClassStrength":17,
-    "NumberOfA's":6,
-    "NumberOfB's":8,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":8,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1545,11 +1545,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":2.09,
     "ClassStrength":14,
-    "NumberOfA's":1,
-    "NumberOfB's":7,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":4
+    "NumberOfAs":1,
+    "NumberOfBs":7,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":4
   },
   {
     "Course":"CS6604",
@@ -1561,11 +1561,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":4.00,
     "ClassStrength":11,
-    "NumberOfA's":11,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5510",
@@ -1577,11 +1577,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.74,
     "ClassStrength":14,
-    "NumberOfA's":10,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5525",
@@ -1593,11 +1593,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":4.00,
     "ClassStrength":16,
-    "NumberOfA's":16,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -1609,11 +1609,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.88,
     "ClassStrength":11,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1625,11 +1625,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.48,
     "ClassStrength":25,
-    "NumberOfA's":12,
-    "NumberOfB's":13,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":13,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -1641,11 +1641,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.55,
     "ClassStrength":19,
-    "NumberOfA's":11,
-    "NumberOfB's":8,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":8,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1657,11 +1657,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.61,
     "ClassStrength":15,
-    "NumberOfA's":11,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -1673,11 +1673,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.57,
     "ClassStrength":14,
-    "NumberOfA's":8,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1689,11 +1689,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.59,
     "ClassStrength":13,
-    "NumberOfA's":8,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -1705,11 +1705,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.56,
     "ClassStrength":19,
-    "NumberOfA's":11,
-    "NumberOfB's":8,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":8,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -1721,11 +1721,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.90,
     "ClassStrength":12,
-    "NumberOfA's":12,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5804",
@@ -1737,11 +1737,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.54,
     "ClassStrength":10,
-    "NumberOfA's":7,
-    "NumberOfB's":2,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":2,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5504",
@@ -1753,11 +1753,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.37,
     "ClassStrength":10,
-    "NumberOfA's":4,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1769,11 +1769,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.36,
     "ClassStrength":16,
-    "NumberOfA's":4,
-    "NumberOfB's":12,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":12,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -1785,11 +1785,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.71,
     "ClassStrength":17,
-    "NumberOfA's":12,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -1801,11 +1801,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.23,
     "ClassStrength":10,
-    "NumberOfA's":3,
-    "NumberOfB's":6,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":3,
+    "NumberOfBs":6,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -1817,11 +1817,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.86,
     "ClassStrength":16,
-    "NumberOfA's":15,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -1833,11 +1833,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":2.96,
     "ClassStrength":44,
-    "NumberOfA's":10,
-    "NumberOfB's":23,
-    "NumberOfC's":9,
-    "NumberOfD's":0,
-    "NumberOfF's":2
+    "NumberOfAs":10,
+    "NumberOfBs":23,
+    "NumberOfCs":9,
+    "NumberOfDs":0,
+    "NumberOfFs":2
   },
   {
     "Course":"CS5704",
@@ -1849,11 +1849,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.33,
     "ClassStrength":42,
-    "NumberOfA's":20,
-    "NumberOfB's":21,
-    "NumberOfC's":0,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":21,
+    "NumberOfCs":0,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1865,11 +1865,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.47,
     "ClassStrength":63,
-    "NumberOfA's":35,
-    "NumberOfB's":27,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":35,
+    "NumberOfBs":27,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -1881,11 +1881,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.33,
     "ClassStrength":42,
-    "NumberOfA's":20,
-    "NumberOfB's":21,
-    "NumberOfC's":0,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":21,
+    "NumberOfCs":0,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1897,11 +1897,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.62,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1913,11 +1913,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.62,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -1929,11 +1929,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":2.98,
     "ClassStrength":11,
-    "NumberOfA's":3,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":3,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6304",
@@ -1945,11 +1945,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.81,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5234",
@@ -1961,11 +1961,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.87,
     "ClassStrength":23,
-    "NumberOfA's":21,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -1977,11 +1977,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.64,
     "ClassStrength":11,
-    "NumberOfA's":7,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5734",
@@ -1993,11 +1993,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.81,
     "ClassStrength":16,
-    "NumberOfA's":16,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -2009,11 +2009,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":4.00,
     "ClassStrength":35,
-    "NumberOfA's":35,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":35,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -2025,11 +2025,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.92,
     "ClassStrength":22,
-    "NumberOfA's":20,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2041,11 +2041,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.39,
     "ClassStrength":18,
-    "NumberOfA's":9,
-    "NumberOfB's":7,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":7,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5045",
@@ -2057,11 +2057,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.55,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":1,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":1,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5804",
@@ -2073,11 +2073,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.49,
     "ClassStrength":16,
-    "NumberOfA's":9,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5214",
@@ -2089,11 +2089,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.68,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -2105,11 +2105,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.66,
     "ClassStrength":18,
-    "NumberOfA's":13,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -2121,11 +2121,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.58,
     "ClassStrength":15,
-    "NumberOfA's":9,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2137,11 +2137,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.40,
     "ClassStrength":27,
-    "NumberOfA's":13,
-    "NumberOfB's":14,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":14,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -2153,11 +2153,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.52,
     "ClassStrength":20,
-    "NumberOfA's":11,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2169,11 +2169,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.61,
     "ClassStrength":24,
-    "NumberOfA's":18,
-    "NumberOfB's":3,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":3,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2185,11 +2185,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.31,
     "ClassStrength":14,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5984",
@@ -2201,11 +2201,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.53,
     "ClassStrength":12,
-    "NumberOfA's":6,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -2217,11 +2217,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.32,
     "ClassStrength":13,
-    "NumberOfA's":8,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":8,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5244",
@@ -2233,11 +2233,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.61,
     "ClassStrength":24,
-    "NumberOfA's":18,
-    "NumberOfB's":3,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":3,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5560",
@@ -2249,11 +2249,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":2.81,
     "ClassStrength":11,
-    "NumberOfA's":2,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":2,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS6204",
@@ -2265,11 +2265,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.70,
     "ClassStrength":11,
-    "NumberOfA's":8,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5560",
@@ -2281,11 +2281,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.10,
     "ClassStrength":14,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":2,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":2,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -2297,11 +2297,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.42,
     "ClassStrength":16,
-    "NumberOfA's":7,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2313,11 +2313,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.40,
     "ClassStrength":13,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5764",
@@ -2329,11 +2329,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.73,
     "ClassStrength":26,
-    "NumberOfA's":19,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2345,11 +2345,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.52,
     "ClassStrength":14,
-    "NumberOfA's":8,
-    "NumberOfB's":5,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":5,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5724",
@@ -2361,11 +2361,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.63,
     "ClassStrength":18,
-    "NumberOfA's":12,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5560",
@@ -2377,11 +2377,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.48,
     "ClassStrength":12,
-    "NumberOfA's":6,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2393,11 +2393,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.29,
     "ClassStrength":20,
-    "NumberOfA's":10,
-    "NumberOfB's":8,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":10,
+    "NumberOfBs":8,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5244",
@@ -2409,11 +2409,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.25,
     "ClassStrength":10,
-    "NumberOfA's":7,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":7,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5204",
@@ -2425,11 +2425,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.34,
     "ClassStrength":13,
-    "NumberOfA's":6,
-    "NumberOfB's":6,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":6,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -2441,11 +2441,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.07,
     "ClassStrength":19,
-    "NumberOfA's":6,
-    "NumberOfB's":11,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":6,
+    "NumberOfBs":11,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5244",
@@ -2457,11 +2457,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":2.98,
     "ClassStrength":14,
-    "NumberOfA's":5,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":5,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5244",
@@ -2473,11 +2473,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.41,
     "ClassStrength":12,
-    "NumberOfA's":5,
-    "NumberOfB's":6,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":6,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -2489,11 +2489,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.83,
     "ClassStrength":21,
-    "NumberOfA's":19,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -2505,11 +2505,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.34,
     "ClassStrength":59,
-    "NumberOfA's":21,
-    "NumberOfB's":38,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":38,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -2521,11 +2521,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.44,
     "ClassStrength":43,
-    "NumberOfA's":18,
-    "NumberOfB's":24,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":24,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2537,11 +2537,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.61,
     "ClassStrength":16,
-    "NumberOfA's":11,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -2553,11 +2553,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.91,
     "ClassStrength":13,
-    "NumberOfA's":13,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6504",
@@ -2569,11 +2569,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.46,
     "ClassStrength":11,
-    "NumberOfA's":7,
-    "NumberOfB's":3,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":3,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -2585,11 +2585,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.64,
     "ClassStrength":18,
-    "NumberOfA's":14,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -2601,11 +2601,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.40,
     "ClassStrength":42,
-    "NumberOfA's":21,
-    "NumberOfB's":19,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":19,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -2617,11 +2617,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.86,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -2633,11 +2633,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.79,
     "ClassStrength":23,
-    "NumberOfA's":20,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2649,11 +2649,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.18,
     "ClassStrength":13,
-    "NumberOfA's":6,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":6,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5244",
@@ -2665,11 +2665,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":2.78,
     "ClassStrength":12,
-    "NumberOfA's":6,
-    "NumberOfB's":2,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":2
+    "NumberOfAs":6,
+    "NumberOfBs":2,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":2
   },
   {
     "Course":"CS5214",
@@ -2681,11 +2681,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.47,
     "ClassStrength":16,
-    "NumberOfA's":9,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -2697,11 +2697,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.67,
     "ClassStrength":12,
-    "NumberOfA's":9,
-    "NumberOfB's":2,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":2,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -2713,11 +2713,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.47,
     "ClassStrength":39,
-    "NumberOfA's":22,
-    "NumberOfB's":15,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":22,
+    "NumberOfBs":15,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2729,11 +2729,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.27,
     "ClassStrength":23,
-    "NumberOfA's":11,
-    "NumberOfB's":9,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":9,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -2745,11 +2745,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.75,
     "ClassStrength":13,
-    "NumberOfA's":12,
-    "NumberOfB's":0,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":0,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2761,11 +2761,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.42,
     "ClassStrength":19,
-    "NumberOfA's":13,
-    "NumberOfB's":4,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":4,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -2777,11 +2777,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.91,
     "ClassStrength":15,
-    "NumberOfA's":14,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -2793,11 +2793,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.96,
     "ClassStrength":16,
-    "NumberOfA's":16,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5224",
@@ -2809,11 +2809,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.98,
     "ClassStrength":59,
-    "NumberOfA's":59,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":59,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2825,11 +2825,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.07,
     "ClassStrength":12,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5114",
@@ -2841,11 +2841,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.21,
     "ClassStrength":25,
-    "NumberOfA's":8,
-    "NumberOfB's":13,
-    "NumberOfC's":4,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":13,
+    "NumberOfCs":4,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5244",
@@ -2857,11 +2857,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.04,
     "ClassStrength":12,
-    "NumberOfA's":4,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6824",
@@ -2873,11 +2873,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.71,
     "ClassStrength":10,
-    "NumberOfA's":9,
-    "NumberOfB's":0,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":0,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -2889,11 +2889,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.77,
     "ClassStrength":11,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -2905,11 +2905,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.75,
     "ClassStrength":13,
-    "NumberOfA's":12,
-    "NumberOfB's":0,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":0,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5234",
@@ -2921,11 +2921,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.80,
     "ClassStrength":22,
-    "NumberOfA's":19,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -2937,11 +2937,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.69,
     "ClassStrength":10,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5045",
@@ -2953,11 +2953,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.69,
     "ClassStrength":13,
-    "NumberOfA's":9,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5634",
@@ -2969,11 +2969,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.73,
     "ClassStrength":13,
-    "NumberOfA's":11,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -2985,11 +2985,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.95,
     "ClassStrength":19,
-    "NumberOfA's":19,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -3001,11 +3001,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.49,
     "ClassStrength":13,
-    "NumberOfA's":7,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5774",
@@ -3017,11 +3017,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":4.00,
     "ClassStrength":19,
-    "NumberOfA's":19,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5774",
@@ -3033,11 +3033,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.86,
     "ClassStrength":20,
-    "NumberOfA's":18,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5485",
@@ -3049,11 +3049,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.70,
     "ClassStrength":12,
-    "NumberOfA's":9,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -3065,11 +3065,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.56,
     "ClassStrength":12,
-    "NumberOfA's":7,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -3081,11 +3081,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.25,
     "ClassStrength":13,
-    "NumberOfA's":5,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5774",
@@ -3097,11 +3097,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.78,
     "ClassStrength":20,
-    "NumberOfA's":15,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5774",
@@ -3113,11 +3113,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.81,
     "ClassStrength":17,
-    "NumberOfA's":15,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -3129,11 +3129,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.11,
     "ClassStrength":23,
-    "NumberOfA's":7,
-    "NumberOfB's":13,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":13,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -3145,11 +3145,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.93,
     "ClassStrength":20,
-    "NumberOfA's":20,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -3161,11 +3161,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.83,
     "ClassStrength":25,
-    "NumberOfA's":24,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":24,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -3177,11 +3177,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.58,
     "ClassStrength":12,
-    "NumberOfA's":6,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -3193,11 +3193,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.75,
     "ClassStrength":16,
-    "NumberOfA's":12,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -3209,11 +3209,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.42,
     "ClassStrength":43,
-    "NumberOfA's":23,
-    "NumberOfB's":18,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":23,
+    "NumberOfBs":18,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3225,11 +3225,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.41,
     "ClassStrength":50,
-    "NumberOfA's":24,
-    "NumberOfB's":25,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":24,
+    "NumberOfBs":25,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -3241,11 +3241,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.76,
     "ClassStrength":22,
-    "NumberOfA's":19,
-    "NumberOfB's":2,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":2,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5214",
@@ -3257,11 +3257,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.64,
     "ClassStrength":11,
-    "NumberOfA's":7,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3273,11 +3273,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.51,
     "ClassStrength":50,
-    "NumberOfA's":32,
-    "NumberOfB's":16,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":32,
+    "NumberOfBs":16,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5614",
@@ -3289,11 +3289,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.25,
     "ClassStrength":13,
-    "NumberOfA's":5,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -3305,11 +3305,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.25,
     "ClassStrength":13,
-    "NumberOfA's":5,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -3321,11 +3321,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.73,
     "ClassStrength":20,
-    "NumberOfA's":14,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3337,11 +3337,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.76,
     "ClassStrength":46,
-    "NumberOfA's":34,
-    "NumberOfB's":12,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":34,
+    "NumberOfBs":12,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -3353,11 +3353,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.53,
     "ClassStrength":12,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3369,11 +3369,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.89,
     "ClassStrength":48,
-    "NumberOfA's":45,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":45,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -3385,11 +3385,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.51,
     "ClassStrength":27,
-    "NumberOfA's":15,
-    "NumberOfB's":11,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":11,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -3401,11 +3401,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":4.00,
     "ClassStrength":17,
-    "NumberOfA's":17,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5234",
@@ -3417,11 +3417,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.48,
     "ClassStrength":14,
-    "NumberOfA's":7,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -3433,11 +3433,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.59,
     "ClassStrength":13,
-    "NumberOfA's":8,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3449,11 +3449,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.85,
     "ClassStrength":50,
-    "NumberOfA's":46,
-    "NumberOfB's":3,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":46,
+    "NumberOfBs":3,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -3465,11 +3465,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.74,
     "ClassStrength":17,
-    "NumberOfA's":12,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -3481,11 +3481,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.54,
     "ClassStrength":13,
-    "NumberOfA's":7,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -3497,11 +3497,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":4.00,
     "ClassStrength":18,
-    "NumberOfA's":18,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3513,11 +3513,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.53,
     "ClassStrength":64,
-    "NumberOfA's":38,
-    "NumberOfB's":25,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":38,
+    "NumberOfBs":25,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3529,11 +3529,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.39,
     "ClassStrength":28,
-    "NumberOfA's":13,
-    "NumberOfB's":13,
-    "NumberOfC's":1,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":13,
+    "NumberOfCs":1,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -3545,11 +3545,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.47,
     "ClassStrength":12,
-    "NumberOfA's":5,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -3561,11 +3561,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.64,
     "ClassStrength":10,
-    "NumberOfA's":7,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -3577,11 +3577,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.33,
     "ClassStrength":32,
-    "NumberOfA's":17,
-    "NumberOfB's":12,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":17,
+    "NumberOfBs":12,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5714",
@@ -3593,11 +3593,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.82,
     "ClassStrength":25,
-    "NumberOfA's":21,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3609,11 +3609,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.82,
     "ClassStrength":14,
-    "NumberOfA's":13,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -3625,11 +3625,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.75,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -3641,11 +3641,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":4.00,
     "ClassStrength":10,
-    "NumberOfA's":10,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5614",
@@ -3657,11 +3657,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.53,
     "ClassStrength":30,
-    "NumberOfA's":16,
-    "NumberOfB's":14,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":14,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -3673,11 +3673,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.65,
     "ClassStrength":11,
-    "NumberOfA's":8,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6824",
@@ -3689,11 +3689,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.79,
     "ClassStrength":10,
-    "NumberOfA's":10,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -3705,11 +3705,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.86,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -3721,11 +3721,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.43,
     "ClassStrength":11,
-    "NumberOfA's":5,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -3737,11 +3737,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.88,
     "ClassStrength":19,
-    "NumberOfA's":17,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -3753,11 +3753,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":4.00,
     "ClassStrength":15,
-    "NumberOfA's":15,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5214",
@@ -3769,11 +3769,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.65,
     "ClassStrength":19,
-    "NumberOfA's":13,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -3785,11 +3785,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.95,
     "ClassStrength":22,
-    "NumberOfA's":21,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -3801,11 +3801,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.83,
     "ClassStrength":11,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -3817,11 +3817,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.51,
     "ClassStrength":28,
-    "NumberOfA's":15,
-    "NumberOfB's":13,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":13,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -3833,11 +3833,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.94,
     "ClassStrength":33,
-    "NumberOfA's":31,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":31,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -3849,11 +3849,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":4.00,
     "ClassStrength":13,
-    "NumberOfA's":13,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -3865,11 +3865,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":4.00,
     "ClassStrength":23,
-    "NumberOfA's":23,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":23,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -3881,11 +3881,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":4.00,
     "ClassStrength":22,
-    "NumberOfA's":22,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":22,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -3897,11 +3897,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.63,
     "ClassStrength":20,
-    "NumberOfA's":14,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -3913,11 +3913,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.96,
     "ClassStrength":21,
-    "NumberOfA's":21,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6304",
@@ -3929,11 +3929,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.82,
     "ClassStrength":26,
-    "NumberOfA's":24,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":24,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -3945,11 +3945,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.35,
     "ClassStrength":13,
-    "NumberOfA's":4,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -3961,11 +3961,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.82,
     "ClassStrength":11,
-    "NumberOfA's":9,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5234",
@@ -3977,11 +3977,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.69,
     "ClassStrength":14,
-    "NumberOfA's":10,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -3993,11 +3993,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.67,
     "ClassStrength":12,
-    "NumberOfA's":8,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5124",
@@ -4009,11 +4009,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.84,
     "ClassStrength":10,
-    "NumberOfA's":9,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5045",
@@ -4025,11 +4025,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.60,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -4041,11 +4041,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.88,
     "ClassStrength":11,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -4057,11 +4057,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.96,
     "ClassStrength":21,
-    "NumberOfA's":21,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5624",
@@ -4073,11 +4073,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.65,
     "ClassStrength":14,
-    "NumberOfA's":10,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5724",
@@ -4089,11 +4089,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.73,
     "ClassStrength":14,
-    "NumberOfA's":12,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -4105,11 +4105,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.88,
     "ClassStrength":26,
-    "NumberOfA's":24,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":24,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -4121,11 +4121,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.69,
     "ClassStrength":16,
-    "NumberOfA's":11,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5714",
@@ -4137,11 +4137,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.95,
     "ClassStrength":33,
-    "NumberOfA's":32,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":32,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5814",
@@ -4153,11 +4153,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.28,
     "ClassStrength":15,
-    "NumberOfA's":7,
-    "NumberOfB's":5,
-    "NumberOfC's":2,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":5,
+    "NumberOfCs":2,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -4169,11 +4169,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.43,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -4185,11 +4185,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.88,
     "ClassStrength":17,
-    "NumberOfA's":15,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -4201,11 +4201,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.84,
     "ClassStrength":16,
-    "NumberOfA's":14,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -4217,11 +4217,11 @@
     "YearAndTerm":"Fall 2010",
     "AverageGPA":3.88,
     "ClassStrength":11,
-    "NumberOfA's":10,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5566",
@@ -4233,11 +4233,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.11,
     "ClassStrength":12,
-    "NumberOfA's":3,
-    "NumberOfB's":7,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":3,
+    "NumberOfBs":7,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -4249,11 +4249,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.73,
     "ClassStrength":11,
-    "NumberOfA's":8,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5734",
@@ -4265,11 +4265,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.54,
     "ClassStrength":10,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5814",
@@ -4281,11 +4281,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.03,
     "ClassStrength":10,
-    "NumberOfA's":4,
-    "NumberOfB's":3,
-    "NumberOfC's":2,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":3,
+    "NumberOfCs":2,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5814",
@@ -4297,11 +4297,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":3.23,
     "ClassStrength":13,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":3,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":3,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5624",
@@ -4313,11 +4313,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.68,
     "ClassStrength":12,
-    "NumberOfA's":9,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -4329,11 +4329,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.59,
     "ClassStrength":32,
-    "NumberOfA's":18,
-    "NumberOfB's":14,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":14,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -4345,11 +4345,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.68,
     "ClassStrength":34,
-    "NumberOfA's":23,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":23,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -4361,11 +4361,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.24,
     "ClassStrength":10,
-    "NumberOfA's":4,
-    "NumberOfB's":5,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":5,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5566",
@@ -4377,11 +4377,11 @@
     "YearAndTerm":"Spring 2009",
     "AverageGPA":2.70,
     "ClassStrength":10,
-    "NumberOfA's":2,
-    "NumberOfB's":5,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":2,
+    "NumberOfBs":5,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5565",
@@ -4393,11 +4393,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":2.29,
     "ClassStrength":11,
-    "NumberOfA's":2,
-    "NumberOfB's":2,
-    "NumberOfC's":5,
-    "NumberOfD's":0,
-    "NumberOfF's":2
+    "NumberOfAs":2,
+    "NumberOfBs":2,
+    "NumberOfCs":5,
+    "NumberOfDs":0,
+    "NumberOfFs":2
   },
   {
     "Course":"CS5244",
@@ -4409,11 +4409,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.86,
     "ClassStrength":74,
-    "NumberOfA's":66,
-    "NumberOfB's":8,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":66,
+    "NumberOfBs":8,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6824",
@@ -4425,11 +4425,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.74,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -4441,11 +4441,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.68,
     "ClassStrength":12,
-    "NumberOfA's":9,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -4457,11 +4457,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.91,
     "ClassStrength":10,
-    "NumberOfA's":10,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5634",
@@ -4473,11 +4473,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.76,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -4489,11 +4489,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.93,
     "ClassStrength":13,
-    "NumberOfA's":13,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5624",
@@ -4505,11 +4505,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.55,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -4521,11 +4521,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.89,
     "ClassStrength":12,
-    "NumberOfA's":11,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6104",
@@ -4537,11 +4537,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.69,
     "ClassStrength":11,
-    "NumberOfA's":7,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -4553,11 +4553,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.53,
     "ClassStrength":18,
-    "NumberOfA's":9,
-    "NumberOfB's":9,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":9,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -4569,11 +4569,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.75,
     "ClassStrength":20,
-    "NumberOfA's":17,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5124",
@@ -4585,11 +4585,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.81,
     "ClassStrength":13,
-    "NumberOfA's":12,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -4601,11 +4601,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.76,
     "ClassStrength":16,
-    "NumberOfA's":13,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5104",
@@ -4617,11 +4617,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":3.50,
     "ClassStrength":10,
-    "NumberOfA's":6,
-    "NumberOfB's":3,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":3,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -4633,11 +4633,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.76,
     "ClassStrength":14,
-    "NumberOfA's":11,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -4649,11 +4649,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.46,
     "ClassStrength":44,
-    "NumberOfA's":15,
-    "NumberOfB's":29,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":29,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5234",
@@ -4665,11 +4665,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.89,
     "ClassStrength":19,
-    "NumberOfA's":17,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -4681,11 +4681,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.77,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -4697,11 +4697,11 @@
     "YearAndTerm":"Spring 2004",
     "AverageGPA":3.21,
     "ClassStrength":54,
-    "NumberOfA's":16,
-    "NumberOfB's":36,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":36,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -4713,11 +4713,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.20,
     "ClassStrength":48,
-    "NumberOfA's":12,
-    "NumberOfB's":34,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":34,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -4729,11 +4729,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.71,
     "ClassStrength":17,
-    "NumberOfA's":15,
-    "NumberOfB's":0,
-    "NumberOfC's":1,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":0,
+    "NumberOfCs":1,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -4745,11 +4745,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.37,
     "ClassStrength":10,
-    "NumberOfA's":4,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":4,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -4761,11 +4761,11 @@
     "YearAndTerm":"Spring 2005",
     "AverageGPA":3.23,
     "ClassStrength":32,
-    "NumberOfA's":9,
-    "NumberOfB's":23,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":23,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -4777,11 +4777,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.66,
     "ClassStrength":15,
-    "NumberOfA's":9,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -4793,11 +4793,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.65,
     "ClassStrength":32,
-    "NumberOfA's":21,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":21,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -4809,11 +4809,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.20,
     "ClassStrength":48,
-    "NumberOfA's":12,
-    "NumberOfB's":34,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":34,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -4825,11 +4825,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.90,
     "ClassStrength":13,
-    "NumberOfA's":12,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -4841,11 +4841,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.28,
     "ClassStrength":13,
-    "NumberOfA's":3,
-    "NumberOfB's":10,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":3,
+    "NumberOfBs":10,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5124",
@@ -4857,11 +4857,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.89,
     "ClassStrength":14,
-    "NumberOfA's":13,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5045",
@@ -4873,11 +4873,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.81,
     "ClassStrength":15,
-    "NumberOfA's":13,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5525",
@@ -4889,11 +4889,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.58,
     "ClassStrength":16,
-    "NumberOfA's":12,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -4905,11 +4905,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.69,
     "ClassStrength":21,
-    "NumberOfA's":16,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5764",
@@ -4921,11 +4921,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.78,
     "ClassStrength":19,
-    "NumberOfA's":17,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -4937,11 +4937,11 @@
     "YearAndTerm":"Fall 2006",
     "AverageGPA":3.26,
     "ClassStrength":73,
-    "NumberOfA's":17,
-    "NumberOfB's":56,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":56,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5724",
@@ -4953,11 +4953,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.71,
     "ClassStrength":15,
-    "NumberOfA's":12,
-    "NumberOfB's":2,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":2,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -4969,11 +4969,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.85,
     "ClassStrength":29,
-    "NumberOfA's":25,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":25,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -4985,11 +4985,11 @@
     "YearAndTerm":"Spring 2007",
     "AverageGPA":3.19,
     "ClassStrength":14,
-    "NumberOfA's":3,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":3,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -5001,11 +5001,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.50,
     "ClassStrength":50,
-    "NumberOfA's":26,
-    "NumberOfB's":24,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":26,
+    "NumberOfBs":24,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -5017,11 +5017,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.81,
     "ClassStrength":17,
-    "NumberOfA's":14,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6404",
@@ -5033,11 +5033,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":4.00,
     "ClassStrength":10,
-    "NumberOfA's":10,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -5049,11 +5049,11 @@
     "YearAndTerm":"Fall 2012",
     "AverageGPA":3.77,
     "ClassStrength":14,
-    "NumberOfA's":12,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -5065,11 +5065,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.57,
     "ClassStrength":10,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5504",
@@ -5081,11 +5081,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.53,
     "ClassStrength":18,
-    "NumberOfA's":12,
-    "NumberOfB's":6,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":12,
+    "NumberOfBs":6,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -5097,11 +5097,11 @@
     "YearAndTerm":"Spring 2008",
     "AverageGPA":3.20,
     "ClassStrength":10,
-    "NumberOfA's":2,
-    "NumberOfB's":8,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":2,
+    "NumberOfBs":8,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5234",
@@ -5113,11 +5113,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.46,
     "ClassStrength":20,
-    "NumberOfA's":11,
-    "NumberOfB's":8,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":8,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -5129,11 +5129,11 @@
     "YearAndTerm":"Fall 2008",
     "AverageGPA":3.54,
     "ClassStrength":48,
-    "NumberOfA's":30,
-    "NumberOfB's":18,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":30,
+    "NumberOfBs":18,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -5145,11 +5145,11 @@
     "YearAndTerm":"Fall 2009",
     "AverageGPA":3.61,
     "ClassStrength":47,
-    "NumberOfA's":38,
-    "NumberOfB's":7,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":38,
+    "NumberOfBs":7,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5014",
@@ -5161,11 +5161,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":2.80,
     "ClassStrength":10,
-    "NumberOfA's":3,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":1,
-    "NumberOfF's":1
+    "NumberOfAs":3,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":1,
+    "NumberOfFs":1
   },
   {
     "Course":"CS5984",
@@ -5177,11 +5177,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.67,
     "ClassStrength":12,
-    "NumberOfA's":8,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -5193,11 +5193,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":2.99,
     "ClassStrength":32,
-    "NumberOfA's":9,
-    "NumberOfB's":16,
-    "NumberOfC's":6,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":16,
+    "NumberOfCs":6,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6824",
@@ -5209,11 +5209,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.96,
     "ClassStrength":14,
-    "NumberOfA's":14,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5744",
@@ -5225,11 +5225,11 @@
     "YearAndTerm":"Fall 2011",
     "AverageGPA":3.41,
     "ClassStrength":35,
-    "NumberOfA's":17,
-    "NumberOfB's":17,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":17,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6704",
@@ -5241,11 +5241,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.93,
     "ClassStrength":26,
-    "NumberOfA's":24,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":24,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -5257,11 +5257,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.55,
     "ClassStrength":21,
-    "NumberOfA's":10,
-    "NumberOfB's":11,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":11,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -5273,11 +5273,11 @@
     "YearAndTerm":"Spring 2013",
     "AverageGPA":3.66,
     "ClassStrength":17,
-    "NumberOfA's":13,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":13,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -5289,11 +5289,11 @@
     "YearAndTerm":"Fall 2003",
     "AverageGPA":3.31,
     "ClassStrength":15,
-    "NumberOfA's":7,
-    "NumberOfB's":6,
-    "NumberOfC's":2,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":7,
+    "NumberOfBs":6,
+    "NumberOfCs":2,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5604",
@@ -5305,11 +5305,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.45,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":4,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":4,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5724",
@@ -5321,11 +5321,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.68,
     "ClassStrength":19,
-    "NumberOfA's":17,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":1,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":1,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5204",
@@ -5337,11 +5337,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.67,
     "ClassStrength":13,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -5353,11 +5353,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.77,
     "ClassStrength":22,
-    "NumberOfA's":19,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5314",
@@ -5369,11 +5369,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.81,
     "ClassStrength":12,
-    "NumberOfA's":10,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5014",
@@ -5385,11 +5385,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.85,
     "ClassStrength":31,
-    "NumberOfA's":29,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":29,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -5401,11 +5401,11 @@
     "YearAndTerm":"Fall 2004",
     "AverageGPA":3.49,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -5417,11 +5417,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.89,
     "ClassStrength":39,
-    "NumberOfA's":38,
-    "NumberOfB's":1,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":38,
+    "NumberOfBs":1,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -5433,11 +5433,11 @@
     "YearAndTerm":"Fall 2005",
     "AverageGPA":3.49,
     "ClassStrength":11,
-    "NumberOfA's":6,
-    "NumberOfB's":5,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":6,
+    "NumberOfBs":5,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -5449,11 +5449,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.97,
     "ClassStrength":19,
-    "NumberOfA's":19,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":19,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -5465,11 +5465,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.81,
     "ClassStrength":21,
-    "NumberOfA's":18,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":18,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6724",
@@ -5481,11 +5481,11 @@
     "YearAndTerm":"Fall 2013",
     "AverageGPA":3.79,
     "ClassStrength":19,
-    "NumberOfA's":17,
-    "NumberOfB's":1,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":17,
+    "NumberOfBs":1,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -5497,11 +5497,11 @@
     "YearAndTerm":"Spring 2006",
     "AverageGPA":3.96,
     "ClassStrength":14,
-    "NumberOfA's":14,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":14,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5560",
@@ -5513,11 +5513,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.79,
     "ClassStrength":19,
-    "NumberOfA's":15,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5565",
@@ -5529,11 +5529,11 @@
     "YearAndTerm":"Fall 2007",
     "AverageGPA":3.44,
     "ClassStrength":12,
-    "NumberOfA's":5,
-    "NumberOfB's":7,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":5,
+    "NumberOfBs":7,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5704",
@@ -5545,11 +5545,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.73,
     "ClassStrength":19,
-    "NumberOfA's":16,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":16,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -5561,11 +5561,11 @@
     "YearAndTerm":"Spring 2010",
     "AverageGPA":4.00,
     "ClassStrength":11,
-    "NumberOfA's":11,
-    "NumberOfB's":0,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":0,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -5577,11 +5577,11 @@
     "YearAndTerm":"Spring 2011",
     "AverageGPA":3.81,
     "ClassStrength":29,
-    "NumberOfA's":25,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":25,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5984",
@@ -5593,11 +5593,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.79,
     "ClassStrength":14,
-    "NumberOfA's":11,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":11,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5114",
@@ -5609,11 +5609,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.41,
     "ClassStrength":21,
-    "NumberOfA's":12,
-    "NumberOfB's":7,
-    "NumberOfC's":1,
-    "NumberOfD's":0,
-    "NumberOfF's":1
+    "NumberOfAs":12,
+    "NumberOfBs":7,
+    "NumberOfCs":1,
+    "NumberOfDs":0,
+    "NumberOfFs":1
   },
   {
     "Course":"CS6204",
@@ -5625,11 +5625,11 @@
     "YearAndTerm":"Spring 2012",
     "AverageGPA":3.80,
     "ClassStrength":24,
-    "NumberOfA's":20,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":20,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6604",
@@ -5641,11 +5641,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.58,
     "ClassStrength":17,
-    "NumberOfA's":9,
-    "NumberOfB's":8,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":9,
+    "NumberOfBs":8,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6824",
@@ -5657,11 +5657,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.68,
     "ClassStrength":10,
-    "NumberOfA's":8,
-    "NumberOfB's":2,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":8,
+    "NumberOfBs":2,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS6204",
@@ -5673,11 +5673,11 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.81,
     "ClassStrength":19,
-    "NumberOfA's":15,
-    "NumberOfB's":4,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":15,
+    "NumberOfBs":4,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   },
   {
     "Course":"CS5754",
@@ -5689,10 +5689,10 @@
     "YearAndTerm":"Spring 2014",
     "AverageGPA":3.70,
     "ClassStrength":13,
-    "NumberOfA's":10,
-    "NumberOfB's":3,
-    "NumberOfC's":0,
-    "NumberOfD's":0,
-    "NumberOfF's":0
+    "NumberOfAs":10,
+    "NumberOfBs":3,
+    "NumberOfCs":0,
+    "NumberOfDs":0,
+    "NumberOfFs":0
   }
 ]
