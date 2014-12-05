@@ -129,14 +129,12 @@ dl
 			    left_pad = 300
 			    additional_width = 50,
 			    additional_height = 20;
-				
-	var minGPA_calc=0;
-	var maxGPA_calc=0;
-	var minSize=0;
-	var maxSize=0;
+	
+	var whichRadio;			
+	
     //This function is called on load
 	$(document).ready(function(){
-	$('.accordion').accordion({ heightStyle: "content" });
+	$('.accordion').accordion({ heightStyle: "content", collapsible: true, active: false   });
 	var x=document.getElementsByClassName("radio");
 	for(i=0;i<x.length;i++)
 	  x[i].checked=false;
@@ -279,7 +277,7 @@ dl
 		   		//This is an empty filler element.
 			   var svg1 = tr1
 			   	.append("td")
-			   	.style("float", "left")
+				.style("margin","0px 0px 0px 160px")
 		        .append("svg")
 		        .attr("width", requiredWidth + 250)
 		        .attr("height", 50);
@@ -297,7 +295,7 @@ dl
 			        });
 			 
 			svg1.append("g")
-			    .attr("class", "x-axis")
+				.attr("class", "x-axis")
 			    .attr("transform", "translate(0, "+(50-pad)+")")
 			    .call(x1Axis);
 
@@ -492,10 +490,10 @@ dl
 	
 		$( "#slider-range_year" ).slider({
 	  range: true,
-      min:2004,
-      max:2013,
+      min:2003,
+      max:2014,
 	  step:1,
-      values:[2004,2013],
+      values:[2010,2014],
       slide: function( event, ui ) {
         $( "#chosenYear" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
@@ -834,41 +832,7 @@ function getHue(averageGPA)
 
 }
 
- function handleRadio(radio)
-	{
-		//window.alert(radio.id);
-		if(radio.id=="filterRadioArea")
-		{
-		 div_id="areas_select";
-		 ul_id="areaList";
-		 input_class="areaCheck";
-		 data_to_populate=areaOption;
-		 data_parameter=1;
-		 button_id="area";
-		 appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter,"area");
-		}
-		else if(radio.id=="filterRadioProfessor")
-		{
-		 div_id="professor_select";
-		 ul_id="professorList";
-		 input_class="professorCheck";
-		 data_to_populate=professorOption;
-		 data_parameter=2;
-		  button_id="professor";
-		 appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter,"professor");
-		}
-		else if(radio.id=="filterRadioCourse")
-		{
-		 div_id="course_select";
-		 ul_id="courseList";
-		 input_class="courseCheck";
-		 data_to_populate=courseOption;
-		 button_id="course";
-		 data_parameter=3;
-		 appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter, "course");
-		}
-		
-	}
+ 
 function appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter,button_id)
 	{
 	    $('.filters div').remove();
@@ -1000,7 +964,7 @@ function populateAllFilterParameters()
 		selectedProfessors[professorIndex++]=childItem.val();
     }
 
-	//console.log("selected radio button is "+ $('input[name=Term]:checked').val());
+	window.alert("selected radio button is "+ $('input[name=Term]:checked').val());
 	//console.log("prof sample"+selectedProfessors);
 	
 	if( $('input[name=Term]:checked').val() == 'Fall&Spring' )
@@ -1041,6 +1005,11 @@ function populateAllFilterParameters()
     json.push(json1);
 	json.push(json3);
 	json.push(json4);
+	json.push(json5);
+	json.push(json6);
+	json.push(json7);
+	
+	
 
     //console.log(json);
 
@@ -1114,20 +1083,20 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			.style("width", 5000);	
 
 			var tr1 = scatterPlotTable
-			   			.append("tr")
-		   	;
+			   			.append("tr");
 
 		   	var td11 = tr1.append("td")
 		   		.attr("width", 160)
 		   		.style("float", "left");
-
-		   	var numberOfYearAndTermCombinations = yearAndTermsAfterFitering.length;
+				
+			var numberOfYearAndTermCombinations = yearAndTermsAfterFitering.length;
 
 		   	var requiredWidth = numberOfYearAndTermCombinations * 150;
 	   	
 		   var svg1 = tr1
 		   	.append("td")
 		   	.style("float", "left")
+			.style("margin-left",160)
 	        .append("svg")
 	        .attr("width", requiredWidth + 250)
 	        .attr("height", 50);
@@ -1299,7 +1268,7 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 							<div name="Terms_select" class="Radio">
 								<input type="radio" name="Term" value="Fall">Fall<br>
 								<input type="radio" name="Term" value="Spring">Spring<br>
-								<input type="radio" name="Term" value="Fall&Spring" checked>Both<br>
+								<input type="radio" name="Term" value="Fall&Spring" checked="true">Both<br>
 							</div>
 							
 				
