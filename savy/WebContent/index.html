@@ -99,7 +99,7 @@ li{
 			    left_pad = 300;
 
 	$(document).ready(function(){
-	//$('.filters').accordion();
+	$('.accordion').accordion({ heightStyle: "content" });
 	var x=document.getElementsByClassName("radio");
 	for(i=0;i<x.length;i++)
 	  x[i].checked=false;
@@ -447,6 +447,41 @@ li{
 		  type: 'GET'
 	   });		
 	   //************************************* ajax complete **************//
+	   $( "#slider-range_year" ).slider({
+	  range: true,
+      min:2004,
+      max:2013,
+	  step:1,
+      values:[2004,2013],
+      slide: function( event, ui ) {
+        $( "#chosenYear" ).val(ui.values[0] +" to "+ ui.values[1] );
+      }
+    });
+    $( "#chosenYear" ).val(  $( "#slider-range_year" ).slider( "values", 0 )  +" to "+  $( "#slider-range" ).slider( "values", 1 ) );
+	
+	$( "#slider-range_GPA" ).slider({
+	  range: true,
+      min:2004,
+      max:2013,
+	  step:1,
+      values:[2004,2013],
+      slide: function( event, ui ) {
+        $( "#chosenGPA" ).val(ui.values[0] +" to "+ ui.values[1] );
+      }
+    });
+    $( "#chosenGPA" ).val(  $( "#slider-range_GPA" ).slider( "values", 0 )  +" to "+  $( "#slider-range" ).slider( "values", 1 ) );
+	
+	$( "#slider-range_size" ).slider({
+	  range: true,
+      min:2004,
+      max:2013,
+	  step:1,
+      values:[2004,2013],
+      slide: function( event, ui ) {
+        $( "#chosenClassSize" ).val(ui.values[0] +" to "+ ui.values[1] );
+      }
+    });
+    $( "#chosenClassSize" ).val(  $( "#slider-range_size" ).slider( "values", 0 )  +" to "+  $( "#slider-range" ).slider( "values", 1 ) );
 
 });
 
@@ -610,10 +645,12 @@ function populateAllFilterParameters()
 	var selectedProfessors={};
 	var selectedAreas={};
 	var selectedCourses={};
-
+    var term={};
+	
 	var professorIndex=0;
 	var areaIndex=0;
 	var courseIndex=0;
+	var termIndex=0;
 
 	 var areaList=$('#areaList').find('li');
     for(i=0;i<areaList.length;i++)
@@ -643,9 +680,17 @@ function populateAllFilterParameters()
 	if(childItem.is(":checked") && childItem.val()!="All")
 		selectedProfessors[professorIndex++]=childItem.val();
     }
-
+	console.log("selected radio button is "+ $('input[name=Term]:checked').val());
+	console.log("prof sample"+selectedProfessors);
+	if( $('input[name=Term]:checked').val() == 'Fall&Spring' )
+		{
+		 term[termIndex++]='Fall';
+		 term[termIndex++]='Spring'
+		}
+	else
+	term[termIndex++]=$('input[name=Term]:checked').val();
     var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
-
+    var json4=JSON.stringify({name:"term",value:term });
     console.log(json1);
 
    
@@ -653,6 +698,7 @@ function populateAllFilterParameters()
     json.push(json2);
     json.push(json1);
 	json.push(json3);
+	json.push(json4);
 
     //console.log(json);
 
@@ -950,51 +996,76 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:
  </script>
 
 		<div style="width: 100%;">
+			<table><tr><td>
 			<div style="width: 250px; float: left;" class="filtersLists">
-				<table style="height:100%;">
-					<tr>
-						<input type="button" id="filterNowButton" value="Filter Now" onClick="filterParametersAjax();" />
-					</tr>
-					<br>
-					<br>
-					<tr style="height:30%;float:left;">
-						<div>
-							<div class="labelForFilters">
-								<label for="courseList">Select Course(s)</label>
+						<div class="accordion">
+							<h3>
+								<label for="TermFilter">Select Term</label>
+							</h3>
+							
+							<div name="Terms_select" class="Radio">
+								<input type="radio" name="Term" value="Fall">Fall<br>
+								<input type="radio" name="Term" value="Spring">Spring<br>
+								<input type="radio" name="Term" value="Fall&Spring" checked>Both<br>
 							</div>
-							<div name="course_select" class="select" >
-								<ul id="courseList" ></ul>
-							</div>
-						</div>
-					</tr>
-					<br>
-					<tr style="height:30%;float:left;">
-						<div>
-							<div class="labelForFilters">
-								<label for="professorList">Select Professor(s) </label>
-							</div>
-							<div name="professor_select" class="select" >
-								<ul id="professorList"></ul>
-							</div>
-						</div>
-					</tr>	
-					<br>
-					<tr style="height:30%;float:left;">
-						<div>
-							<div class="labelForFilters" >
+							
+				
+				
+							<h3>
 								<label for="areaList">Select Area(s)</label>
-							</div>
+							</h3>
 							<div name="areas_select" class="select">
-								<ul id="areaList"></ul>
+								<p><ul id="areaList"></ul></p>
 							</div>
-						</div>
-					</tr>
-				</table>
-			</div>
+				
+							<h3>
+								<label for="courseList">Select Course(s)</label>
+							</h3>
+							
+							<div name="course_select" class="select" >
+								<p><ul id="courseList" ></ul></p>
+							</div>
+			
+							<h3>
+								<label for="professorList">Select Professor(s) </label>
+							</h3>
+							<div name="professor_select" class="select" >
+								<p><ul id="professorList"></ul></p>
+							</div>
+							
+							<h3>
+								<label for="yearList">Select year(s) </label>
+							</h3>
+							<div name="year_select" class="select" >
+								<input type="text" id="chosenYear" readonly style="width:150px;">
+								<div id="slider-range_year"></div>
+							</div>
+							<h3>
+								<label for="yearList">Select Average GPA Range </label>
+							</h3>
+							<div name="GPA_select" class="select" >
+								<input type="text" id="chosenGPA" readonly style="width:150px;">
+								<div id="slider-range_GPA"></div>
+							</div>
+							<h3>
+								<label for="yearList">Select Class size</label>
+							</h3>
+							<div name="classSize_select" class="select" >
+								<input type="text" id="chosenClassSize" readonly style="width:150px;">
+								<div id="slider-range_size"></div>
+							</div>
+						</div> 
+			<input type="button" id="filterNowButton" value="Filter Now" onClick="filterParametersAjax();" />
+			
+			</div>	
+			
+			
+			</td><td>
     		<div style="margin-left: 280px;" id="tableHolder">
     			<table style="width:5000" id="scatterplotTable"> 
     			</table>   			
     		</div>
+			</tr></table>
 		</div>	
 
 		

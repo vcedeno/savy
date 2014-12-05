@@ -15,7 +15,7 @@ import org.json.simple.parser.ParseException;
 
 import util.*;
 
-public class JsonProcessor 
+public class JsonProcessor
 {
 	private static TreeSet<String> areaList = new TreeSet<String>();
 	private static TreeSet<String> professorList = new TreeSet<String>();
@@ -37,36 +37,35 @@ public class JsonProcessor
 	private static HashMap<Float, TreeSet<JSONObject>> averageGPAMap = new HashMap<Float, TreeSet<JSONObject>>();
 	private static HashMap<Integer, TreeSet<JSONObject>> classStrengthMap = new HashMap<Integer, TreeSet<JSONObject>>();
 
-	public JsonProcessor() 
+	public JsonProcessor()
 	{
 		this.preProcess();
 	}
 
-	//reads and processes data on start-up 
-	public void preProcess() 
+	// reads and processes data on start-up
+	public void preProcess()
 	{
 		JSONParser parser = new JSONParser();
 
-		try {
+		try
+		{
 			Object obj = parser.parse(new FileReader("C:\\JSON\\data.json"));
 
 			JSONArray jsonArray = (JSONArray) obj;
 			JSONObject jsonObject = new JSONObject();
 			System.out.println(jsonArray.size());
-			for (int i = 0; i < jsonArray.size(); i++) 
+			for (int i = 0; i < jsonArray.size(); i++)
 			{
 				jsonObject = (JSONObject) jsonArray.get(i);
-				
+
 				CustomComparator myComp = new CustomComparator();
 				CustomComparator2 myOtherComp = new CustomComparator2();
 
-				String courseName = (String) jsonObject.get(StringLiterals.CourseName);				
+				String courseName = (String) jsonObject.get(StringLiterals.CourseName);
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(courseNameMap, courseNameList, courseName, jsonObject, myComp);
-				
-				
+
 				String courseNumber = (String) jsonObject.get(StringLiterals.CourseNumber);
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(courseNumberMap, courseNumberList, courseNumber, jsonObject, myComp);
-
 
 				String professor = (String) jsonObject.get(StringLiterals.Professor);
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(professorMap, professorList, professor, jsonObject, myComp);
@@ -75,14 +74,14 @@ public class JsonProcessor
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(yearMap, yearList, year, jsonObject);
 
 				String term = (String) jsonObject.get(StringLiterals.Term);
+				//System.out.println(term + " *********");
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(termMap, termList, term, jsonObject, myComp);
-				
+
 				String yearAndTerm = (String) jsonObject.get(StringLiterals.YearAndTerm);
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(yearAndTermMap, yearAndTermList, yearAndTerm, jsonObject, myOtherComp);
 
 				Float averageGPA = ((Double) jsonObject.get(StringLiterals.AverageGPA)).floatValue();
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(averageGPAMap, averageGPAList, averageGPA, jsonObject);
-
 
 				String area = (String) jsonObject.get(StringLiterals.Area);
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(areaMap, areaList, area, jsonObject, myComp);
@@ -90,185 +89,200 @@ public class JsonProcessor
 				Integer classStrength = ((Long) jsonObject.get(StringLiterals.ClassStrength)).intValue();
 				UtilFunctions.addToMapAndListIfNotAlreadyPresent(classStrengthMap, classStrengthList, classStrength, jsonObject);
 
-
 				// kept for completeness
-				/*Long numberOfAs = (Long) jsonObject
-						.get(StringLiterals.Number_A);
-				Long numberOfBs = (Long) jsonObject
-						.get(StringLiterals.Number_B);
-				Long numberOfCs = (Long) jsonObject
-						.get(StringLiterals.Number_C);
-				Long numberOfDs = (Long) jsonObject
-						.get(StringLiterals.Number_D);
-				Long numberOfEs = (Long) jsonObject
-						.get(StringLiterals.Number_E);
-				Long numberOfFs = (Long) jsonObject
-						.get(StringLiterals.Number_F);*/
+				/*
+				 * Long numberOfAs = (Long) jsonObject
+				 * .get(StringLiterals.Number_A); Long numberOfBs = (Long)
+				 * jsonObject .get(StringLiterals.Number_B); Long numberOfCs =
+				 * (Long) jsonObject .get(StringLiterals.Number_C); Long
+				 * numberOfDs = (Long) jsonObject .get(StringLiterals.Number_D);
+				 * Long numberOfEs = (Long) jsonObject
+				 * .get(StringLiterals.Number_E); Long numberOfFs = (Long)
+				 * jsonObject .get(StringLiterals.Number_F);
+				 */
 
 			}
 
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e)
+		{
 			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (IOException e)
+		{
 			e.printStackTrace();
-		} catch (org.json.simple.parser.ParseException e) {
+		} catch (org.json.simple.parser.ParseException e)
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (Exception e) {
+		} catch (Exception e)
+		{
 			e.printStackTrace();
 		}
-		
-		
-		
+
 	}
 
 	// Filters progressively on all specified filterParameters
-	public JSONObject getFilteredResults(JSONObject inputObject) 
+	public JSONObject getFilteredResults(JSONObject inputObject)
 	{
 		JSONObject returnObject = new JSONObject();
 		JSONArray resultList = new JSONArray();
 		JSONObject jsonArrayOfFilterParameters = null;
-		
+
 		JSONParser parser = new JSONParser();
-		
+
 		JSONArray objectWithParameters = (JSONArray) inputObject.get("value");
 
-		for (int i = 0; i < objectWithParameters.size(); i++) 
+		for (int i = 0; i < objectWithParameters.size(); i++)
 		{
 			try
 			{
-				jsonArrayOfFilterParameters = (JSONObject) parser.parse((String)objectWithParameters.get(i));
+				jsonArrayOfFilterParameters = (JSONObject) parser.parse((String) objectWithParameters.get(i));
 			} catch (ParseException e)
 			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 			String filterParameter = (String) jsonArrayOfFilterParameters.get(StringLiterals.Name);
 			JSONObject filterValues = (JSONObject) jsonArrayOfFilterParameters.get(StringLiterals.Value);
-			
-			//System.out.println("Filter parameter: " + filterParameter);
-			//System.out.println("FilterValues: " + filterValues.toString());
-			
+
+			// System.out.println("Filter parameter: " + filterParameter);
+			// System.out.println("FilterValues: " + filterValues.toString());
+
 			List<String> filterParameterValues = new ArrayList<String>();
-	
-			for (int j = 0; j < filterValues.size(); j++) 
+
+			for (int j = 0; j < filterValues.size(); j++)
 			{
 				filterParameterValues.add((String) filterValues.get(String.valueOf(j)));
 			}
-			
+
 			List<JSONObject> filteredResults = new ArrayList<JSONObject>();
-			
-			if(filterParameterValues.size()> 0)
-			{				
-				switch(filterParameter)
+
+			if (filterParameterValues.size() > 0)
+			{
+				switch (filterParameter)
 				{
-					case "area" : 	filteredResults = UtilFunctions.populateJSONObjects(areaMap, filterParameterValues);
-									break;
-					
-					case "professor" : 	filteredResults = UtilFunctions.populateJSONObjects(professorMap, filterParameterValues);
-										break;
-										
-					case "course" : filteredResults = UtilFunctions.populateJSONObjects(courseNameMap, filterParameterValues);
-										break;
-										
-					case "classStrength" : filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(classStrengthMap, filterParameterValues);
-										break;
-					
-					case "averageGPA" : filteredResults = UtilFunctions.populateJSONObjectsForARangeOfFloat(averageGPAMap, filterParameterValues);
-										break;
-										
-					case "year" : filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(yearMap, filterParameterValues);
-										break;
-					
-					case "term" : filteredResults = UtilFunctions.populateJSONObjects(termMap, filterParameterValues);
-										break;
+				case "area":
+					filteredResults = UtilFunctions.populateJSONObjects(areaMap, filterParameterValues);
+					break;
+
+				case "professor":
+					filteredResults = UtilFunctions.populateJSONObjects(professorMap, filterParameterValues);
+					break;
+
+				case "course":
+					filteredResults = UtilFunctions.populateJSONObjects(courseNameMap, filterParameterValues);
+					break;
+
+				case "classStrength":
+					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(classStrengthMap, filterParameterValues);
+					break;
+
+				case "averageGPA":
+					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfFloat(averageGPAMap, filterParameterValues);
+					break;
+
+				case "year":
+					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(yearMap, filterParameterValues);
+					break;
+
+				case "term":
+					filteredResults = UtilFunctions.populateJSONObjects(termMap, filterParameterValues);
+					// System.out.println("inside case term "
+					// +filterParameterValues.size());
+					break;
 				}
-				
-				//check if this is the first pass, of the first filtering criterion
-				if(resultList.size() ==0)
+
+				// check if this is the first pass, of the first filtering
+				// criterion
+				if (resultList.size() == 0)
 				{
-					for(JSONObject object: filteredResults)
+					for (JSONObject object : filteredResults)
 					{
 						resultList.add(object);
-					}				
-				}
-				else
+					}
+				} else
 				{
-					//filter down the resultList further by taking intersection with the filteredResults
+					// filter down the resultList further by taking intersection
+					// with the filteredResults
 					resultList = UtilFunctions.findIntersectionOfLists(resultList, filteredResults);
 				}
-				
+
 				System.out.println("ResultList size: " + resultList.size());
 				System.out.println("ResultList: " + resultList.toString());
-				
+
 			}
 		}
-		
-		//returns a JSONArray with course to JSONObject mapping, to make it easier to process in Javascript
+
+		// returns a JSONArray with course to JSONObject mapping, to make it
+		// easier to process in Javascript
 		returnObject.put("CoursesData", UtilFunctions.processResultList(resultList));
 		returnObject.put("YearAndTermData", UtilFunctions.getYearAndTermListForFilteredResults(resultList));
-		
+
 		return returnObject;
 
 	}
-	
-	//for testing logic
+
+	// for testing logic
 	public JSONArray filterOnOneParameter(JSONObject inputObject)
 	{
 		JSONArray resultList = new JSONArray();
-		
+
 		JSONArray jsonArray = (JSONArray) inputObject.get(StringLiterals.Value);
 		String filterParameter = (String) inputObject.get(StringLiterals.Name);
-				
+
 		List<String> filterParameterValues = new ArrayList<String>();
 
-		for(int i=0; i< jsonArray.size(); i++)
-		{	
-			filterParameterValues.add((String)jsonArray.get(i));
-		}
-		
-		switch(filterParameter)
+		for (int i = 0; i < jsonArray.size(); i++)
 		{
-			case "area" : 	return UtilFunctions.populateJSONObjects(areaMap, filterParameterValues);
-			case "course" : return UtilFunctions.populateJSONObjects(courseNameMap, filterParameterValues);
-			case "professor" : return UtilFunctions.populateJSONObjects(professorMap, filterParameterValues);
+			filterParameterValues.add((String) jsonArray.get(i));
 		}
-		
+
+		switch (filterParameter)
+		{
+		case "area":
+			return UtilFunctions.populateJSONObjects(areaMap, filterParameterValues);
+		case "course":
+			return UtilFunctions.populateJSONObjects(courseNameMap, filterParameterValues);
+		case "professor":
+			return UtilFunctions.populateJSONObjects(professorMap, filterParameterValues);
+		}
+
 		return resultList;
 	}
-	
-	// for retrieving all Values for a given StringParameter, for initial filter population
-	public JSONArray getListForStringParameter(String parameter) 
+
+	// for retrieving all Values for a given StringParameter, for initial filter
+	// population
+	public JSONArray getListForStringParameter(String parameter)
 	{
 		JSONArray resultArray = new JSONArray();
 		TreeSet<String> listToProcess = new TreeSet<String>();
 
 		// Create a JSONObject list and return
-		switch (parameter) {
+		switch (parameter)
+		{
 		case StringLiterals.Area:
-									listToProcess = areaList;
-									break;
+			listToProcess = areaList;
+			break;
 		case StringLiterals.CourseName:
-									listToProcess = courseNameList;
-									break;
+			listToProcess = courseNameList;
+			break;
 		case StringLiterals.CourseNumber:
-									listToProcess = courseNumberList;
-									break;
+			listToProcess = courseNumberList;
+			break;
 		case StringLiterals.Professor:
-									listToProcess = professorList;
-									break;
+			listToProcess = professorList;
+			break;
 		case StringLiterals.YearAndTerm:
-									listToProcess = yearAndTermList;
-									break;
+			listToProcess = yearAndTermList;
+			break;
 		case StringLiterals.Term:
-									listToProcess = termList;
-									break;
+			listToProcess = termList;
+			break;
 		default:
-									System.out.println("not a valid string Parameter");
-									break;
+			System.out.println("not a valid string Parameter");
+			break;
 		}
-		for (String listItem : listToProcess) 
+		for (String listItem : listToProcess)
 		{
 			// System.out.println("[");
 			JSONObject jsonItem = new JSONObject();
@@ -280,27 +294,29 @@ public class JsonProcessor
 
 		return resultArray;
 	}
-	
-	// for retrieving all Values for a given Integer Parameter, for initial filter population
-	public JSONArray getListForIntegerParameter(String parameter) 
+
+	// for retrieving all Values for a given Integer Parameter, for initial
+	// filter population
+	public JSONArray getListForIntegerParameter(String parameter)
 	{
 		JSONArray resultArray = new JSONArray();
 		TreeSet<Integer> genericList = new TreeSet<Integer>();
 
 		// Create a JSONObject list and return
-		switch (parameter) {
+		switch (parameter)
+		{
 		case StringLiterals.ClassStrength:
-									genericList = classStrengthList;
-									break;
+			genericList = classStrengthList;
+			break;
 		case StringLiterals.Year:
-									genericList = yearList;
-									break;
-		
+			genericList = yearList;
+			break;
+
 		default:
-									System.out.println("not a valid integer Parameter");
-									break;
+			System.out.println("not a valid integer Parameter");
+			break;
 		}
-		for (Integer listItem : genericList) 
+		for (Integer listItem : genericList)
 		{
 			// System.out.println("[");
 			JSONObject jsonItem = new JSONObject();
@@ -312,12 +328,13 @@ public class JsonProcessor
 
 		return resultArray;
 	}
-	
-	// for retrieving all Values for a given FloatParameter, for initial filter population
-	public JSONArray getListForFloatParameter(String parameter) 
+
+	// for retrieving all Values for a given FloatParameter, for initial filter
+	// population
+	public JSONArray getListForFloatParameter(String parameter)
 	{
 		JSONArray resultArray = new JSONArray();
-		for (Float listItem : averageGPAList) 
+		for (Float listItem : averageGPAList)
 		{
 			// System.out.println("[");
 			JSONObject jsonItem = new JSONObject();
@@ -329,10 +346,10 @@ public class JsonProcessor
 
 		return resultArray;
 	}
-	
+
 	public JSONArray getDataForAllCourses()
 	{
 		return UtilFunctions.convertMapToJSONArray(courseNameMap);
 	}
-	
+
 }
