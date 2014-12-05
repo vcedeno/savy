@@ -146,46 +146,72 @@ public class JsonProcessor
 			JSONObject filterValues = (JSONObject) jsonArrayOfFilterParameters.get(StringLiterals.Value);
 
 			// System.out.println("Filter parameter: " + filterParameter);
-			// System.out.println("FilterValues: " + filterValues.toString());
-
-			List<String> filterParameterValues = new ArrayList<String>();
-
-			for (int j = 0; j < filterValues.size(); j++)
-			{
-				filterParameterValues.add((String) filterValues.get(String.valueOf(j)));
-			}
-
+			// System.out.println("FilterValues: " + filterValues.toString());	
+			
+			List<String> filterParameterValues = new ArrayList<String>();			
+			List<Integer> filterIntParameterValues = new ArrayList<Integer>();			
+			List<Float> filterFloatParameterValues = new ArrayList<Float>();		
+			
 			List<JSONObject> filteredResults = new ArrayList<JSONObject>();
-
-			if (filterParameterValues.size() > 0)
-			{
+			
 				switch (filterParameter)
 				{
 				case "area":
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterParameterValues.add((String) filterValues.get(String.valueOf(j)));
+					}
 					filteredResults = UtilFunctions.populateJSONObjects(areaMap, filterParameterValues);
 					break;
 
 				case "professor":
+					
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterParameterValues.add((String) filterValues.get(String.valueOf(j)));
+					}
 					filteredResults = UtilFunctions.populateJSONObjects(professorMap, filterParameterValues);
 					break;
 
 				case "course":
+					
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterParameterValues.add((String) filterValues.get(String.valueOf(j)));
+					}
 					filteredResults = UtilFunctions.populateJSONObjects(courseNameMap, filterParameterValues);
 					break;
 
 				case "classStrength":
-					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(classStrengthMap, filterParameterValues);
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterIntParameterValues.add((Integer) filterValues.get(String.valueOf(j)));
+					}
+					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(classStrengthMap, filterIntParameterValues);
 					break;
 
 				case "averageGPA":
-					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfFloat(averageGPAMap, filterParameterValues);
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterFloatParameterValues.add(((Double) filterValues.get(String.valueOf(j))).floatValue());
+					}
+					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfFloat(averageGPAMap, filterFloatParameterValues);
 					break;
 
 				case "year":
-					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(yearMap, filterParameterValues);
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterIntParameterValues.add(((Long) filterValues.get(String.valueOf(j))).intValue());
+					}
+					filteredResults = UtilFunctions.populateJSONObjectsForARangeOfInt(yearMap, filterIntParameterValues);
 					break;
 
 				case "term":
+					
+					for (int j = 0; j < filterValues.size(); j++)
+					{
+						filterParameterValues.add((String) filterValues.get(String.valueOf(j)));
+					}
 					filteredResults = UtilFunctions.populateJSONObjects(termMap, filterParameterValues);
 					// System.out.println("inside case term "
 					// +filterParameterValues.size());
@@ -210,7 +236,7 @@ public class JsonProcessor
 				System.out.println("ResultList size: " + resultList.size());
 				System.out.println("ResultList: " + resultList.toString());
 
-			}
+			
 		}
 
 		// returns a JSONArray with course to JSONObject mapping, to make it
