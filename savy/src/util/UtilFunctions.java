@@ -183,7 +183,7 @@ public class UtilFunctions
 			}			
 		}
 		
-		return convertMapToJSONArray(outputMap);
+		return convertMapToJSONArray(outputMap, false);
 		
 	}
 	
@@ -207,7 +207,7 @@ public class UtilFunctions
 		
 	}
 	
-	public static JSONArray convertMapToJSONArray (HashMap<String, TreeSet<JSONObject>> inputMap)
+	public static JSONArray convertMapToJSONArray (HashMap<String, TreeSet<JSONObject>> inputMap, boolean limitedDataSet)
 	{
 		JSONArray returnObject = new JSONArray();
 		TreeSet<JSONObject> jsonObjectListToTraverse = new TreeSet<JSONObject>(new CustomComparator());
@@ -218,7 +218,17 @@ public class UtilFunctions
 			
 			for(JSONObject obj : jsonObjectListToTraverse)
 			{
-				list.add(obj);
+				if(limitedDataSet)
+				{
+					if((Long)obj.get("Year") >= 2010)
+					{
+						list.add(obj);
+					}
+				}
+				else
+				{
+					list.add(obj);
+				}
 			}
 			
 			JSONObject keyValueObject = new JSONObject();
@@ -228,6 +238,45 @@ public class UtilFunctions
 			
 			returnObject.add(keyValueObject);
 		}
+		
+		return returnObject;
+	}
+	
+	public static JSONArray getRelevantYearAndTermValues(JSONArray coursesData)
+	{
+		JSONArray returnObject = new JSONArray();
+		TreeSet<String> outputList = new TreeSet<String>(new CustomComparatorForString());
+		
+		for(int i=0; i< coursesData.size(); i++)
+		{
+			JSONArray list = (JSONArray)((JSONObject) coursesData.get(i)).get(StringLiterals.Value);
+			for(int j=0; j< list.size(); j++)
+			{
+				Long year = (Long) ((JSONObject)list.get(j)).get(StringLiterals.Year);
+				if(year >=2010)
+				{
+					String yearAndTerm = (String)((JSONObject)list.get(j)).get(StringLiterals.YearAndTerm);
+				
+					if(!outputList.contains(yearAndTerm))
+					{
+						outputList.add(yearAndTerm);
+					}
+				}
+			}
+		}
+		
+		for (String listItem : outputList) 
+		{
+			// System.out.println("[");
+			JSONObject jsonItem = new JSONObject();
+			jsonItem.put(StringLiterals.YearAndTerm, listItem);
+			// System.out.println("{"+parameter+":"+listItem+"}");
+			returnObject.add(jsonItem);
+			// System.out.println("]");
+			//System.out.println(outputList);
+		}
+		
+		//System.out.println(returnObject.toString());
 		
 		return returnObject;
 	}

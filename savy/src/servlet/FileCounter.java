@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -40,17 +42,20 @@ public class FileCounter extends HttpServlet
 
 		// JSONArray allLists=new JSONArray();
 		JSONObject jsonObject = new JSONObject();
+		JSONArray relevantCourseData = processor.getDataForAllCourses();
 		jsonObject.put(StringLiterals.ListOfAreas, processor.getListForStringParameter(StringLiterals.Area));
 		jsonObject.put(StringLiterals.ListOfCourses, processor.getListForStringParameter(StringLiterals.CourseName));
 		jsonObject.put(StringLiterals.ListOfProfessors, processor.getListForStringParameter(StringLiterals.Professor));
 		jsonObject.put(StringLiterals.ListOfCourseNumbers, processor.getListForStringParameter(StringLiterals.CourseNumber));
 		jsonObject.put(StringLiterals.ListOfYears, processor.getListForIntegerParameter(StringLiterals.Year));
 		jsonObject.put(StringLiterals.ListOfTerms, processor.getListForStringParameter(StringLiterals.Term));
-		jsonObject.put(StringLiterals.ListOfYearsAndTerms, processor.getListForStringParameter(StringLiterals.YearAndTerm));
+		jsonObject.put(StringLiterals.ListOfYearsAndTerms, UtilFunctions.getRelevantYearAndTermValues(relevantCourseData));
 		jsonObject.put(StringLiterals.ListOfClassStrengths, processor.getListForIntegerParameter(StringLiterals.ClassStrength));
 		jsonObject.put(StringLiterals.ListOfAverageGPAs, processor.getListForFloatParameter(StringLiterals.AverageGPA));
 		
-		jsonObject.put(StringLiterals.CoursesData, processor.getDataForAllCourses());
+		
+		//System.out.println(processor.getListForStringParameter(StringLiterals.YearAndTerm).toString());
+		jsonObject.put(StringLiterals.CoursesData, relevantCourseData);
 
 		// response.getWriter().write(preprocessor.getAllAreas().toJSONString());
 		response.getWriter().write(jsonObject.toJSONString());
