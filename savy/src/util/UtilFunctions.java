@@ -89,13 +89,13 @@ public class UtilFunctions
 		return resultList;
 	}
 	
-	public static JSONArray populateJSONObjectsForARangeOfFloat(HashMap<Float, TreeSet<JSONObject>> mapToFilter, List<String> filterValues)
+	public static JSONArray populateJSONObjectsForARangeOfFloat(HashMap<Float, TreeSet<JSONObject>> mapToFilter, List<Float> filterValues)
 	{
 		JSONArray resultList = new JSONArray();	
 		TreeSet<JSONObject> jsonObjectList = new TreeSet<JSONObject>(new CustomComparator());
 		
-		float minValue = Float.parseFloat(filterValues.get(0));
-		float maxValue = Float.parseFloat(filterValues.get(1));
+		float minValue = filterValues.get(0);
+		float maxValue = filterValues.get(1);
 		
 		for(float key : mapToFilter.keySet())
 		{
@@ -116,13 +116,13 @@ public class UtilFunctions
 		return resultList;
 	}
 	
-	public static JSONArray populateJSONObjectsForARangeOfInt(HashMap<Integer, TreeSet<JSONObject>> mapToFilter, List<String> filterValues)
+	public static JSONArray populateJSONObjectsForARangeOfInt(HashMap<Integer, TreeSet<JSONObject>> mapToFilter, List<Integer> filterValues)
 	{
 		JSONArray resultList = new JSONArray();	
 		TreeSet<JSONObject> jsonObjectList = new TreeSet<JSONObject>(new CustomComparator());
 		
-		int minValue = Integer.parseInt(filterValues.get(0));
-		int maxValue = Integer.parseInt(filterValues.get(1));
+		int minValue = filterValues.get(0);
+		int maxValue = filterValues.get(1);
 		
 		for(int key : mapToFilter.keySet())
 		{
