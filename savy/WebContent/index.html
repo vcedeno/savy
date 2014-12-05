@@ -823,15 +823,13 @@ function getRadius(classStrength)
 	}
 }
 
-//Needs to be made more granular (Shiwani)
 function getHue(averageGPA)
 {
-	var a = averageGPA/4,
-		 b = a*120;
-		
-		//Return a CSS HSL string
-		return 'hsl('+b+',100%,25%)';
+    var val = 4-averageGPA;
 
+    var hue = Math.floor(120 - Math.floor((val) * 280 /4));  // go from green to red
+    
+    return 'hsl('+hue+',' + '80%, 40%)';
 }
 
  function handleRadio(radio)
