@@ -115,7 +115,8 @@ li{
 			    left_pad = 300
 			    additional_width = 50,
 			    additional_height = 20;
-
+				
+	var minGPA_calc,maxGPA_calc,minSize,maxSize;
     //This function is called on load
 	$(document).ready(function(){
 	$('.accordion').accordion({ heightStyle: "content" });
@@ -134,10 +135,45 @@ li{
 			professorOption=data.ListOfProfessors;
 			areaOption=data.ListOfAreas;
 			yearAndTermOption=data.ListOfYearsAndTerms;
-			console.log(yearAndTermOption);
+			//console.log(data.ListOfClassStrengths);
+			sizeList= data.ListOfClassStrengths;
+			GPAList=data.ListOfAverageGPAs;
+			//maxSize= Math.max(data.ListOfClassStrengths);
+			//console.log(minSize);
+			//console.log(maxSize);
 			coursesData = data.CoursesData;
-
-
+			var SizePopulated=[];
+			var GPAPopulated=[];
+			
+			//putInList(sizeList,SizePopulated,"ClassStrength");
+			//putInList(GPAList,GPAPopulated,"AverageGPA");	
+			for(i=0;i<sizeList.length;i++)
+		{
+				
+				listItem=sizeList[i].ClassStrength;
+				//console.log("**** "+listItem);
+				SizePopulated.push(listItem);
+				
+		}
+			for(i=0;i<GPAList.length;i++)
+		{
+				
+				listItem=GPAList[i].AverageGPA;
+				//console.log("**** "+listItem);
+				GPAPopulated.push(listItem);
+				
+		}
+			//console.log(SizePopulated);
+			//console.log(GPAPopulated);
+			
+			
+			maxSize=  Math.max.apply(null,SizePopulated);
+			minSize=  Math.min.apply(null,SizePopulated);
+			
+			minGPA_calc=Math.min.apply(null,GPAPopulated);
+			maxGPA_calc=Math.max.apply(null,GPAPopulated);
+			
+			
 			//This section constructs the filters one by one
 			var str='<li><input class="areaCheck" type="checkbox" value="All" checked="checked" onClick="toggleAll(this);"/>All</li>';
 			for(i=0;i<areaOption.length;i++)
@@ -249,8 +285,8 @@ li{
 				maxGPAForCourses.push(d3.max(courseValue, function(d){return d.AverageGPA}));
 			}
 
-			minGPA = d3.min(minGPAForCourses);
-			maxGPA = d3.max(maxGPAForCourses);
+			var minGPA = d3.min(minGPAForCourses);
+			var maxGPA = d3.max(maxGPAForCourses);
 
 			//console.log(courseWiseProfessors);
 
@@ -403,7 +439,9 @@ li{
 		  type: 'GET'
 	   });		
 	   //************************************* ajax complete **************//
-	   $( "#slider-range_year" ).slider({
+	
+			
+	$( "#slider-range_year" ).slider({
 	  range: true,
       min:2004,
       max:2013,
@@ -413,31 +451,31 @@ li{
         $( "#chosenYear" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
     });
-    $( "#chosenYear" ).val(  $( "#slider-range_year" ).slider( "values", 0 )  +" to "+  $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#chosenYear" ).val(  $( "#slider-range_year" ).slider( "values", 0 )  +" to "+  $( "#slider-range_year" ).slider( "values", 1 ) );
 	
 	$( "#slider-range_GPA" ).slider({
 	  range: true,
-      min:2004,
-      max:2013,
-	  step:1,
-      values:[2004,2013],
+      min:  minGPA_calc,
+      max:maxGPA_calc,
+	  step:0.1,
+      values:[minGPA_calc,maxGPA_calc],
       slide: function( event, ui ) {
         $( "#chosenGPA" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
     });
-    $( "#chosenGPA" ).val(  $( "#slider-range_GPA" ).slider( "values", 0 )  +" to "+  $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#chosenGPA" ).val(  $( "#slider-range_GPA" ).slider( "values", 0 )  +" to "+  $( "#slider-range_GPA" ).slider( "values", 1 ) );
 	
 	$( "#slider-range_size" ).slider({
 	  range: true,
-      min:2004,
-      max:2013,
-	  step:1,
-      values:[2004,2013],
+      min:minSize,
+      max:maxSize,
+	  step:2,
+      values:[minSize,maxSize],
       slide: function( event, ui ) {
         $( "#chosenClassSize" ).val(ui.values[0] +" to "+ ui.values[1] );
       }
     });
-    $( "#chosenClassSize" ).val(  $( "#slider-range_size" ).slider( "values", 0 )  +" to "+  $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#chosenClassSize" ).val(  $( "#slider-range_size" ).slider( "values", 0 )  +" to "+  $( "#slider-range_size" ).slider( "values", 1 ) );
 
 });
 
@@ -812,11 +850,17 @@ function populateAllFilterParameters()
 	var selectedAreas={};
 	var selectedCourses={};
     var term={};
+	var year={};
+	var averageGPA={};
+	var classStrength={};
+	
 	
 	var professorIndex=0;
 	var areaIndex=0;
 	var courseIndex=0;
 	var termIndex=0;
+	//var yearIndex=0;
+	//var classStrength=0;
 
 	 var areaList=$('#areaList').find('li');
     for(i=0;i<areaList.length;i++)
@@ -846,8 +890,9 @@ function populateAllFilterParameters()
 	if(childItem.is(":checked") && childItem.val()!="All")
 		selectedProfessors[professorIndex++]=childItem.val();
     }
-	console.log("selected radio button is "+ $('input[name=Term]:checked').val());
-	console.log("prof sample"+selectedProfessors);
+	//console.log("selected radio button is "+ $('input[name=Term]:checked').val());
+	//console.log("prof sample"+selectedProfessors);
+	
 	if( $('input[name=Term]:checked').val() == 'Fall&Spring' )
 		{
 		 term[termIndex++]='Fall';
@@ -855,9 +900,25 @@ function populateAllFilterParameters()
 		}
 	else
 	term[termIndex++]=$('input[name=Term]:checked').val();
-    var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
+    
+	
+	year[0]= $("#slider-range_year").slider("values",0);
+	year[1]= $("#slider-range_year").slider("values",1);
+	
+	averageGPA[0]= $("#slider-range_GPA").slider("values",0);
+	averageGPA[1]= $("#slider-range_GPA").slider("values",1);
+	
+	classStrength[0]= $("#slider-range_size").slider("values",0);
+	classStrength[1]= $("#slider-range_size").slider("values",1);
+	
+	var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
     var json4=JSON.stringify({name:"term",value:term });
-    console.log(json1);
+    var json5=JSON.stringify({name:"year",value:year });
+	var json6=JSON.stringify({name:"averageGPA",value:averageGPA });
+	var json7=JSON.stringify({name:"classStrength",value:classStrength });
+	
+	
+	console.log(json1);
 
    
 
