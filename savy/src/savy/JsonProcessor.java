@@ -47,14 +47,9 @@ public class JsonProcessor
 	{
 		JSONParser parser = new JSONParser();
 
-<<<<<<< HEAD
-		try {
-			Object obj = parser.parse(new FileReader("data.json"));
-=======
 		try
 		{
 			Object obj = parser.parse(new FileReader("C:\\JSON\\data.json"));
->>>>>>> b0808f0dbfbda7816208e997a4ca73716d4bc2a8
 
 			JSONArray jsonArray = (JSONArray) obj;
 			JSONObject jsonObject = new JSONObject();
