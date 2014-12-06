@@ -9,17 +9,11 @@ height:320px;
 width:190px;
 }
 
- .tooltipsy
-    {
-        padding: 15px;
-        max-width: 200px;
-        color: #303030;
-    }
-
-title
+.subsvg
 {
-	font-family: sans-serif;
-    font-size: 8px;
+      border-style:solid;
+      border-width:1;
+      border-color:grey;
 }
 
 .filters{
@@ -38,6 +32,7 @@ li{
 	font-family: sans-serif;
     font-size: 11px;
 }
+     
 
 .x-axis path,
 .x-axis line {
@@ -61,6 +56,22 @@ li{
 .y-axis text {
     font-family: sans-serif;
     font-size: 11px;
+}
+
+.subsvg text {
+
+	font-family: sans-serif;
+    font-size: 10px;
+    stroke: black;
+    float: left;
+}
+
+.legendSVG text {
+
+	font-family: sans-serif;
+    font-size: 10px;
+    stroke: black;
+    float: left;
 }
 
 
@@ -92,14 +103,24 @@ li{
 <script type="text/javascript" src="tooltipsy-master/tooltipsy.source.js"></script>
 <script type="text/javascript" src="tooltipsy-master/tooltipsy.min.js"></script>
 <script>
-
-	        var w = 4500,
+			
+			//Various parameters which are used for the SVGs
+			    var w = 4500,
 			    h = 300,
 			    pad = 20,
-			    left_pad = 300;
-
+			    left_pad = 300
+			    additional_width = 50,
+			    additional_height = 20;
+	
+	var whichRadio;			
+	
+    //This function is called on load
 	$(document).ready(function(){
-	//$('.filters').accordion();
+	
+	
+
+	$('.accordion').accordion({ heightStyle: "content", collapsible: true, active: false   });
+	$('input:radio[name="Term"][value="Fall&Spring"]').prop('checked', true);
 	var x=document.getElementsByClassName("radio");
 	for(i=0;i<x.length;i++)
 	  x[i].checked=false;
@@ -115,8 +136,48 @@ li{
 			professorOption=data.ListOfProfessors;
 			areaOption=data.ListOfAreas;
 			yearAndTermOption=data.ListOfYearsAndTerms;
+			//console.log(data.ListOfClassStrengths);
+			sizeList= data.ListOfClassStrengths;
+			GPAList=data.ListOfAverageGPAs;
+			//maxSize= Math.max(data.ListOfClassStrengths);
+			
 			coursesData = data.CoursesData;
-
+			var SizePopulated=[];
+			var GPAPopulated=[];
+			
+			//putInList(sizeList,SizePopulated,"ClassStrength");
+			//putInList(GPAList,GPAPopulated,"AverageGPA");	
+			for(i=0;i<sizeList.length;i++)
+		{
+				
+				listItem=sizeList[i].ClassStrength;
+				//console.log("**** "+listItem);
+				SizePopulated.push(listItem);
+				
+		}
+			for(i=0;i<GPAList.length;i++)
+		{
+				
+				listItem=GPAList[i].AverageGPA;
+				//console.log("**** "+listItem);
+				GPAPopulated.push(listItem);
+				
+		}
+			//console.log(SizePopulated);
+			//console.log(GPAPopulated);
+			
+			
+			maxSize=  Math.max.apply(null,SizePopulated);
+			minSize=  Math.min.apply(null,SizePopulated);
+			
+			minGPA_calc=Math.min.apply(null,GPAPopulated);
+			maxGPA_calc=Math.max.apply(null,GPAPopulated);
+			
+			console.log(minSize);
+			console.log(maxSize);
+			
+			
+			//This section constructs the filters one by one
 			var str='<li><input class="areaCheck" type="checkbox" value="All" checked="checked" onClick="toggleAll(this);"/>All</li>';
 			for(i=0;i<areaOption.length;i++)
 			{
@@ -152,10 +213,44 @@ li{
 			
 			$('#professorList').html(str);
 			str="";
+
+
+			//Legend
+			var legendTr = d3.select("#legendTable")
+			   					.append("tr")
+			   	;
+
+
+			for(i=0; i< areaOption.length; i++)
+			{				
+				var area = areaOption[i].Area;
+				var requiredWidth = area.length *9;
+
+				//console.log(area + " " + area.length);
+
+				var legendtd = legendTr.append("td").style("float", "left").attr("width", requiredWidth + 15);
+				var legendSVG = legendtd.append("svg").attr("width", requiredWidth).attr("height", 20);
+
+				legendSVG.append("rect")
+				.attr("class", "legendSVG")
+				.attr("width", 10)
+				.attr("height", 10)
+				.attr("fill", getColourBasedOnArea(area));
+
+				legendSVG.append("text")
+				.attr("dx", 12)
+				.attr("dy", 12)
+				.text(area);
+
+			}
+
       
 	        var courseWiseProfessors = [];
 
-	        var requiredWidth = yearAndTermOption.length * 100;
+	        var requiredWidth = yearAndTermOption.length * 120;
+
+	        //We create a scatterplot table for the courses view
+	        //Essentially we are creating a spark line
 
 			var tr1 = d3.select("#scatterplotTable")
 			   					.append("tr")
@@ -163,30 +258,35 @@ li{
 
 			   	var td11 = tr1.append("td")
 			   		.style("float", "left")
-			   		.attr("width", "7%");
+			   		.attr("width", 160);
 
-		   	
+		   		//This is an empty filler element.
 			   var svg1 = tr1
 			   	.append("td")
-			   	.style("float", "left")
+				.style("margin","0px 0px 0px 160px")
 		        .append("svg")
-		        .attr("width", requiredWidth + 50)
+		        .attr("width", requiredWidth + 250)
 		        .attr("height", 50);
 
-			var x1 = d3.scale.linear().domain([0, 21]).range([left_pad, requiredWidth-pad]);
+
+		    //The first item in the scatterplot table in the first row is the term-year combination x-axis
+			var x = d3.scale.linear().domain([0, yearAndTermOption.length -1]).range([left_pad, requiredWidth-pad]);
 					 
-			var x1Axis = d3.svg.axis().scale(x1).orient("top")
-		        .ticks(22)
+			var x1Axis = d3.svg.axis().scale(x).orient("top")
+		        .ticks(yearAndTermOption.length)
 		        .tickFormat(function (d, i) 
 		        {
+		        		//console.log(d);
 			            return yearAndTermOption[d].YearAndTerm;
 			        });
 			 
 			svg1.append("g")
-			    .attr("class", "x-axis")
+				.attr("class", "x-axis")
 			    .attr("transform", "translate(0, "+(50-pad)+")")
 			    .call(x1Axis);
 
+			//These two variables are used to interpret the variance and to allow us to make the color gradient granular
+			//Gradient is used to represent avgGPA
 			var minGPAForCourses = [];
 			var maxGPAForCourses = [];		
 
@@ -195,8 +295,9 @@ li{
 			{
 				var courseName = coursesData[i].name;
 				var courseValue = coursesData[i].value;
-
+				
 				var professorsForCourse = [];
+				var areaForCourse;
 
 				for(j=0; j<courseValue.length;j++)
 				{
@@ -205,39 +306,43 @@ li{
 					{
 						professorsForCourse.push(professorName);
 					}
+
+					if(j==0)
+					{
+						areaForCourse = courseValue[j].Area;
+					}
 				}
 
-				courseWiseProfessors.push({courseName: courseName, professorNames: professorsForCourse});
+				courseWiseProfessors.push({courseName: courseName, professorNames: professorsForCourse, area: areaForCourse});
 
 				minGPAForCourses.push(d3.min(courseValue, function(d){return d.AverageGPA}));
 				maxGPAForCourses.push(d3.max(courseValue, function(d){return d.AverageGPA}));
 			}
 
-			minGPA = d3.min(minGPAForCourses);
-			maxGPA = d3.max(maxGPAForCourses);
+			var minGPA = d3.min(minGPAForCourses);
+			var maxGPA = d3.max(maxGPAForCourses);
 
 			//console.log(courseWiseProfessors);
 
 			
-
+			//For each entry in the professors list, create one row in the scatterplot
+			//The row will have two TDs, one has the courseName and the other has the plot
 			for(i=0; i< courseWiseProfessors.length; i++)
 			{
-				//console.log(i);
-				//console.log(courseWiseProfessors[i].courseName);
-				//console.log(courseWiseProfessors[i].professorNames);
+
 				var professorNames = courseWiseProfessors[i].professorNames; 
 				var numberOfProfessors = professorNames.length;
 
 			   	var actualHeight = (numberOfProfessors*60) + 20;
-			   	//console.log("For courseName :" + courseWiseProfessors[i].courseName + ", actualHeight: " + actualHeight);
 
 				var tr = d3.select("#scatterplotTable")
 			   					.append("tr")
+			   					.attr("bgcolor", function(d){ return getColourBasedOnArea(courseWiseProfessors[i].area);});
 			   	;
 
 			   	var td1 = tr.append("td")
 			   		.style("float", "left")
-			   		.attr("width", "7%");
+			   		.attr("width", 160);
 
 			   	td1.append("text")
 			   	.text(courseWiseProfessors[i].courseName)
@@ -251,20 +356,20 @@ li{
 			   	
 				var svg = tr
 				   	.append("td")
-				   	.style("align","right")
+				   	//.style("align","right")
 				   	.style("float", "left")
 			        .append("svg")
-			        .attr("width", requiredWidth)
-			        .attr("height", actualHeight);
+			        .attr("width", requiredWidth + additional_width)
+			        .attr("height", actualHeight + additional_height);
 			        //var firstNames = ['John', 'Anna', 'Peter'];
 
 			        var numberOfProfessors = professorNames.length;
 
-					var x = d3.scale.linear().domain([0, 21]).range([left_pad, requiredWidth-pad]),
-					    y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
-					 
+					var y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
+
+					//We need to create an x-axis for the sake of plotting, but using CSS we make sure it is not visible 
 					var xAxis = d3.svg.axis().scale(x).orient("bottom")
-					        .ticks(22)
+					        .ticks(yearAndTermOption.length)
 					        .tickFormat(function (d, i) 
 					        {
 					            return yearAndTermOption[d].YearAndTerm;
@@ -286,8 +391,8 @@ li{
 					    .attr("transform", "translate("+(left_pad- pad)+", 0)")
 					    .call(yAxis);
 
-					    //console.log(svg);
-
+					
+					//Club all data points for the same course which the professor has taught multiple times
 					var relevantCoursesData = [];
 
 					for(k=0; k< coursesData.length; k++)
@@ -305,6 +410,7 @@ li{
 
 					//console.log(relevantCoursesData);
 
+					//Create a gnode for each data point
 					var gnodes = svg.selectAll('g.gnode')
 					  .data(relevantCoursesData)
 					  .enter()
@@ -344,99 +450,18 @@ li{
 								{
 									return getHue(d.AverageGPA);
 								})
-								.attr("title", function(d)
-								{
-									return "Number Of A's: " + d.NumberOfAs + ", \nNumber Of B's: " + d.NumberOfBs;
-								})/*
-								.on("mouseover", function(d)
-								{
-									var xPosition = parseFloat(d3.select(this).attr("cx")) + 2;
-									var yPosition = parseFloat(d3.select(this).attr("cy")) + 2;
 
-									var rect = d3.select(this)
-									.append("rect")									
-									.attr("x", xPosition)
-									.attr("y", yPosition)
-									.attr("width", 10)
-									.attr("height", 6)
-									.attr("fill", "black");
-
-									rect.append("text")
-									.text("Hi");
-								})*/
-								;
-
-								/*
-				                $('svg circle').tipsy
-				                ({ 
-				                    gravity: 'w', 
-				                    html: true, 
-				                    title: function()
-				                    {
-				                        return "Hi";
-				                    }
-				                });	
-
-				                */
-
-				                $('svg circle').tooltipsy(
-				                {
-				                	offset: [7,0],
-				                	show : function (e, $e1)
-				                	{
-				                		$e1.fadeIn(1000);
-				                	},
-				                	hide : function (e, $e1)
-				                	{
-				                		$e1.fadeOut(100);
-				                	}
-				                });	
-
+								//on mouse over we basically append a new SVG to the circle consisting of a bar graph and tex.
+									//could also consider creating this initially with opacity = 0 and then toggling opacity on mouse-over
+									//but not entirely sure how to do it. maybe if time permits
 								gnodes
-								.on("mouseover", function(d)
-								{
-									var xPosition = parseFloat(d3.select(this).select("circle").attr("cx")) + 8;
-									var yPosition = parseFloat(d3.select(this).select("circle").attr("cy")) - 5;
-
-									var subSVG = d3.select(this)
-									.append("svg")
-									.attr("width", 20)
-									.attr("height", 60)
-									.attr("x", xPosition)
-									.attr("y", yPosition)
-									;
-
-									var rect1 = subSVG
-									.append("rect")									
-									.attr("width", 10)
-									.attr("height", d.NumberOfBs * 3)
-									.attr("fill", "orange");
-
-									var rect2 = subSVG
-									.append("rect")									
-									.attr("width", 10)
-									.attr("height", d.NumberOfAs ^ 3)
-									.attr("fill", "blue");
-
-									
-
-									var text = subSVG.append("block")
-									.append("text")
-									.text("Hi.. How are you???")
-								   	.style("font-family", "sans-serif")
-								   	.style("font-size", "8px")
-								   	.style("stroke", "black")
-									;
-
-									
-								})
+								.on("mouseover", function(d){return hover(d, d3.select(this));})
+			
 								.on("mouseout", function(d)
 								{
 									d3.select(this).selectAll("svg").transition().remove();
 								})
 								;
-
-				
 			}
 
 
@@ -448,8 +473,314 @@ li{
 		  type: 'GET'
 	   });		
 	   //************************************* ajax complete **************//
-
+	
+	//$('input[name=Term]').val()
+	
+	$( "#slider-range_year" ).slider({
+	  range: true,
+      min:2003,
+      max:2014,
+	  step:1,
+      values:[2010,2014],
+      slide: function( event, ui ) {
+        $( "#chosenYear" ).val(ui.values[0] +" to "+ ui.values[1] );
+      }
+    });
+    $( "#chosenYear" ).val(  $( "#slider-range_year" ).slider( "values", 0 )  +" to "+  $( "#slider-range_year" ).slider( "values", 1 ) );
+	
+	$( "#slider-range_GPA" ).slider({
+	  range: true,
+      min:2.50,
+      max:4.01,
+	  step:0.05,
+      values:[2.50,4.01],
+      slide: function( event, ui ) {
+        $( "#chosenGPA" ).val(ui.values[0] +" to "+ ui.values[1] );
+      }
+    });
+    $( "#chosenGPA" ).val(  $( "#slider-range_GPA" ).slider( "values", 0 ).toFixed(2)  +" to "+  $( "#slider-range_GPA" ).slider( "values", 1 ).toFixed(2)  );
+	
+	$( "#slider-range_size" ).slider({
+	  range: true,
+      min:10,
+      max:75,
+	  step:2,
+      values:[10,75],
+      slide: function( event, ui ) {
+        $( "#chosenClassSize" ).val(ui.values[0] +" to "+ ui.values[1] );
+      }
+    });
+    $( "#chosenClassSize" ).val(  $( "#slider-range_size" ).slider( "values", 0 )  +" to "+  $( "#slider-range_size" ).slider( "values", 1 ) );	
+	
 });
+
+
+
+function hover(d, obj_ref)
+{
+	var xPosition = parseFloat(obj_ref.select("circle").attr("cx")) + 8;
+	var yPosition = parseFloat(obj_ref.select("circle").attr("cy")) - 5;
+
+	var subSVG = obj_ref
+	.append("svg")
+	.attr("width", 200)
+	.attr("height", (d.ClassStrength*3) + 40)
+	.attr("x", xPosition)
+	.attr("y", yPosition)
+	.attr("class", "subsvg")
+	;
+
+	var xpositionForRect = xPosition + 3;
+	var ypositionForRect = yPosition + 3;
+
+	var totalOfAll = 0;
+	console.log(typeof(totalOfAll));
+
+	if(d.NumberOfFs>0)
+	{
+		totalOfAll += d.NumberOfFs;
+	}
+
+	if(d.NumberOfEs>0)
+	{
+		totalOfAll += d.NumberOfEs;
+	}
+
+	if(d.NumberOfDs>0)
+	{
+		totalOfAll += d.NumberOfDs;
+	}
+
+	if(d.NumberOfCs>0)
+	{
+		totalOfAll += d.NumberOfCs;
+	}
+
+	if(d.NumberOfBs>0)
+	{
+		totalOfAll += d.NumberOfBs;
+	}
+
+	if(d.NumberOfAs>0)
+	{
+		totalOfAll += d.NumberOfAs;
+	}
+
+	console.log(totalOfAll);
+	console.log(typeof(totalOfAll));
+
+	if(d.NumberOfFs>0)
+	{
+		subSVG
+		.append("rect")									
+		.attr("width", 10)
+		.attr("height", (totalOfAll * 3))
+		.attr("fill", "pink");
+
+		ypositionForRect+= (d.NumberOfFs *3) ;
+
+		totalOfAll -=d.NumberOfFs;
+	}
+
+	if(d.NumberOfEs>0)
+	{
+		subSVG
+		.append("rect")									
+		.attr("width", 10)
+		.attr("height", totalOfAll * 3)
+		.attr("fill", "green");
+
+		ypositionForRect+= (d.NumberOfEs *3) ;
+		totalOfAll -=d.NumberOfEs;
+	}
+
+	if(d.NumberOfDs>0)
+	{
+		subSVG
+		.append("rect")									
+		.attr("width", 10)
+		.attr("height", totalOfAll * 3)
+		.attr("fill", "red");
+
+		ypositionForRect+= (d.NumberOfDs *3) ;
+		totalOfAll -=d.NumberOfDs;
+	}
+
+	if(d.NumberOfCs>0)
+	{
+		subSVG
+		.append("rect")									
+		.attr("width", 10)
+		.attr("height", totalOfAll * 3)
+		.attr("fill", "purple");
+
+		ypositionForRect+= (d.NumberOfCs *3) ;
+		totalOfAll -=d.NumberOfCs;
+	}
+
+	if(d.NumberOfBs>0)
+	{
+		subSVG
+		.append("rect")									
+		.attr("width", 10)
+		.attr("height", totalOfAll * 3)
+		.attr("fill", "orange");
+
+
+		ypositionForRect+= (d.NumberOfBs *3) ;
+		totalOfAll -=d.NumberOfBs;
+	}
+
+	if(d.NumberOfAs>0)
+	{
+		subSVG
+		.append("rect")									
+		.attr("width", 10)
+		.attr("height", totalOfAll * 3)
+		.attr("fill", "blue");
+
+	}
+
+	var dy_val = 8;
+	dx_val = 12;
+
+	var text0 = subSVG
+	.append("text")
+	.attr("dx", dx_val)
+	.attr("dy", dy_val)
+	.text("Class size: " + d.ClassStrength)
+	;
+
+	dy_val+=13;
+	
+
+	if(d.NumberOfAs >0)
+	{
+
+		var text1 = subSVG
+		.append("text")
+		.attr("dx", dx_val)
+		.attr("dy", dy_val)
+		.text("#A's: " + d.NumberOfAs)
+		;
+
+		dy_val+=13;
+
+	}
+
+	if(d.NumberOfBs >0)
+	{
+		var text2 = subSVG
+		.append("text")
+		.attr("dx", dx_val)
+		.attr("dy", dy_val)
+		.text("#B's: " + d.NumberOfBs)
+		;
+		dy_val+=13;
+
+	}
+
+	if(d.NumberOfCs >0)
+	{
+		var text3 = subSVG
+		.append("text")
+		.attr("dx", dx_val)
+		.attr("dy", dy_val)
+		.text("#C's: " + d.NumberOfCs)
+		;
+
+		dy_val +=13;
+	}
+
+	if(d.NumberOfDs >0)
+	{
+		var text4 = subSVG
+		.append("text")
+		.attr("dx", dx_val)
+		.attr("dy", dy_val)
+		.text("#D's: " + d.NumberOfDs)
+		;
+
+		dy_val +=13;
+	}
+
+	if(d.NumberOfEs >0)
+	{
+		var text5 = subSVG
+		.append("text")
+		.attr("dx", dx_val)
+		.attr("dy", dy_val)
+		.text("#E's: " + d.NumberOfEs)
+		;
+		dy_val +=13;
+	}
+
+	if(d.NumberOfFs >0)
+	{
+
+		var text6 = subSVG
+		.append("text")
+		.attr("dx", dx_val)
+		.attr("dy", dy_val)
+		.text("#F's: " + d.NumberOfFs)
+	;
+
+	}
+}
+
+function getColourBasedOnArea(area)
+{	
+	if(area == "Algorithms and Theory")
+	{
+		return "#00FF00";
+	}
+
+	if(area == "Computational Biology and Bioinformatics")
+	{
+		return "#8000FF";
+	}
+
+	if(area == "Computer Systems")
+	{
+		return "#FF00FF";
+	}
+
+	if(area == "Data and Information")
+	{
+		return "#FFFF00";
+	}
+
+	if(area == "Human Computer Interaction")
+	{
+		return "#00FFF2";
+	}
+
+
+	if(area == "Intelligent Systems")
+	{
+		return "#FFFFFF";
+	}
+
+	if(area == "Numerical and Scientific Computing")
+	{
+		return "#FF6A00";
+	}
+
+	if(area == "Programming Languages")
+	{
+		return "#FF3300";
+	}
+
+	if(area == "Software Engineering")
+	{
+		return "#FF0080";
+	}
+
+	//default color
+	return "#BEBEBE";
+
+
+}
 
 function getRadius(classStrength)
 {
@@ -481,49 +812,14 @@ function getRadius(classStrength)
 
 function getHue(averageGPA)
 {
-	var a = averageGPA/4,
-		 b = a*120;
-		
-		//Return a CSS HSL string
-		return 'hsl('+b+',100%,25%)';
+    var val = 4-averageGPA;
 
+    var hue = Math.floor(120 - Math.floor((val) * 280 /4));  // go from green to red
+    
+    return 'hsl('+hue+',' + '80%, 40%)';
 }
 
- function handleRadio(radio)
-	{
-		//window.alert(radio.id);
-		if(radio.id=="filterRadioArea")
-		{
-		 div_id="areas_select";
-		 ul_id="areaList";
-		 input_class="areaCheck";
-		 data_to_populate=areaOption;
-		 data_parameter=1;
-		 button_id="area";
-		 appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter,"area");
-		}
-		else if(radio.id=="filterRadioProfessor")
-		{
-		 div_id="professor_select";
-		 ul_id="professorList";
-		 input_class="professorCheck";
-		 data_to_populate=professorOption;
-		 data_parameter=2;
-		  button_id="professor";
-		 appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter,"professor");
-		}
-		else if(radio.id=="filterRadioCourse")
-		{
-		 div_id="course_select";
-		 ul_id="courseList";
-		 input_class="courseCheck";
-		 data_to_populate=courseOption;
-		 button_id="course";
-		 data_parameter=3;
-		 appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter, "course");
-		}
-		
-	}
+ 
 function appendAptDiv(div_id,ul_id,input_class,data_to_populate,data_parameter,button_id)
 	{
 	    $('.filters div').remove();
@@ -604,6 +900,8 @@ function populateSelectedList(all)
 
 //TO DO: add parameters for next filters
 //For year, averageGPA and classStrength, only add minValue and maxValue. MinValue has to be first attribute
+
+//TO DO 2: optimize when 'All' is selected for any parameter? Would need backend tweaking as well though
 function populateAllFilterParameters()
 {
 	var json = [];
@@ -611,24 +909,20 @@ function populateAllFilterParameters()
 	var selectedProfessors={};
 	var selectedAreas={};
 	var selectedCourses={};
-
+    var term={};
+	var year={};
+	var averageGPA={};
+	var classStrength={};
+	
+	
 	var professorIndex=0;
 	var areaIndex=0;
 	var courseIndex=0;
+	var termIndex=0;
+	//var yearIndex=0;
+	//var classStrength=0;
 
-	var professorList=$('#professorList').find('li');
-	for(i=0;i<professorList.length;i++)
-	{
-	var childItem=$(professorList[i]).find('input');
-	if(childItem.is(":checked") && childItem.val()!="All")
-		selectedProfessors[professorIndex++]=childItem.val();
-    }
-
-    var json1 = JSON.stringify({name:"professor", value:selectedProfessors});
-
-    console.log(json1);
-
-    var areaList=$('#areaList').find('li');
+	 var areaList=$('#areaList').find('li');
     for(i=0;i<areaList.length;i++)
 	{
 	var childItem=$(areaList[i]).find('input');
@@ -636,7 +930,7 @@ function populateAllFilterParameters()
 		selectedAreas[areaIndex++]=childItem.val();
     }
 
-    var json2 = JSON.stringify({name:"area", value:selectedAreas});
+    var json1 = JSON.stringify({name:"area", value:selectedAreas});
     
 
     var courseList=$('#courseList').find('li');
@@ -647,11 +941,66 @@ function populateAllFilterParameters()
 		selectedCourses[courseIndex++]=childItem.val();
     }
 
-    var json3 = JSON.stringify({name:"course", value:selectedCourses});
+    var json2 = JSON.stringify({name:"course", value:selectedCourses});
+
+	var professorList=$('#professorList').find('li');
+	for(i=0;i<professorList.length;i++)
+	{
+	var childItem=$(professorList[i]).find('input');
+	if(childItem.is(":checked") && childItem.val()!="All")
+		selectedProfessors[professorIndex++]=childItem.val();
+    }
+
+
+	window.alert("selected radio button is "+ $('input[name=Term]:checked').val());
+
+
+	//console.log("selected radio button is "+ $('input[name=Term]:checked').val());
+
+	//console.log("prof sample"+selectedProfessors);
+	
+	if( $('input[name=Term]:checked').val() == 'Fall&Spring' )
+		{
+		 term[termIndex++]='Fall';
+		 term[termIndex++]='Spring'
+		}
+	else
+	term[termIndex++]=$('input[name=Term]:checked').val();
+    
+	
+	year[0]= $("#slider-range_year").slider("values",0);
+	year[1]= $("#slider-range_year").slider("values",1);
+	
+	averageGPA[0]= $("#slider-range_GPA").slider("values",0).toFixed(2) ;
+	averageGPA[1]= $("#slider-range_GPA").slider("values",1).toFixed(2);
+	console.log(averageGPA[0]+" "+ averageGPA[1]);
+	classStrength[0]= $("#slider-range_size").slider("values",0);
+	classStrength[1]= $("#slider-range_size").slider("values",1);
+	
+	var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
+    var json4=JSON.stringify({name:"term",value:term });
+    var json5=JSON.stringify({name:"year",value:year });
+	var json6=JSON.stringify({name:"averageGPA",value:averageGPA });
+	var json7=JSON.stringify({name:"classStrength",value:classStrength });
+	
+	
+	console.log(json1);
+
+
+    var json3 = JSON.stringify({name:"professor", value:selectedProfessors});
+
+    //console.log(json1);
+
+   
 
     json.push(json2);
     json.push(json1);
 	json.push(json3);
+	json.push(json4);
+	json.push(json5);
+	json.push(json6);
+	json.push(json7);
+
 
     //console.log(json);
 
@@ -669,12 +1018,20 @@ function okButtonClicked(ipButton){
 		}
 }
 
+//Called when backend returns after 'Submit'
+//Removes the complete sctaterplot table and creates a new one based on incoming data
+//Logic and code same as in the on-load function.
+
 function filterParametersAjax()
 {
 $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters", value:populateAllFilterParameters()}) })
 	.done(function(data) {
 		    var obj = JSON.parse(data);
-		    var numberOfObjects = Object.keys(obj).length;
+
+		    var courses = obj.CoursesData;
+		    var yearAndTermsAfterFitering = obj.YearAndTermData;
+		    //console.log(yearAndTerm);
+		    var numberOfObjects = Object.keys(courses).length;
 
 			//alert("success " + numberOfObjects);
 
@@ -694,12 +1051,11 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			//$("#scatterplotTable tr").remove();
 
 			var professorNamesAfterFiltering = [];
-			var yearAndTermsAfterFitering = [];
 
 			for(i=0; i<numberOfObjects; i++)
 			{
-				var courseName = obj[i].name;
-				var courseDataPoint = obj[i].value;
+				var courseName = courses[i].name;
+				var courseDataPoint = courses[i].value;
 				
 				for(j=0; j< Object.keys(courseDataPoint).length; j++)
 				{
@@ -707,12 +1063,6 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 					if($.inArray(professorName, professorNamesAfterFiltering) < 0)
 					{
 						professorNamesAfterFiltering.push(professorName);
-					}
-
-					var yearAndTerm = courseDataPoint[j].YearAndTerm;
-					if($.inArray(yearAndTerm, yearAndTermsAfterFitering) < 0)
-					{
-						yearAndTermsAfterFitering.push(yearAndTerm);
 					}
 					
 				}
@@ -724,28 +1074,28 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			.style("width", 5000);	
 
 			var tr1 = scatterPlotTable
-			   			.append("tr")
-		   	;
+			   			.append("tr");
 
 		   	var td11 = tr1.append("td")
-		   		.attr("width", "7%")
+		   		.attr("width", 160)
 		   		.style("float", "left");
+				
+			var numberOfYearAndTermCombinations = yearAndTermsAfterFitering.length;
 
-		   	var numberOfYearAndTermCombinations = yearAndTermsAfterFitering.length;
-
-		   	var requiredWidth = numberOfYearAndTermCombinations * 100;
+		   	var requiredWidth = numberOfYearAndTermCombinations * 150;
 	   	
 		   var svg1 = tr1
 		   	.append("td")
 		   	.style("float", "left")
+			.style("margin","0px 0px 0px 160px")
 	        .append("svg")
-	        .attr("width", requiredWidth)
+	        .attr("width", requiredWidth + 250)
 	        .attr("height", 50);
 
 		        
-			var x1 = d3.scale.linear().domain([0, (numberOfYearAndTermCombinations)]).range([left_pad, requiredWidth-pad]);
+			var x = d3.scale.linear().domain([0, (numberOfYearAndTermCombinations)]).range([left_pad, requiredWidth-pad]);
 					 
-			var x1Axis = d3.svg.axis().scale(x1).orient("top")
+			var x1Axis = d3.svg.axis().scale(x).orient("top")
 		        .ticks(numberOfYearAndTermCombinations)
 		        .tickFormat(function (d) 
 		        {
@@ -759,10 +1109,11 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 
 			for(i=0; i<numberOfObjects; i++)
 			{	
-				var courseName = obj[i].name;
-				var courseDataPoint = obj[i].value;
+				var courseName = courses[i].name;
+				var courseDataPoint = courses[i].value;
 				
 			   	var professorsForCourse = [];
+			   	var areaForCourse;
 
 				for(j=0; j<courseDataPoint.length;j++)
 				{
@@ -771,6 +1122,11 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 					{
 						professorsForCourse.push(professorName);
 					}
+
+					if(j==0)
+					{
+						areaForCourse = courseDataPoint[j].Area;
+					}
 				}
 
 				var numberOfProfessors = professorsForCourse.length;
@@ -778,12 +1134,13 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			   	
 				var tr = scatterPlotTable
 			   					.append("tr")
+			   					.attr("bgcolor", function(d){ return getColourBasedOnArea(areaForCourse);});
 			   	;
 
 			   	var td1 = tr.append("td")
 			   		.style("align","left")
 			   		.style("float", "left")
-			   		.attr("width","7%")
+			   		.attr("width",160)
 			   		;
 
 			   	td1.append("text")
@@ -796,15 +1153,15 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 			   
 				var svg = tr
 				   	.append("td")
-				   	.style("align","right")
+				   	//.style("align","right")
 				   	.style("float", "left")
 			        .append("svg")
-			        .attr("width", requiredWidth)
-			        .attr("height", actualHeight);
+			        .attr("width", requiredWidth + additional_width)
+			        .attr("height", actualHeight + additional_height);
 
 
-					var x = d3.scale.linear().domain([0, numberOfYearAndTermCombinations]).range([left_pad, requiredWidth-pad]),
-					    y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
+
+				var y = d3.scale.linear().domain([0, numberOfProfessors]).range([pad, actualHeight-pad*2]);
 					 
 					var xAxis = d3.svg.axis().scale(x).orient("bottom")
 					        .ticks(numberOfYearAndTermCombinations)
@@ -868,61 +1225,10 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 								{
 									return getHue(d.AverageGPA);
 								})
-								.attr("title", function(d)
-								{
-									return "Number Of A's: " + d.NumberOfAs + ", \nNumber Of B's: " + d.NumberOfBs;
-								});
-
-								$('svg circle').tooltipsy(
-				                {
-				                	offset: [7,0],
-				                	show : function (e, $e1)
-				                	{
-				                		$e1.fadeIn(1000);
-				                	},
-				                	hide : function (e, $e1)
-				                	{
-				                		$e1.fadeOut(100);
-				                	}
-				                });		
+								
 
 								gnodes
-								.on("mouseover", function(d)
-								{
-									var xPosition = parseFloat(d3.select(this).select("circle").attr("cx")) + 8;
-									var yPosition = parseFloat(d3.select(this).select("circle").attr("cy")) - 5;
-
-									var subSVG = d3.select(this)
-									.append("svg")
-									.attr("width", 20)
-									.attr("height", 60)
-									.attr("x", xPosition)
-									.attr("y", yPosition)
-									;
-
-									var rect1 = subSVG
-									.append("rect")									
-									.attr("width", 10)
-									.attr("height", d.NumberOfBs * 3)
-									.attr("fill", "orange");
-
-									var rect2 = subSVG
-									.append("rect")									
-									.attr("width", 10)
-									.attr("height", d.NumberOfAs ^ 3)
-									.attr("fill", "blue");
-
-									/*
-
-									var text = subSVG.append("text")
-									.text("Hi.. How are you???")
-								   	.style("font-family", "sans-serif")
-								   	.style("font-size", "8px")
-								   	.style("stroke", "black")
-									;
-
-									*/
-								})
+								.on("mouseover", function(d){return hover(d, d3.select(this));})
 								.on("mouseout", function(d)
 								{
 									d3.select(this).selectAll("svg").transition().remove();
@@ -936,67 +1242,98 @@ $.post("/savy/FileCounter", { json_string:JSON.stringify({name:"filterParameters
 	); 
 }
 
-/*
-function filterParametersAjax(object)
-{
-$.post("/savy/FileCounter", { json_string:JSON.stringify({name:object.id, value:populateSelectedList(object)}) })
-	.done(function(data) {
-		    //
-			alert("success" + data);
-
-         }
-	); 
-}
-*/
 
  </script>
 
 		<div style="width: 100%;">
+
+			<table><tr><td>
+
+
 			<div style="width: 250px; float: left;" class="filtersLists">
-				<table style="height:100%;">
-					<tr>
-						<input type="button" id="filterNowButton" value="Filter Now" onClick="filterParametersAjax();" />
-					</tr>
-					<br>
-					<br>
-					<tr style="height:30%;float:left;">
-						<div>
-							<div class="labelForFilters">
-								<label for="courseList">Select Course(s)</label>
+						<div class="accordion">
+							<h3>
+								<label for="TermFilter">Select by Term</label>
+							</h3>
+							
+							<div name="Terms_select" class="Radio">
+								<input type="radio" id="Fall" name="Term" value="Fall">Fall<br>
+								<input type="radio" id="Spring" name="Term" value="Spring">Spring<br>
+								<input type="radio" id="Both" name="Term" value="Fall&Spring">Both<br>
 							</div>
-							<div name="course_select" class="select" >
-								<ul id="courseList" ></ul>
-							</div>
-						</div>
-					</tr>
-					<br>
-					<tr style="height:30%;float:left;">
-						<div>
-							<div class="labelForFilters">
-								<label for="professorList">Select Professor(s) </label>
-							</div>
-							<div name="professor_select" class="select" >
-								<ul id="professorList"></ul>
-							</div>
-						</div>
-					</tr>	
-					<br>
-					<tr style="height:30%;float:left;">
-						<div>
-							<div class="labelForFilters" >
-								<label for="areaList">Select Area(s)</label>
-							</div>
+							
+				
+				
+							<h3>
+								<label for="areaList">Select by Area(s)</label>
+							</h3>
 							<div name="areas_select" class="select">
-								<ul id="areaList"></ul>
+								<p><ul id="areaList"></ul></p>
 							</div>
-						</div>
-					</tr>
-				</table>
-			</div>
+				
+							<h3>
+								<label for="courseList">Select by Course(s)</label>
+							</h3>
+							
+							<div name="course_select" class="select" >
+								<p><ul id="courseList" ></ul></p>
+							</div>
+			
+							<h3>
+								<label for="professorList">Select by Professor(s) </label>
+							</h3>
+							<div name="professor_select" class="select" >
+								<p><ul id="professorList"></ul></p>
+							</div>
+							
+							<h3>
+								<label for="yearList">Select by year(s) </label>
+							</h3>
+							<div name="year_select" class="select" >
+								<input type="text" id="chosenYear" readonly style="width:150px;">
+								<div id="slider-range_year"></div>
+							</div>
+							<h3>
+								<label for="yearList">Select by Average GPA </label>
+							</h3>
+							<div name="GPA_select" class="select" >
+								<input type="text" id="chosenGPA" readonly style="width:150px;">
+								<div id="slider-range_GPA"></div>
+							</div>
+							<h3>
+								<label for="yearList">Select by Class size</label>
+							</h3>
+							<div name="classSize_select" class="select" >
+								<input type="text" id="chosenClassSize" readonly style="width:150px;">
+								<div id="slider-range_size"></div>
+							</div>
+
+						</div> 
+			<input type="button" id="filterNowButton" value="Filter Now" onClick="filterParametersAjax();" />
+			
+			</div>	
+			
+			
+			</td><td>
+
+						
+				
+			
+			<div style="margin-left: 280px;" id="legendHolder">
+				<fieldset>
+				<legend>Legend</legend>
+    			<table style="width:5000" id="legendTable">
+
+    			</table>
+    			</fieldset>
+
+    		</div>
+
     		<div style="margin-left: 280px;" id="tableHolder">
     			<table style="width:5000" id="scatterplotTable"> 
     			</table>   			
     		</div>
+			</td></tr></table>
 		</div>	
 
 		

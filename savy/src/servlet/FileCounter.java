@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,6 @@ import org.json.simple.parser.ParseException;
 
 import savy.FileDao;
 import savy.JsonProcessor;
-import sun.org.mozilla.javascript.internal.json.JsonParser;
 import util.*;
 
 /**
@@ -32,7 +32,8 @@ public class FileCounter extends HttpServlet
 	private JsonProcessor processor;
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 		// Set a cookie for the user, so that the counter does not increate
 		// every time the user press refresh
 		HttpSession session = request.getSession(true);
@@ -41,17 +42,20 @@ public class FileCounter extends HttpServlet
 
 		// JSONArray allLists=new JSONArray();
 		JSONObject jsonObject = new JSONObject();
+		JSONArray relevantCourseData = processor.getDataForAllCourses();
 		jsonObject.put(StringLiterals.ListOfAreas, processor.getListForStringParameter(StringLiterals.Area));
 		jsonObject.put(StringLiterals.ListOfCourses, processor.getListForStringParameter(StringLiterals.CourseName));
 		jsonObject.put(StringLiterals.ListOfProfessors, processor.getListForStringParameter(StringLiterals.Professor));
 		jsonObject.put(StringLiterals.ListOfCourseNumbers, processor.getListForStringParameter(StringLiterals.CourseNumber));
 		jsonObject.put(StringLiterals.ListOfYears, processor.getListForIntegerParameter(StringLiterals.Year));
 		jsonObject.put(StringLiterals.ListOfTerms, processor.getListForStringParameter(StringLiterals.Term));
-		jsonObject.put(StringLiterals.ListOfYearsAndTerms, processor.getListForStringParameter(StringLiterals.YearAndTerm));
+		jsonObject.put(StringLiterals.ListOfYearsAndTerms, UtilFunctions.getRelevantYearAndTermValues(relevantCourseData));
 		jsonObject.put(StringLiterals.ListOfClassStrengths, processor.getListForIntegerParameter(StringLiterals.ClassStrength));
 		jsonObject.put(StringLiterals.ListOfAverageGPAs, processor.getListForFloatParameter(StringLiterals.AverageGPA));
 		
-		jsonObject.put(StringLiterals.CoursesData, processor.getDataForAllCourses());
+		
+		//System.out.println(processor.getListForStringParameter(StringLiterals.YearAndTerm).toString());
+		jsonObject.put(StringLiterals.CoursesData, relevantCourseData);
 
 		// response.getWriter().write(preprocessor.getAllAreas().toJSONString());
 		response.getWriter().write(jsonObject.toJSONString());
@@ -76,12 +80,12 @@ public class FileCounter extends HttpServlet
 		//System.out.println((JSONArray) jsonobject.get("value"));
 		//System.out.println((String) jsonobject.get("name"));
 		
-		JSONArray resultArray = processor.getFilteredResults(jsonobject);
+		JSONObject resultObject = processor.getFilteredResults(jsonobject);
 				
 		//JSONArray resultArray = processor.filterOnOneParameter(jsonobject);		
-		System.out.println("Sending response" + resultArray.toString());
+		System.out.println("Sending response" + resultObject.toString());
 		
-		response.getWriter().write(resultArray.toJSONString());
+		response.getWriter().write(resultObject.toJSONString());
 		
 		
 
