@@ -375,7 +375,7 @@ public class JsonProcessor
 
 	public JSONArray getDataForAllCourses()
 	{
-		return UtilFunctions.convertMapToJSONArray(courseNameMap, true);
+		return UtilFunctions.convertMapToJSONArray(courseNameList, courseNameMap, true);
 	}
 
 }

@@ -207,6 +207,41 @@ public class UtilFunctions
 		
 	}
 	
+	public static JSONArray convertMapToJSONArray (TreeSet<String> courseNameList, HashMap<String, TreeSet<JSONObject>> inputMap, boolean limitedDataSet)
+	{
+		JSONArray returnObject = new JSONArray();
+		TreeSet<JSONObject> jsonObjectListToTraverse = new TreeSet<JSONObject>(new CustomComparator());
+		for(String course: courseNameList)
+		{
+			jsonObjectListToTraverse = inputMap.get(course);
+			JSONArray list = new JSONArray();
+			
+			for(JSONObject obj : jsonObjectListToTraverse)
+			{
+				if(limitedDataSet)
+				{
+					if((Long)obj.get("Year") >= 2010)
+					{
+						list.add(obj);
+					}
+				}
+				else
+				{
+					list.add(obj);
+				}
+			}
+			
+			JSONObject keyValueObject = new JSONObject();
+			
+			keyValueObject.put(StringLiterals.Name, course);
+			keyValueObject.put(StringLiterals.Value, list);
+			
+			returnObject.add(keyValueObject);
+		}
+		
+		return returnObject;
+	}
+	
 	public static JSONArray convertMapToJSONArray (HashMap<String, TreeSet<JSONObject>> inputMap, boolean limitedDataSet)
 	{
 		JSONArray returnObject = new JSONArray();

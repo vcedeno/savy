@@ -16,19 +16,6 @@ width:190px;
       border-color:grey;
 }
 
- .tooltipsy
-    {
-        padding: 15px;
-        max-width: 200px;
-        color: #303030;
-    }
-
-title
-{
-	font-family: sans-serif;
-    font-size: 8px;
-}
-
 .filters{
 margin-top:2px;
 padding: 0;
@@ -45,12 +32,7 @@ li{
 	font-family: sans-serif;
     font-size: 11px;
 }
-
-dl
-      dt, dd
-      {
-         display: inline;
-      }      
+     
 
 .x-axis path,
 .x-axis line {
@@ -265,7 +247,7 @@ dl
       
 	        var courseWiseProfessors = [];
 
-	        var requiredWidth = yearAndTermOption.length * 100;
+	        var requiredWidth = yearAndTermOption.length * 120;
 
 	        //We create a scatterplot table for the courses view
 	        //Essentially we are creating a spark line
@@ -660,16 +642,17 @@ function hover(d, obj_ref)
 	}
 
 	var dy_val = 8;
+	dx_val = 12;
 
 	var text0 = subSVG
 	.append("text")
-	.attr("dx", 8)
+	.attr("dx", dx_val)
 	.attr("dy", dy_val)
 	.text("Class size: " + d.ClassStrength)
 	;
 
 	dy_val+=13;
-	dx_val = 10;
+	
 
 	if(d.NumberOfAs >0)
 	{
@@ -749,27 +732,27 @@ function getColourBasedOnArea(area)
 {	
 	if(area == "Algorithms and Theory")
 	{
-		return "#FFFFFF";
+		return "#00FF00";
 	}
 
 	if(area == "Computational Biology and Bioinformatics")
 	{
-		return "#FFFF66";
+		return "#8000FF";
 	}
 
 	if(area == "Computer Systems")
 	{
-		return "#CBBDA2";
+		return "#FF00FF";
 	}
 
 	if(area == "Data and Information")
 	{
-		return "#E79798";
+		return "#FFFF00";
 	}
 
 	if(area == "Human Computer Interaction")
 	{
-		return "#FF6501";
+		return "#00FFF2";
 	}
 
 
@@ -780,17 +763,17 @@ function getColourBasedOnArea(area)
 
 	if(area == "Numerical and Scientific Computing")
 	{
-		return "#FFFFFF";
+		return "#FF6A00";
 	}
 
 	if(area == "Programming Languages")
 	{
-		return "#FFFFFF";
+		return "#FF3300";
 	}
 
 	if(area == "Software Engineering")
 	{
-		return "#664943";
+		return "#FF0080";
 	}
 
 	//default color
