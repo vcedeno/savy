@@ -523,8 +523,8 @@ function hover(d, obj_ref)
 
 	var subSVG = obj_ref
 	.append("svg")
-	.attr("width", 200)
-	.attr("height", (d.ClassStrength*3) + 40)
+	//.attr("width", 200)
+	//.attr("height", (d.ClassStrength*3) + 40)
 	.attr("x", xPosition)
 	.attr("y", yPosition)
 	.attr("class", "subsvg")
@@ -534,7 +534,7 @@ function hover(d, obj_ref)
 	var ypositionForRect = yPosition + 3;
 
 	var totalOfAll = 0;
-	console.log(typeof(totalOfAll));
+	//console.log(typeof(totalOfAll));
 
 	if(d.NumberOfFs>0)
 	{
@@ -566,8 +566,8 @@ function hover(d, obj_ref)
 		totalOfAll += d.NumberOfAs;
 	}
 
-	console.log(totalOfAll);
-	console.log(typeof(totalOfAll));
+	//console.log(totalOfAll);
+	//console.log(typeof(totalOfAll));
 
 	if(d.NumberOfFs>0)
 	{
