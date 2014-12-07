@@ -61,7 +61,7 @@ li{
 .subsvg text {
 
 	font-family: sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     stroke: black;
     float: left;
 }
@@ -521,20 +521,37 @@ function hover(d, obj_ref)
 	var xPosition = parseFloat(obj_ref.select("circle").attr("cx")) + 8;
 	var yPosition = parseFloat(obj_ref.select("circle").attr("cy")) - 5;
 
+	var width_svg = 120;
+	var height_svg = (d.ClassStrength*3) + 60;
+	var rect_width = 20;
+	var outline_rect_width = 4;
+
 	var subSVG = obj_ref
 	.append("svg")
+
 	//.attr("width", 200)
 	//.attr("height", (d.ClassStrength*3) + 40)
+
+	.attr("width", width_svg)
+	.attr("height", height_svg)
+
 	.attr("x", xPosition)
 	.attr("y", yPosition)
 	.attr("class", "subsvg")
 	;
 
-	var xpositionForRect = xPosition + 3;
-	var ypositionForRect = yPosition + 3;
+	subSVG
+		.append("rect")									
+		.attr("width", width_svg - 1)
+		.attr("height", height_svg - 1)
+		.attr("fill", "white")
+		;
 
 	var totalOfAll = 0;
 	//console.log(typeof(totalOfAll));
+
+	var totalOfAll = outline_rect_width;
+
 
 	if(d.NumberOfFs>0)
 	{
@@ -566,6 +583,7 @@ function hover(d, obj_ref)
 		totalOfAll += d.NumberOfAs;
 	}
 
+
 	//console.log(totalOfAll);
 	//console.log(typeof(totalOfAll));
 
@@ -573,11 +591,9 @@ function hover(d, obj_ref)
 	{
 		subSVG
 		.append("rect")									
-		.attr("width", 10)
+		.attr("width", rect_width)
 		.attr("height", (totalOfAll * 3))
 		.attr("fill", "pink");
-
-		ypositionForRect+= (d.NumberOfFs *3) ;
 
 		totalOfAll -=d.NumberOfFs;
 	}
@@ -586,11 +602,10 @@ function hover(d, obj_ref)
 	{
 		subSVG
 		.append("rect")									
-		.attr("width", 10)
+		.attr("width", rect_width)
 		.attr("height", totalOfAll * 3)
 		.attr("fill", "green");
 
-		ypositionForRect+= (d.NumberOfEs *3) ;
 		totalOfAll -=d.NumberOfEs;
 	}
 
@@ -598,11 +613,10 @@ function hover(d, obj_ref)
 	{
 		subSVG
 		.append("rect")									
-		.attr("width", 10)
+		.attr("width", rect_width)
 		.attr("height", totalOfAll * 3)
 		.attr("fill", "red");
 
-		ypositionForRect+= (d.NumberOfDs *3) ;
 		totalOfAll -=d.NumberOfDs;
 	}
 
@@ -610,11 +624,10 @@ function hover(d, obj_ref)
 	{
 		subSVG
 		.append("rect")									
-		.attr("width", 10)
+		.attr("width", rect_width)
 		.attr("height", totalOfAll * 3)
 		.attr("fill", "purple");
 
-		ypositionForRect+= (d.NumberOfCs *3) ;
 		totalOfAll -=d.NumberOfCs;
 	}
 
@@ -622,12 +635,10 @@ function hover(d, obj_ref)
 	{
 		subSVG
 		.append("rect")									
-		.attr("width", 10)
+		.attr("width", rect_width)
 		.attr("height", totalOfAll * 3)
 		.attr("fill", "orange");
 
-
-		ypositionForRect+= (d.NumberOfBs *3) ;
 		totalOfAll -=d.NumberOfBs;
 	}
 
@@ -635,14 +646,43 @@ function hover(d, obj_ref)
 	{
 		subSVG
 		.append("rect")									
-		.attr("width", 10)
+		.attr("width", rect_width)
 		.attr("height", totalOfAll * 3)
 		.attr("fill", "blue");
 
 	}
 
-	var dy_val = 8;
-	dx_val = 12;
+	subSVG
+		.append("rect")									
+		.attr("width", outline_rect_width)
+		.attr("height", height_svg)
+		.attr("fill", "white")
+		;
+
+	subSVG
+		.append("rect")									
+		.attr("width", width_svg)
+		.attr("height", outline_rect_width)
+		.attr("fill", "white")
+		;	
+
+	subSVG
+		.append("rect")									
+		.attr("width", 2)
+		.attr("height", height_svg)
+		.attr("fill", "black")
+		;
+
+	subSVG
+		.append("rect")									
+		.attr("width", width_svg)
+		.attr("height", 2)
+		.attr("fill", "black")
+		;		
+
+	var dy_val = 15;
+	dx_val = 22;
+	var dist = 15;
 
 	var text0 = subSVG
 	.append("text")
@@ -651,7 +691,7 @@ function hover(d, obj_ref)
 	.text("Class size: " + d.ClassStrength)
 	;
 
-	dy_val+=13;
+	dy_val+=dist;
 	
 
 	if(d.NumberOfAs >0)
@@ -664,7 +704,7 @@ function hover(d, obj_ref)
 		.text("#A's: " + d.NumberOfAs)
 		;
 
-		dy_val+=13;
+		dy_val+=dist;
 
 	}
 
@@ -676,7 +716,7 @@ function hover(d, obj_ref)
 		.attr("dy", dy_val)
 		.text("#B's: " + d.NumberOfBs)
 		;
-		dy_val+=13;
+		dy_val+=dist;
 
 	}
 
@@ -689,7 +729,7 @@ function hover(d, obj_ref)
 		.text("#C's: " + d.NumberOfCs)
 		;
 
-		dy_val +=13;
+		dy_val +=dist;
 	}
 
 	if(d.NumberOfDs >0)
@@ -701,7 +741,7 @@ function hover(d, obj_ref)
 		.text("#D's: " + d.NumberOfDs)
 		;
 
-		dy_val +=13;
+		dy_val +=dist;
 	}
 
 	if(d.NumberOfEs >0)
@@ -712,7 +752,7 @@ function hover(d, obj_ref)
 		.attr("dy", dy_val)
 		.text("#E's: " + d.NumberOfEs)
 		;
-		dy_val +=13;
+		dy_val +=dist;
 	}
 
 	if(d.NumberOfFs >0)
