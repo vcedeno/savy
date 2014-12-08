@@ -140,7 +140,6 @@ z-index: 2;
 
 var jsonData;
 
-<<<<<<< HEAD
 
  d3.json("data.json", function(json) {
     jsonData=json;
@@ -148,15 +147,6 @@ var jsonData;
 });
 
 
-=======
-
- d3.json("data2.json", function(json) {
-    jsonData=json;
-    chart(jsonData, "all");
-});
-
-
->>>>>>> origin/master
 //
 //
 //
@@ -187,7 +177,7 @@ strokecolor = "#A9A9A9";
 
 var format = d3.time.format("%m/%d/%y");
 
-var margin = {top: 100, right: 40, bottom: 30, left: 290};
+var margin = {top: 120, right: 40, bottom: 30, left: 290};
 var width = document.body.clientWidth - margin.left - margin.right;
 var height = 500 - margin.top - margin.bottom;
 
@@ -200,6 +190,14 @@ var tooltip = d3.select("body")
     .style("top", "500px")
     .style("left", "300px");
     
+var tooltip2 = d3.select("body")
+    .append("div")
+    .attr("class", "remove")
+    .style("position", "absolute")
+    .style("z-index", "20")
+    .style("visibility", "hidden")
+    .style("top", "60px")
+    .style("left", "300px");
 
 var x = d3.time.scale()
     .range([0, width]);
@@ -254,14 +252,10 @@ var svg = d3.select(".chart").append("svg")
     d.gtvalue = +d.gtvalue;
   });
   
-var layers = stack(nest.entries(data));
 
-<<<<<<< HEAD
-=======
 
 var layers = stack(nest.entries(data));
 
->>>>>>> origin/master
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.y0 + d.y; })]);
@@ -274,7 +268,7 @@ var layers = stack(nest.entries(data));
       .attr("stroke", strokecolor)
       .attr("d", function(d) { return area(d.values); })
       
-
+	
       .style("fill", function(d, i) { 
       
       if(d.values[0].rarea=="Computational Biology and Bioinformatics") j=0;
@@ -288,6 +282,8 @@ var layers = stack(nest.entries(data));
       if(d.values[0].rarea=="Systems and Cybersecurity") j=8; 
       
       //return colorrange[j]; });
+      
+      
       var exp=2014-d.values[0].experience;
       if(d.values[0].experience==0)
       		exp=95;
@@ -322,8 +318,7 @@ var layers = stack(nest.entries(data));
       .attr("class", "y axis")
       .call(yAxis.orient("left"));
       
-
-
+      
 
   svg.selectAll(".layer")
     .attr("opacity", 1)
@@ -334,6 +329,7 @@ var layers = stack(nest.entries(data));
         return j != i ? 0.6 : 1;
     })})
     
+ 
 
     .on("mousemove", function(d, i) {
       mousex = d3.mouse(this);
@@ -359,21 +355,18 @@ var layers = stack(nest.entries(data));
 	  gratname = d.values[mousedate].gtname;
 	  rarea= d.values[mousedate].rarea;
 	  experience= d.values[mousedate].experience;
-<<<<<<< HEAD
-=======
 	  tenure= d.values[mousedate].tenure;
->>>>>>> origin/master
-	  
+
+
+      
+    		  
 	  year=invertedx+1899;
 	  if(experience==0)
 	  	expe="NA"
 	  else
 	  	expe=2014-experience;
-<<<<<<< HEAD
-=======
 	  if(tenure==0)
 	  	tenure="NA"
->>>>>>> origin/master
 	  	
 	  graonevalue = d.values[mousedate].gonevalue;
 	  if (graonevalue=="0") {graonevalue=""; graonename="";graone="";} 
@@ -396,12 +389,24 @@ var layers = stack(nest.entries(data));
       .classed("hover", true)
       .attr("stroke", strokecolor)
       .attr("stroke-width", "1.5px"), 
-<<<<<<< HEAD
-      tooltip.html( "<p>"+  d.key+"<br>Year: "+year+" Years in Academia: "+expe+"<br>Research Area: " +rarea + "<br>Articles: " + pro+ "<br>" +"Graduated students:"+stu+ "<br>"+grant+"<br>" + graonevalue+" "+ graone+ " " + graonename+ "<br>" + gratwovalue+" "+ gratwo+ " " + gratwoname+ "<br>" + gratvalue+" "+ grat+ " " + gratname+ "<br>" + "</p>" ).style("visibility", "visible");
-=======
-      tooltip.html( "<p>"+  d.key+"<br>Year: "+year+" Years in Academia: "+expe+" Tenure:"+tenure+"<br>Research Area: " +rarea + "<br>Articles: " + pro+ "<br>" +"Graduated students:"+stu+ "<br>"+grant+"<br>" + graonevalue+" "+ graone+ " " + graonename+ "<br>" + gratwovalue+" "+ gratwo+ " " + gratwoname+ "<br>" + gratvalue+" "+ grat+ " " + gratname+ "<br>" + "</p>" ).style("visibility", "visible");
->>>>>>> origin/master
+      tooltip.html( "<p>"+  d.key+"<br>Year: "+year+"<br>Years in Academia: "+expe+"<br>Tenure:"+tenure+"<br>Research Area: " +rarea + "<br>Articles: " + pro+ "<br>" +"Graduated students:"+stu+ "<br>"+grant+"<br>" + graonevalue+" "+ graone+ " " + graonename+ "<br>" + gratwovalue+" "+ gratwo+ " " + gratwoname+ "<br>" + gratvalue+" "+ grat+ " " + gratname+ "<br>" + "</p>" ).style("visibility", "visible");
       
+        var allLabels = d3.nest()
+  		.key(function(d) { return(d.key);})
+  		.rollup(function(d) { 
+   		 return d3.sum(d, function(g) {return g.value; });
+  		}).entries(data);
+  		
+	  var labels=" - ";
+    	allLabels.forEach(function(d)
+    	{
+    	labels=labels+d.key+" - ";
+    	});
+    	
+    	d3.select(".chart")
+      .attr("stroke", strokecolor)
+      .attr("stroke-width", "1.5px"), 
+      tooltip2.html( "<p>"+labels).style("visibility", "visible");
     })
     .on("mouseout", function(d, i) {
      svg.selectAll(".layer")
@@ -410,24 +415,23 @@ var layers = stack(nest.entries(data));
       .attr("opacity", "1");
       d3.select(this)
       .classed("hover", false)
-<<<<<<< HEAD
-      .attr("stroke-width", "1.5px"), tooltip.html( "<p>"+  d.key+"<br>Year: "+year+" Years in Academia: "+expe+"<br>Research Area: " +rarea + "<br>Articles: " + pro+ "<br>" +"Graduated students:"+stu+ "<br>"+grant+"<br>" + graonevalue+" "+ graone+ " " + graonename+ "<br>" + gratwovalue+" "+ gratwo+ " " + gratwoname+ "<br>" + gratvalue+" "+ grat+ " " + gratname+ "<br>" + "</p>" ).style("visibility", "visible");
-      })
-=======
       .attr("stroke-width", "1.5px"), tooltip.html( "<p>" +  d.key+ "<br>Research Area: " +rarea + "<br>Articles: " + pro+ "<br>Grants:<br>" + graonevalue+" "+ graone+ " " + graonename+ "<br>" + gratwovalue+" "+ gratwo+ " " + gratwoname+ "<br>" + gratvalue+" "+ grat+ " " + gratname+ "<br>" +"</p>" ).style("visibility", "hidden");
+      
+    	
+    	d3.select(".chart")
+      .attr("stroke", strokecolor)
+      .attr("stroke-width", "1.5px"), 
+      tooltip2.html( "test").style("visibility", "hidden");
   })
->>>>>>> origin/master
-    
+  
+
+ 
   var vertical = d3.select(".chart")
         .append("div")
         .attr("class", "remove")
         .style("position", "absolute")
         .style("z-index", "1")
-<<<<<<< HEAD
-        .style("width", "1px")
-=======
         .style("width", "2px")
->>>>>>> origin/master
         .style("height", "380px")
         .style("top", "95px")
         .style("bottom", "30px")
@@ -443,6 +447,10 @@ var layers = stack(nest.entries(data));
          mousex = d3.mouse(this);
          mousex = mousex[0] + 5;
          vertical.style("left", mousex + "px")});
+         
+        
+      
+
 //});
 
 var allArticles = d3.nest()
@@ -511,13 +519,10 @@ var allArticles = d3.nest()
 		
 		if(aVisibility=="visible"&& d=="Select All")
 		{
-			//d3.select(".filterContainer").selectAll("input").attr("checked", true);
+		    
+			//d3.select(".filterContainerA").selectAll("input").attr("checked", true);
 			location.reload();
-<<<<<<< HEAD
-=======
-
-						
->>>>>>> origin/master
+				
 		}
 		if(aVisibility=="hidden"&& d=="Select All")
 		{
@@ -537,12 +542,6 @@ var allArticles = d3.nest()
 		$("#sidebarA").show();   // show sidebar
 		
 		
-<<<<<<< HEAD
-		
-
-		
-=======
->>>>>>> origin/master
         d3.select(".filterContainer").selectAll("div")
 		.data(names)
 		.enter()
@@ -568,17 +567,6 @@ var allArticles = d3.nest()
 		{
 			//d3.select(".filterContainer").selectAll("input").attr("checked", true);
 			location.reload();
-<<<<<<< HEAD
-		}
-		if(lVisibility=="hidden"&& d=="Select All")
-		{
-			d3.select(".filterContainer").selectAll("input").attr("checked", null);
-			var dataS='[]';
-			data=JSON.parse(dataS);
-     		d3.select("svg").remove();
-    		chart(data, "all");
-		}
-=======
 			
 		}
 		if(lVisibility=="hidden"&& d=="Select All")
@@ -589,7 +577,7 @@ var allArticles = d3.nest()
      		d3.select("svg").remove();
     		chart(data, "all");
 		}
->>>>>>> origin/master
+
 
 		})
 		
@@ -606,6 +594,7 @@ function dataChange(name,aVisibility) {
 		
 		if(aVisibility=="visible")
 		{
+		
 			var dataS='[';
 			
 			d3.json("data.json", function(json) {
@@ -631,7 +620,6 @@ function dataChange(name,aVisibility) {
 			});      	
       		
 		}
-<<<<<<< HEAD
 
 		if(aVisibility=="hidden")
 		{
@@ -670,123 +658,10 @@ function dataChange(name,aVisibility) {
 }
 function dataChangeA(area,aVisibility) {
 
-		if(aVisibility=="visible")
-		{
-			var dataS='[';
 			
-			d3.json("data.json", function(json) {
-    		jsonData=json;
-    		
-    		jsonData.forEach(function(d) {
-  				if(d.rarea==area)
-  					dataS=dataS+'{"key":"'+d.key+'","tenure":'+d.tenure+',"experience":'+d.experience+',"value":'+d.value+',"students":'+d.students+',"date":"'+d.date+'","rarea":"'+d.rarea+'","gone":"'+d.gone+'","gonename":"'+d.gonename+'","gtwo":"'+d.gtwo+'","gtwoname":"'+d.gtwoname+'","gt":"'+d.gt+'","gtname":"'+d.gtname+'","gonevalue":'+d.gonevalue+',"gtwovalue":'+d.gtwovalue+',"gtvalue":'+d.gtvalue+'},';		
-  				
-  			})
-  			
-    		
-     		data.forEach(function(d) {
-     				var newDate=formatDate(d.date);
-     				//console.log(d.date);
-  					dataS=dataS+'{"key":"'+d.key+'","tenure":'+d.tenure+',"experience":'+d.experience+',"value":'+d.value+',"students":'+d.students+',"date":"'+newDate+'","rarea":"'+d.rarea+'","gone":"'+d.gone+'","gonename":"'+d.gonename+'","gtwo":"'+d.gtwo+'","gtwoname":"'+d.gtwoname+'","gt":"'+d.gt+'","gtname":"'+d.gtname+'","gonevalue":'+d.gonevalue+',"gtwovalue":'+d.gtwovalue+',"gtvalue":'+d.gtvalue+'},';		
-  			})
-  			dataS=dataS+']';
-  			dataS=dataS.replace(',]',']');
-    		data=JSON.parse(dataS);
-     		d3.select("svg").remove();
-    		chart(data, "all");
-			});      	
-      		
-		}
-
-		if(aVisibility=="hidden")
-		{
-		
-			var dataS='[';
-     		data.forEach(function(d) {
-     			if(d.rarea!=area)
-     			{
-     				var newDate=formatDate(d.date);
-     				//console.log(d.date);
-  					dataS=dataS+'{"key":"'+d.key+'","tenure":'+d.tenure+',"experience":'+d.experience+',"value":'+d.value+',"students":'+d.students+',"date":"'+newDate+'","rarea":"'+d.rarea+'","gone":"'+d.gone+'","gonename":"'+d.gonename+'","gtwo":"'+d.gtwo+'","gtwoname":"'+d.gtwoname+'","gt":"'+d.gt+'","gtname":"'+d.gtname+'","gonevalue":'+d.gonevalue+',"gtwovalue":'+d.gtwovalue+',"gtvalue":'+d.gtvalue+'},';		
-  				}
-  			})
-  			dataS=dataS+']';
-  			dataS=dataS.replace(',]',']');
-  			
-			data=JSON.parse(dataS);
-     		d3.select("svg").remove();
-    		chart(data, "all");
-
-		}
-		
-}
-function formatDate(date){
-	if(date=="Tue Jan 01 2013 00:00:00 GMT-0500 (EST)")
-		return "1/1/13";
-	if(date=="Sun Jan 01 2012 00:00:00 GMT-0500 (EST)")
-		return "1/1/12";
-	if(date=="Sat Jan 01 2011 00:00:00 GMT-0500 (EST)")
-		return "1/1/11";
-	if(date=="Fri Jan 01 2010 00:00:00 GMT-0500 (EST)")
-		return "1/1/10";
-	if(date=="Thu Jan 01 2009 00:00:00 GMT-0500 (EST)")
-		return "1/1/09";
-	if(date=="Tue Jan 01 2008 00:00:00 GMT-0500 (EST)")
-		return "1/1/08";
-	if(date=="Mon Jan 01 2007 00:00:00 GMT-0500 (EST)")
-		return "1/1/07";
-	if(date=="Sun Jan 01 2006 00:00:00 GMT-0500 (EST)")
-		return "1/1/06";
-	if(date=="Sat Jan 01 2005 00:00:00 GMT-0500 (EST)")
-		return "1/1/05";
-	if(date=="Thu Jan 01 2004 00:00:00 GMT-0500 (EST)")
-		return "1/1/04";
-}
-=======
->>>>>>> origin/master
-
-		if(aVisibility=="hidden")
-		{
-		
-			//var test='[{"key":"Layne Watson","tenure":1980,"value":2,"students":1,"date":"1/1/13","rarea":"Mathematical Foundations of Computer Science","gone":"","gonename":"","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":0,"gtwovalue":0,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":9,"students":0,"date":"1/1/12","rarea":"Mathematical Foundations of Computer Science","gone":"","gonename":"","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":0,"gtwovalue":0,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":15,"students":0,"date":"1/1/11","rarea":"Mathematical Foundations of Computer Science","gone":"","gonename":"","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":0,"gtwovalue":0,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":22,"students":0,"date":"1/1/10","rarea":"Mathematical Foundations of Computer Science","gone":"","gonename":"","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":0,"gtwovalue":0,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":22,"students":2,"date":"1/1/09","rarea":"Mathematical Foundations of Computer Science","gone":"AFRL","gonename":"AFRL-VT Collaborative Center on Multidisciplinary Analysis and Design of Future Aerospace Vehicle","gtwo":"AFOSR","gtwoname":"Parallel Deterministic And Stochastic Global Optimization Algorithms","gt":"","gtname":"","gonevalue":240.737,"gtwovalue":718.237,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":18,"students":0,"date":"1/1/08","rarea":"Mathematical Foundations of Computer Science","gone":"NSF","gonename":"Multiscale Modeling Simulation And Sensitivity Analysis of Biochemical Systems Motivated By Pulsatile Insulin Secretion","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":131.568,"gtwovalue":0,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":16,"students":1,"date":"1/1/07","rarea":"Mathematical Foundations of Computer Science","gone":"National Institute of General Medical Sciences","gonename":"Stochastic Models Of Cell Cycle Regulation In Eukaryotes","gtwo":"USDA-CREES","gtwoname":"Sustainable Engineered Materials From Renewable Resouces: Design And Manufacture A High-Performance Composites","gt":"","gtname":"","gonevalue":533.939,"gtwovalue":48.921,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":16,"students":0,"date":"1/1/06","rarea":"Mathematical Foundations of Computer Science","gone":"Department of Energy","gonename":"Mathematical Software for Optimization And Nonlinear Systems Of Equations On Terascale Computers","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":346.255,"gtwovalue":0,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":11,"students":1,"date":"1/1/05","rarea":"Mathematical Foundations of Computer Science","gone":"NSF","gonename":"Short Cycle Surrogate Based Design Optimization","gtwo":"NSF","gtwoname":"Statistical Decision: Theoretic Methods for Robust Design Optimization","gt":"","gtname":"","gonevalue":111.952,"gtwovalue":200.000,"gtvalue":0},{"key":"Layne Watson","tenure":1980,"value":18,"students":1,"date":"1/1/04","rarea":"Mathematical Foundations of Computer Science","gone":"","gonename":"","gtwo":"","gtwoname":"","gt":"","gtname":"","gonevalue":0,"gtwovalue":0,"gtvalue":0}]';
-			var dataS='[';
-     		data.forEach(function(d) {
-     			if(d.key!=name)
-     			{
-     				var newDate=formatDate(d.date);
-     				//console.log(d.date);
-  					dataS=dataS+'{"key":"'+d.key+'","tenure":'+d.tenure+',"experience":'+d.experience+',"value":'+d.value+',"students":'+d.students+',"date":"'+newDate+'","rarea":"'+d.rarea+'","gone":"'+d.gone+'","gonename":"'+d.gonename+'","gtwo":"'+d.gtwo+'","gtwoname":"'+d.gtwoname+'","gt":"'+d.gt+'","gtname":"'+d.gtname+'","gonevalue":'+d.gonevalue+',"gtwovalue":'+d.gtwovalue+',"gtvalue":'+d.gtvalue+'},';		
-  				}
-  			})
-  			dataS=dataS+']';
-  			dataS=dataS.replace(',]',']');
-  			
-			data=JSON.parse(dataS);
-     		d3.select("svg").remove();
-    		chart(data, "all");
-    		
-			/*
-			d3.select("svg").remove();
-		   	d3.selectAll("path")
-      		.data(function() {
-        	jsonData=d3.json("data2.json", function(json) {
-    		jsonData=json;
-    		chart(jsonData, "orange");
-			});
-      		})
-    		.transition()
-      		.duration(2500)
-      		.attr("d", area);*/
-		}
-		
-}
-<<<<<<< HEAD
-=======
-function dataChangeA(area,aVisibility) {
-
-
 		if(aVisibility=="visible")
 		{
+		//d3.select(this).attr("checked", true);
 			var dataS='[';
 			
 			d3.json("data.json", function(json) {
@@ -859,7 +734,6 @@ function formatDate(date){
 }
 
 }
->>>>>>> origin/master
 
 
 
